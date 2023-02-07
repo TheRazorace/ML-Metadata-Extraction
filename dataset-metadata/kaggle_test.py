@@ -21,7 +21,17 @@ with pd.option_context('display.max_columns', None, 'display.max_rows', None):
 #Download a dataset using ref column: 
 # download specific dataset
 dataset = api.dataset_download_cli("ahsan81/hotel-reservations-classification-dataset")
-with zipfile.ZipFile("hotel-reservations-classification-dataset.zip") as z:
+# Get a list of all files in the current directory
+file_list = os.listdir()
+
+zip_filename = None
+for filename in file_list:
+    if filename.endswith(".zip"):
+        zip_filename = filename
+        break
+
+
+with zipfile.ZipFile(zip_filename) as z:
      z.extractall(".")
      file_list = z.namelist()
 
