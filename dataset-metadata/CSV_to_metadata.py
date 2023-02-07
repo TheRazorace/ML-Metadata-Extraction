@@ -7,13 +7,13 @@ df = pd.read_csv("Dataset_examples/IndiaTourism.csv")
 # Extract metadata information
 metadata = {
     "number_of_rows": df.shape[0],
-    "number_of_columns": df.shape[1],
-    "column_names": list(df.columns),
-    "column_data_types": list(df.dtypes),
+    "feature_count": df.shape[1],
+    "feature_names": list(df.columns),
+    "feature_type": list(df.dtypes),
     "memory_usage": df.memory_usage().sum() / 1024 ** 2,
     "dataframe_statistics": df.describe().transpose().to_dict(),
     "missing_values": df.isnull().sum().to_dict(),
-    "unique_values": [df[col].nunique() for col in df.columns],
+    "feature_distinct": [df[col].nunique() for col in df.columns],
     "value_counts": [df[col].value_counts().to_dict() for col in df.columns],
 }
 
