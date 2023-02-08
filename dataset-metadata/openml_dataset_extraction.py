@@ -89,21 +89,21 @@ feature_df['missing_values'] = feature_missing
 
 
 #print and save dfs as csvs to use for mappings
-# with pd.option_context('display.max_columns', None, 'display.max_rows', None):
-#     print(dataset_df)
+with pd.option_context('display.max_columns', None, 'display.max_rows', None):
+    print(dataset_df)
 
-# with pd.option_context('display.max_columns', None, 'display.max_rows', None):
-#     print(feature_df)
+with pd.option_context('display.max_columns', None, 'display.max_rows', None):
+    print(feature_df)
 
-# compression_opts = dict(method='zip', archive_name='datasets2.csv')  
-# dataset_df.to_csv('datasets.zip', index=False, compression=compression_opts)  
+compression_opts = dict(method='zip', archive_name='datasets2.csv')
+dataset_df.to_csv('datasets.zip', index=False, compression=compression_opts)
 
-# compression_opts = dict(method='zip', archive_name='creators2.csv')  
-# creator_df.to_csv('creators.zip', index=False, compression=compression_opts) 
+compression_opts = dict(method='zip', archive_name='creators2.csv')
+creator_df.to_csv('creators.zip', index=False, compression=compression_opts)
 
-# compression_opts = dict(method='zip', archive_name='features2.csv')  
-# feature_df.to_csv('features.zip', index=False, compression=compression_opts) 
+compression_opts = dict(method='zip', archive_name='features2.csv')
+feature_df.to_csv('features.zip', index=False, compression=compression_opts)
 
-# compression_opts = dict(method='zip', archive_name='tags2.csv')  
-# tag_df.to_csv('tags.zip', index=False, compression=compression_opts) 
+compression_opts = dict(method='zip', archive_name='tags2.csv')
+tag_df.to_csv('tags.zip', index=False, compression=compression_opts)
 

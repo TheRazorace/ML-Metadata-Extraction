@@ -13,17 +13,16 @@ api.authenticate()
 #get dataset metadata
 datasets = kaggle.api.datasets_list(search="countries")
 dataset_df = pd.DataFrame(datasets)[:1]
-# with pd.option_context('display.max_columns', None, 'display.max_rows', None):
-#     print(dataset_df)
-
-print(dataset_df['id'])
+with pd.option_context('display.max_columns', None, 'display.max_rows', None):
+    print(dataset_df)
+dataset_titles = [d['title'] for d in datasets]
+print(dataset_titles)
 
 #####TO DO
 
 #Download a dataset using ref column: 
 # download specific dataset
 dataset = api.dataset_download_cli("ahsan81/hotel-reservations-classification-dataset")
-print(dataset)
 
 # Get a list of all files in the current directory
 file_list = os.listdir()
@@ -45,25 +44,39 @@ for filename in file_list:
                     csv_filename = filename
                     # convert csv to pd DataFrame
                     df = pd.read_csv(csv_filename)
-                    counter += 1
-                    # extract metadata
-                    metadata = {
-                        "number_of_rows": df.shape[0],
-                        "feature_count": df.shape[1],
-                        "feature_names": list(df.columns),
-                        "feature_type": list(df.dtypes),
-                        "memory_usage": df.memory_usage().sum() / 1024 ** 2,
-                        "dataframe_statistics": df.describe().transpose().to_dict(),
-                        "missing_values": df.isnull().sum().to_dict(),
-                        "feature_distinct": [df[col].nunique() for col in df.columns],
-                        "value_counts": [df[col].value_counts().to_dict() for col in df.columns],
-                    }
+                    feature_count = df.shape[1]
+                    feature_name = []
+                    feature_type = []
+                    feature_distinct = []
+                    feature_missing = []
+                    feature_count = []
+                    features = list(df.columns)
+
+
+
+                    for feature in list(df.columns)[1:]:
+                        feature_count.append(counter)
+                        #did_features.append(did)
+                        feature_name.append(feature)
+                        feature_type.append(df[feature].dtype)
+                        feature_distinct.append(len(df[feature].unique()))
+                        feature_missing.append(df[feature].isnull().sum())
+                        counter += 1
+
+
+
+                    metadata_df = pd.DataFrame({
+                        "feature_id": feature_count,
+                        "feature_name": feature_name,
+                        "feature_type": feature_type,
+                        "feature_distinct": feature_distinct,
+                        "feature_missing": feature_missing
+                    })
 
                     # convert metadata to csv
-                    metadata_df = pd.DataFrame.from_dict(metadata, orient='index')
                     metadata_name = "Dataset_examples/metadata_" + csv_filename
-
-                    metadata_df.to_csv(metadata_name, header=False)
+                    header = ["feature_id", "feature_name","feature_type","feature_distinct","feature_missing"]
+                    metadata_df.to_csv(metadata_name, index =False,header=header)
                     # remove original csv file
                     os.remove(csv_filename)
 
@@ -87,12 +100,8 @@ os.remove(zip_filename)
 #
 #
 # #Find some extra metadata (e.g column names, datatypes, number of features...)
+# #Save metadata in a new dataframe
 
-#
-# metadata_df = pd.DataFrame.from_dict(metadata, orient='index')
-# metadata_name = "Dataset_examples/metadata_" + csv_filename
-#
-# metadata_df.to_csv(metadata_name, header=False)
 
 
 
