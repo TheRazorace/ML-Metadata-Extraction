@@ -1,17 +1,17 @@
 import openml
 import pandas as pd
 
-#openML configuration
+# openML configuration
 openml.config.apikey = 'eee9181dd538cb1a9daac582a55efd72'
 
-#Get 10 datasets metadata and save 1 as a dataframe
+# Get 10 datasets metadata and save 1 as a dataframe
 dlist = openml.datasets.list_datasets(size=10)
 dataset_df = pd.DataFrame.from_dict(dlist, orient="index").reset_index()[:1]
-dataset_df['index']=dataset_df.index
+dataset_df['index'] = dataset_df.index
 
 idlist = list(dataset_df['did'])
- 
-#Add more metadata using get_dataset() function
+
+# Add more metadata using get_dataset() function
 dataset_df['cache_format'] = [openml.datasets.get_dataset(did).cache_format for did in idlist]
 dataset_df['description'] = [openml.datasets.get_dataset(did).description for did in idlist]
 dataset_df['creator'] = [openml.datasets.get_dataset(did).creator for did in idlist]
@@ -32,7 +32,7 @@ dataset_df['original_data_url'] = [openml.datasets.get_dataset(did).original_dat
 dataset_df['paper_url'] = [openml.datasets.get_dataset(did).paper_url for did in idlist]
 dataset_df['md5_checksum'] = [openml.datasets.get_dataset(did).md5_checksum for did in idlist]
 
-#creation of separate creators df for dataset creators
+# creation of separate creators df for dataset creators
 creators_per_dataset = list(dataset_df['creator'])
 did_creators = []
 creators = []
@@ -40,12 +40,12 @@ for i in range(len(idlist)):
     for j in range(len(creators_per_dataset[i])):
         did_creators.append(idlist[i])
         creators.append(creators_per_dataset[i][j])
-        
+
 creator_df = pd.DataFrame()
 creator_df['did_per_creator'] = did_creators
-creator_df['creator_per_dataset'] = creators 
+creator_df['creator_per_dataset'] = creators
 
-#creation of separate tags df for dataset tags
+# creation of separate tags df for dataset tags
 tags_per_dataset = list(dataset_df['tag'])
 did_creators = []
 tags = []
@@ -53,13 +53,12 @@ for i in range(len(idlist)):
     for j in range(len(tags_per_dataset[i])):
         did_creators.append(idlist[i])
         tags.append(tags_per_dataset[i][j])
-        
+
 tag_df = pd.DataFrame()
 tag_df['did_per_tag'] = did_creators
-tag_df['tag_per_dataset'] = tags 
+tag_df['tag_per_dataset'] = tags
 
-
-#creation of separate features df for dataset features
+# creation of separate features df for dataset features
 did_features = []
 feature_name = []
 feature_type = []
@@ -78,7 +77,7 @@ for did in idlist:
         feature_distinct.append(len(dataset.get_data(feature)[1].unique()))
         feature_missing.append(dataset.get_data(feature)[1].isnull().sum())
         counter += 1
-        
+
 feature_df = pd.DataFrame()
 feature_df['did'] = did_features
 feature_df['feature_id'] = feature_count
@@ -87,23 +86,21 @@ feature_df['type'] = feature_type
 feature_df['distinct_values'] = feature_distinct
 feature_df['missing_values'] = feature_missing
 
+# print and save dfs as csvs to use for mappings
+# with pd.option_context('display.max_columns', None, 'display.max_rows', None):
+#     print(dataset_df)
 
-#print and save dfs as csvs to use for mappings
-with pd.option_context('display.max_columns', None, 'display.max_rows', None):
-    print(dataset_df)
+# with pd.option_context('display.max_columns', None, 'display.max_rows', None):
+#     print(feature_df)
 
-with pd.option_context('display.max_columns', None, 'display.max_rows', None):
-    print(feature_df)
+# compression_opts = dict(method='zip', archive_name='datasets2.csv')
+# dataset_df.to_csv('datasets.zip', index=False, compression=compression_opts)
 
-compression_opts = dict(method='zip', archive_name='datasets2.csv')
-dataset_df.to_csv('datasets.zip', index=False, compression=compression_opts)
+# compression_opts = dict(method='zip', archive_name='creators2.csv')
+# creator_df.to_csv('creators.zip', index=False, compression=compression_opts)
 
-compression_opts = dict(method='zip', archive_name='creators2.csv')
-creator_df.to_csv('creators.zip', index=False, compression=compression_opts)
+# compression_opts = dict(method='zip', archive_name='features2.csv')
+# feature_df.to_csv('features.zip', index=False, compression=compression_opts)
 
-compression_opts = dict(method='zip', archive_name='features2.csv')
-feature_df.to_csv('features.zip', index=False, compression=compression_opts)
-
-compression_opts = dict(method='zip', archive_name='tags2.csv')
-tag_df.to_csv('tags.zip', index=False, compression=compression_opts)
-
+# compression_opts = dict(method='zip', archive_name='tags2.csv')
+# tag_df.to_csv('tags.zip', index=False, compression=compression_opts)

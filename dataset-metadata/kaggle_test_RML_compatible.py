@@ -13,74 +13,94 @@ api.authenticate()
 #get dataset metadata
 datasets = kaggle.api.datasets_list(search="countries")
 dataset_df = pd.DataFrame(datasets)[:1]
-with pd.option_context('display.max_columns', None, 'display.max_rows', None):
-    print(dataset_df)
-dataset_titles = [d['title'] for d in datasets]
-print(dataset_titles)
+# with pd.option_context('display.max_columns', None, 'display.max_rows', None):
+#     print(dataset_df)
+
+dataset_dict = {d['id']: d['ref'] for d in datasets}
+
+print(dataset_dict)
 
 #####TO DO
 
 #Download a dataset using ref column: 
-# download specific dataset
-dataset = api.dataset_download_cli("ahsan81/hotel-reservations-classification-dataset")
+# # download specific dataset
+# dataset = api.dataset_download_cli("ahsan81/hotel-reservations-classification-dataset")
 
-# Get a list of all files in the current directory
-file_list = os.listdir()
-#print(file_list)
-counter = 0
+for id, ref in dataset_dict.items():
 
-# Search for the zip file
-zip_filename = ""
-for filename in file_list:
-    if filename.endswith(".zip"):
-        zip_filename = filename
-        with zipfile.ZipFile(filename) as z:
-            z.extractall(".")
-            file_list = z.namelist()
+    dataset = api.dataset_download_cli(ref)
+    print(dataset)
 
-            # Search for the csv files
-            for filename in file_list:
-                if filename.endswith(".csv"):
-                    csv_filename = filename
-                    # convert csv to pd DataFrame
-                    df = pd.read_csv(csv_filename)
-                    feature_count = df.shape[1]
-                    feature_name = []
-                    feature_type = []
-                    feature_distinct = []
-                    feature_missing = []
-                    feature_count = []
-                    features = list(df.columns)
+    #dataset_metadata = api.dataset_metadata_cli(ref)
+    #print(dataset_metadata)
+
+    #dataset_name = "Dataset_examples/datasetMD_" + str(id)
+    #dataset_df.to_csv(dataset_name, index=False, header=False)
 
 
 
-                    for feature in list(df.columns)[1:]:
-                        feature_count.append(counter)
-                        #did_features.append(did)
-                        feature_name.append(feature)
-                        feature_type.append(df[feature].dtype)
-                        feature_distinct.append(len(df[feature].unique()))
-                        feature_missing.append(df[feature].isnull().sum())
-                        counter += 1
+
+    # Get a list of all files in the current directory
+    file_list = os.listdir()
+    #print(file_list)
+
+    # Search for the zip file
+    zip_filename = ""
+    for filename in file_list:
+        if filename.endswith(".zip"):
+            zip_filename = filename
+            with zipfile.ZipFile(filename) as z:
+                z.extractall(".")
+                file_list = z.namelist()
+                feature_count = []
+                did_features = []
+                file_name = []
+                feature_name = []
+                feature_type = []
+                feature_distinct = []
+                feature_missing = []
+                feature_count = []
+                counter = 0
+
+                # Search for the csv files
+                for filename in file_list:
+
+                    if filename.endswith(".csv"):
+                        csv_filename = filename
+                        # convert csv to pd DataFrame
+                        df = pd.read_csv(csv_filename)
+
+                        for feature in list(df.columns)[1:]:
+                            feature_count.append(counter)
+                            did_features.append(id)
+                            file_name.append(csv_filename)
+                            feature_name.append(feature)
+                            feature_type.append(df[feature].dtype)
+                            feature_distinct.append(len(df[feature].unique()))
+                            feature_missing.append(df[feature].isnull().sum())
+                            counter += 1
+                        # remove original csv file
+                        os.remove(csv_filename)
 
 
 
-                    metadata_df = pd.DataFrame({
+
+                    feature_df = pd.DataFrame({
                         "feature_id": feature_count,
+                        "dataset_id": did_features,
+                        "file_name": file_name,
                         "feature_name": feature_name,
                         "feature_type": feature_type,
                         "feature_distinct": feature_distinct,
                         "feature_missing": feature_missing
                     })
 
-                    # convert metadata to csv
-                    metadata_name = "Dataset_examples/metadata_" + csv_filename
-                    header = ["feature_id", "feature_name","feature_type","feature_distinct","feature_missing"]
-                    metadata_df.to_csv(metadata_name, index =False,header=header)
-                    # remove original csv file
-                    os.remove(csv_filename)
+                # convert metadata to csv
+                feature_name = "Dataset_examples/featureMD_" + str(id)
+                header = ["feature_id", "dataset_id", "file_name", "feature_name","feature_type","feature_distinct","feature_missing"]
+                feature_df.to_csv(feature_name, index =False,header=header)
 
-os.remove(zip_filename)
+    os.remove(zip_filename)
 
 
 #
