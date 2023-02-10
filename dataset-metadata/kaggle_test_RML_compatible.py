@@ -13,37 +13,19 @@ api.authenticate()
 #get dataset metadata
 datasets = kaggle.api.datasets_list(search="countries")
 print(len(datasets))
-dataset_df = pd.DataFrame(datasets)[:2]
+dataset_df = pd.DataFrame(datasets)[:6]
+dataset_df = dataset_df.drop(['versions', 'files'], axis =1)
 print(dataset_df)
 
-
-for dataset in datasets:
-
-    data = dict()
-
-    for feature in dataset:
-
-        #Hardcoded extraction of metadata
-        #data ={"subtitleNullable": [dataset["subtitleNullable"]],"creatorNameNullable": dataset["creatorNameNullable"], "creatorUrlNullable" : dataset["creatorUrlNullable"], "creatorUrlNullable" : dataset["creatorUrlNullable"], "urlNullable" : dataset["urlNullable"], "licenseNameNullable" : dataset["licenseNameNullable"], "descriptionNullable" : dataset["descriptionNullable"], "ownerNameNullable" : dataset["ownerNameNullable"], "ownerRefNullable" : dataset["ownerRefNullable"], "titleNullable" : dataset["titleNullable"], "currentVersionNumberNullable" : dataset["currentVersionNumberNullable"], "usabilityRatingNullable" : dataset["usabilityRatingNullable"], "id" : dataset["id"], "ref" : dataset["ref"], "subtitle" : dataset["subtitle"], "hasSubtitle" : dataset["hasSubtitle"], "creatorName" : dataset["creatorName"], "hasCreatorName" : dataset["hasCreatorName"], "creatorUrl" : dataset["creatorUrl"], "hasCreatorUrl" : dataset["hasCreatorUrl"], "totalBytes" : dataset["totalBytes"], "hasTotalBytes" : dataset["hasTotalBytes"], "url" : dataset["url"], "hasUrl" : dataset["hasUrl"], "lastUpdated" : dataset["lastUpdated"], "downloadCount" : dataset["downloadCount"], "isPrivate" : dataset["isFeatured"], "licenseName" : dataset["licenseName"], "hasLicenseName" : dataset["hasLicenseName"], "description" : dataset["description"], "hasDescription" : dataset["hasDescription"], "ownerName" : dataset["ownerName"], "hasOwnerName" : dataset["hasOwnerName"], "ownerRef" : dataset["ownerRef"], "hasOwnerRef" : dataset["hasOwnerRef"], "kernelCount" : dataset["kernelCount"], "title" : dataset["title"], "hasTitle" : dataset["hasTitle"], "topicCount" : dataset["topicCount"], "viewCount" : dataset["viewCount"], "voteCount" : dataset["voteCount"], "currentVersionNumber" : dataset["currentVersionNumber"], "hasCurrentVersionNumber" : dataset["hasCurrentVersionNumber"], "usabilityRating" : dataset["usabilityRating"], "hasUsabilityRating" : dataset["hasUsabilityRating"]}
-        if(feature != "tags" and feature != "versions" and feature != "files"):
-            data[feature] = dataset[feature]
-
-
-    dataset_df = pd.DataFrame(data, index = [0])
-    dataset_name = "Dataset_examples/DatasetMD/DatasetMD_" + str(dataset["id"])
-    dataset_df.to_csv(dataset_name, index=False, header=True)
+dataset_name = "Dataset_examples/DatasetMD/Kaggle_DatasetMD"
+dataset_df.to_csv(dataset_name, index=False, header=True)
 
 
 
 
+#dataset_dict = {d['id']: d['ref'] for d in dataset_df}
+dataset_dict = {d['id']: d['ref'] for d in dataset_df.to_dict(orient='records')}
 
-# dataset_df = pd.DataFrame(datasets)[1:2]
-# with pd.option_context('display.max_columns', None, 'display.max_rows', None):
-#   print(dataset_df)
-
-
-
-dataset_dict = {d['id']: d['ref'] for d in datasets}
 print("line 47")
 
 #####TO DO
@@ -51,6 +33,25 @@ print("line 47")
 #Download a dataset using ref column: 
 # # download specific dataset
 # dataset = api.dataset_download_cli("ahsan81/hotel-reservations-classification-dataset")
+
+# metadata for fileMD
+files_count = []
+did_files = []
+file_name = []
+nr_of_rows = []
+nr_of_features = []
+file_counter = 0
+print("line 76")
+
+# metadata for featureMD
+feature_count = []
+did_features = []
+features_file_name = []
+feature_name = []
+feature_type = []
+feature_distinct = []
+feature_missing = []
+feature_counter = 0
 
 for id, ref in dataset_dict.items():
     print("line 56")
@@ -66,24 +67,7 @@ for id, ref in dataset_dict.items():
             with zipfile.ZipFile(filename) as z:
                 z.extractall(".")
                 file_list = z.namelist()
-                #metadata for fileMD
-                files_count = []
-                did_files = []
-                file_name = []
-                nr_of_rows = []
-                nr_of_features = []
-                file_counter = 0
-                print("line 76")
 
-                #metadata for featureMD
-                feature_count = []
-                did_features = []
-                features_file_name = []
-                feature_name = []
-                feature_type = []
-                feature_distinct = []
-                feature_missing = []
-                feature_counter = 0
 
                 # Search for the csv files
                 for filename in file_list:
@@ -117,35 +101,35 @@ for id, ref in dataset_dict.items():
 
 
 
-                #Creating the file dataframe
-                file_df = pd.DataFrame({
-                    "file_id": files_count,
-                    "dataset_id": did_files,
-                    "file_name": file_name,
-                    "nr_of_rows": nr_of_rows,
-                    "nr_of_features": nr_of_features
-                })
+    #Creating the file dataframe
+    file_df = pd.DataFrame({
+        "file_id": files_count,
+        "dataset_id": did_files,
+        "file_name": file_name,
+        "nr_of_rows": nr_of_rows,
+        "nr_of_features": nr_of_features
+    })
 
-                #Creating the feature dataframe
-                feature_df = pd.DataFrame({
-                    "feature_id": feature_count,
-                    "dataset_id": did_features,
-                    "file_name": features_file_name,
-                    "feature_name": feature_name,
-                    "feature_type": feature_type,
-                    "feature_distinct": feature_distinct,
-                    "feature_missing": feature_missing
-                })
+    #Creating the feature dataframe
+    feature_df = pd.DataFrame({
+        "feature_id": feature_count,
+        "dataset_id": did_features,
+        "file_name": features_file_name,
+        "feature_name": feature_name,
+        "feature_type": feature_type,
+        "feature_distinct": feature_distinct,
+        "feature_missing": feature_missing
+    })
 
-                # convert file metadata to csv
-                file_name = "Dataset_examples/FileMD/fileMD_" + str(id)
-                header = ["file_id", "dataset_id", "file_name", "nr_of_rows","nr_of_features"]
-                file_df.to_csv(file_name, index =False,header=header)
+    # convert file metadata to csv
+    fileNAME = "Dataset_examples/FileMD/Kaggle_FileMD"
+    header = ["file_id", "dataset_id", "file_name", "nr_of_rows","nr_of_features"]
+    file_df.to_csv(fileNAME, index =False,header=header)
 
-                # convert feature metadata to csv
-                feature_name = "Dataset_examples/FeatureMD/featureMD_" + str(id)
-                header = ["feature_id", "dataset_id", "file_name", "feature_name","feature_type","feature_distinct","feature_missing"]
-                feature_df.to_csv(feature_name, index =False,header=header)
+    # convert feature metadata to csv
+    featureNAME = "Dataset_examples/FeatureMD/Kaggle_FeatureMD"
+    header = ["feature_id", "dataset_id", "file_name", "feature_name","feature_type","feature_distinct","feature_missing"]
+    feature_df.to_csv(featureNAME, index =False,header=header)
 
 
 
