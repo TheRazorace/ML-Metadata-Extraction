@@ -10,8 +10,9 @@ def datasetMD_extraction(data_df):
     dataset_name = "Dataset_examples/DatasetMD/Kaggle_DatasetMD"
     dataset_df.to_csv(dataset_name, index=False, header=True)
 
-def tagsMD_extraction(data_df):
+def tags_extraction(data_df):
     tags_per_dataset = list(data_df['tags'])
+    idlist = list(data_df['id'])
     did_creators = []
     tags = []
     for i in range(len(idlist)):
@@ -51,7 +52,9 @@ def tagsMD_extraction(data_df):
     parsed_tag_df.to_csv(tags_name, index=False, header=True)
 
 
-def features_files_extraction(data_dict, ):
+def features_filesMD_extraction(data_df):
+    dataset_dict = {d['id']: d['ref'] for d in data_df.to_dict(orient='records')}
+
     # metadata for fileMD
     files_count = []
     did_files = []
@@ -70,7 +73,7 @@ def features_files_extraction(data_dict, ):
     feature_missing = []
     feature_counter = 0
 
-    for id, ref in data_dict.items():
+    for id, ref in dataset_dict.items():
         # Download dataset with reference ref
         dataset = api.dataset_download_cli(ref)
         file_list = os.listdir()
@@ -144,6 +147,20 @@ def features_files_extraction(data_dict, ):
 
         os.remove(zip_filename)
 
+def kernelMD_extraction(data_df):
+    kernel_df = pd.DataFrame()
+
+    for i in range(len(data_df)):
+        kernels = kaggle.api.kernels_list_with_http_info(dataset=list(data_df['ref'])[i], page_size=1)[0]
+        data_row = data_df.iloc[i]
+
+        kernels_df = pd.DataFrame(kernels) # Convert kernels to a Pandas dataframe
+        kernels_df['did'] = data_row['id'] # Add 'id' column to kernels_df
+        kernel_df = kernel_df.append(kernels_df)
+
+    kernelNAME = "Dataset_examples/KernelMD/Kaggle_KernelMD"
+    kernel_df.to_csv(kernelNAME, index=False, header=True)
+
 
 if __name__ == "__main__":
     api = KaggleApi()
@@ -153,24 +170,12 @@ if __name__ == "__main__":
 
     # get dataset metadata
     datasets = kaggle.api.datasets_list(search="countries")
-    print(len(datasets))
     dataset_df = pd.DataFrame(datasets)[:6]
-    idlist = list(dataset_df['id'])
+
     datasetMD_extraction(dataset_df)
-    ######### TODO
-    # Add tags_df
-    # tags_df = dataset_df.filter(['id', 'tags'])
-    # pd.options.display.max_columns = None
-    # print(tags_df)
-
-    tagsMD_extraction(dataset_df)
-
-
-
-
-    dataset_dict = {d['id']: d['ref'] for d in dataset_df.to_dict(orient='records')}
-
-    features_files_extraction(dataset_dict)
+    tags_extraction(dataset_df)
+    features_filesMD_extraction(dataset_df)
+    kernelMD_extraction(dataset_df)
 
 #
 # with zipfile.ZipFile(zip_filename) as z:
@@ -195,8 +200,5 @@ if __name__ == "__main__":
 #####
 
 
-# get scripts related to first dataset
-# kernels = kaggle.api.kernels_list_with_http_info(dataset=list(dataset_df['ref'])[0], page_size=1)[0]
-# kernel_df = pd.DataFrame(kernels)
-# with pd.option_context('display.max_columns', None, 'display.max_rows', None):
-#     print(kernel_df)
+
+
