@@ -30,6 +30,116 @@ def data_info(data):
     data.info()
     print(data)
 
+def classify_features():
+    col = list(data.columns)
+    for i in col:
+        if len(data[i].unique()) > 6:
+            numerical_features.append(i)
+        else:
+            categorical_features.append(i)
+
+    print('Categorical Features :', *categorical_features)
+    print('Numerical Features :', *numerical_features)
+
+def transform_features():
+    le = LabelEncoder()
+
+    for features in categorical_features:
+
+        df1[features] = le.fit_transform(df1[features])
+
+
+    mms = MinMaxScaler()  # Normalization
+    ss = StandardScaler()  # Standardization
+
+    # for features in numerical_features:
+    #     df1[features] = ss.fit_transform(df1[[features]])
+
+    df1['Oldpeak'] = mms.fit_transform(df1[['Oldpeak']])
+    df1['Age'] = ss.fit_transform(df1[['Age']])
+    df1['RestingBP'] = ss.fit_transform(df1[['RestingBP']])
+    df1['Cholesterol'] = ss.fit_transform(df1[['Cholesterol']])
+    df1['MaxHR'] = ss.fit_transform(df1[['MaxHR']])
+
+    print(df1.head())
+
+def make_featureMD():
+    feature_MD = pd.DataFrame({
+        'kaggle_ID': kaggle_id,
+        'feature_name': feature_name,
+        'categorical_boolean': categorical_boolean,
+        'numerical_boolean': numerical_boolean,
+        'chi_squared_score': chi_square_score,
+        'ANOVA_score': ANOVA_scor,
+        'dropped_boolean': dropped_boolean
+    })
+
+    # convert file metadata to csv
+    featureNAME = "Dataset_examples/MachineLearningMD/feature_MLMD"
+    feature_MD.to_csv(featureNAME, index=False, header=True)
+
+def make_paramMD():
+    param_MLMD = pd.DataFrame({
+        'kaggle_ID': kaggle_id,
+        'ML_name': MLparam_name,
+        'param_name': param_name,
+        'param_value': param_value,
+    })
+
+    paramNAME = "Dataset_examples/MachineLearningMD/param_MLMD"
+    param_MLMD.to_csv(paramNAME, index=False, header=True)
+
+
+def make_modelMD():
+    ML_results_model_MD = pd.DataFrame({
+        'kaggle_ID': did,
+        'ML_name': ML_name,
+        'accuracy': accuracy,
+        'cross_validation_score': cross_validation_score,
+        'ROC_AUC_score': ROC_AUC_score
+    })
+
+    modelNAME = "Dataset_examples/MachineLearningMD/model_results_MLMD"
+    ML_results_model_MD.to_csv(modelNAME, index=False, header=True)
+
+def make_model_evaluationMD():
+    ML_results_model_evaluation_MD = pd.DataFrame({
+        'Kaggle_ID': model_eval_kaggleID,
+        'ML_name': model_eval_ML_name,
+        'variable': model_eval_name,
+        'precision': model_eval_precision,
+        'recall': model_eval_recall,
+        'f1-score': model_eval_f1_score,
+        'support': model_eval_support
+    })
+
+    model_evalNAME = "Dataset_examples/MachineLearningMD/model_eval_results_MLMD"
+    ML_results_model_evaluation_MD.to_csv(model_evalNAME, index=False, header=True)
+
+
+def filter_params(df1):
+    numerical_df = df1.loc[:, numerical_features]
+    categorical_df = df1.loc[:, categorical_features]
+    categorical_df = categorical_df.drop(target_param, axis=1)
+    corr_numerical = numerical_df.corrwith(df1[target_param]).to_frame()
+    corr_category = categorical_df.corrwith(df1[target_param]).to_frame()
+    for index, row in corr_category.iterrows():
+        print(index)
+        if abs(row[0]) < 0.2:
+            df1 = df1.drop(index, axis=1)
+            dropped_boolean.append(True)
+        else:
+            dropped_boolean.append(False)
+    for index, row in corr_numerical.iterrows():
+        print(index)
+        if abs(row[0]) < 0.2:
+            df1 = df1.drop(index, axis=1)
+            dropped_boolean.append(True)
+        else:
+            dropped_boolean.append(False)
+    return df1
+
+
 def mean_value_features(data):
     yes = data[data['HeartDisease'] == 1].describe().T
     no = data[data['HeartDisease'] == 0].describe().T
@@ -48,10 +158,14 @@ def mean_value_features(data):
     plt.show()
 
 
-def model(classifier):
+
+
+
+def model(classifier, MLA_name):
     classifier.fit(x_train, y_train)
     prediction = classifier.predict(x_test)
     cv = RepeatedStratifiedKFold(n_splits=10, n_repeats=3, random_state=1)
+    ML_name.append(MLA_name)
     did.append('12345')
     accuracy.append(accuracy_score(y_test, prediction))
     print("Accuracy : ", '{0:.2%}'.format(accuracy_score(y_test, prediction)))
@@ -63,35 +177,6 @@ def model(classifier):
     plot_roc_curve(classifier, x_test, y_test)
     plt.title('ROC_AUC_Plot')
     plt.show()
-    # did = []
-    # ML_name = []
-    # ML_model = []
-    # accuracy = []
-    # cross_validation_score = []
-    # ROC_AUC_score = []
-
-def chi_squared_score(df1):
-    features = df1.loc[:, categorical_features[:-1]]
-    target = df1.loc[:, categorical_features[-1]]
-
-    best_features = SelectKBest(score_func=chi2, k='all')
-    fit = best_features.fit(features, target)
-
-    featureScores = pd.DataFrame(data=fit.scores_, index=list(features.columns), columns=['Chi Squared Score'])
-
-
-    first = featureScores.iloc[0]
-    print('line 73')
-    print(featureScores)
-    for index, row in featureScores.iterrows():
-        kaggle_id.append(12345)
-        feature_name.append(index)
-        categorical_boolean.append('True')
-        numerical_boolean.append('False')
-        chi_square_score.append(str(row['Chi Squared Score']))
-        ANOVA_scor.append('NULL')
-        #print(featureScores.at[index, row['Chi Squared Score']])
-        print(str(index) + ":: " + str(row['Chi Squared Score']) )
 
 
 def model_evaluation(classifier, ML_name):
@@ -117,20 +202,75 @@ def model_evaluation(classifier, ML_name):
             model_eval_f1_score.append(class_report_dict[index]['f1-score'])
             model_eval_support.append(class_report_dict[index]['support'])
 
-
-
-
-
-
-
     print(class_report_dict)
-    # model_eval_kaggleID = []
-    # model_eval_ML_name = []
-    # model_eval_name = []
-    # model_eval_precision = []
-    # model_eval_recall = []
-    # model_eval_f1_score = []
-    # model_eval_support = []
+
+def lr_exec_and_MD(random_state, C, penalty):
+    classifier_lr = LogisticRegression(random_state=random_state, C=C, penalty=penalty)
+    params = classifier_lr.get_params()
+    MLA_name = 'LogisticRegression'
+    param_extraction(params, MLA_name)
+
+    model(classifier_lr,MLA_name)
+    model_evaluation(classifier_lr, MLA_name)
+
+def svc_exec_and_MD(kernel,C):
+    classifier_svc = SVC(kernel=kernel, C=C)
+    params = classifier_svc.get_params()
+    MLA_name = 'SVC'
+    param_extraction(params, MLA_name)
+
+    model(classifier_svc, MLA_name)
+    model_evaluation(classifier_svc, MLA_name)
+
+def dt_exec_and_MD(random_state, max_depth, min_samples_leaf):
+    classifier_dt = DecisionTreeClassifier(random_state=random_state, max_depth=max_depth, min_samples_leaf=min_samples_leaf)
+    params = classifier_dt.get_params()
+    MLA_name = 'Decision Tree Classifier'
+    param_extraction(params, MLA_name)
+
+    model(classifier_dt, MLA_name)
+    model_evaluation(classifier_dt,MLA_name)
+
+def rf_exec_and_MD(max_depth, random_state):
+    classifier_rf = RandomForestClassifier(max_depth=max_depth, random_state=random_state)
+    params = classifier_rf.get_params()
+    MLA_name = 'Random Forest Classifier'
+    param_extraction(params, MLA_name)
+
+    model(classifier_rf, MLA_name)
+    model_evaluation(classifier_rf, MLA_name)
+
+def knn_exec_and_MD(leaf_size, n_neighbors, p):
+    classifier_knn = KNeighborsClassifier(leaf_size=leaf_size, n_neighbors=n_neighbors, p=p)
+    params = classifier_knn.get_params()
+    MLA_name = 'K Nearest Neighbour'
+    param_extraction(params, MLA_name)
+
+    model(classifier_knn, MLA_name)
+    model_evaluation(classifier_knn, MLA_name)
+
+def chi_squared_score(df1):
+    features = df1.loc[:, categorical_features[:-1]]
+    target = df1.loc[:, categorical_features[-1]]
+
+    best_features = SelectKBest(score_func=chi2, k='all')
+    fit = best_features.fit(features, target)
+
+    featureScores = pd.DataFrame(data=fit.scores_, index=list(features.columns), columns=['Chi Squared Score'])
+
+
+    first = featureScores.iloc[0]
+    print('line 73')
+    print(featureScores)
+    for index, row in featureScores.iterrows():
+        kaggle_id.append(12345)
+        feature_name.append(index)
+        categorical_boolean.append('True')
+        numerical_boolean.append('False')
+        chi_square_score.append(str(row['Chi Squared Score']))
+        ANOVA_scor.append('NULL')
+        #print(featureScores.at[index, row['Chi Squared Score']])
+        print(str(index) + ":: " + str(row['Chi Squared Score']) )
 
 def ANOVA_score(df1):
     features = df1.loc[:, numerical_features]
@@ -161,36 +301,15 @@ def param_extraction(params, model_name):
 if __name__ == "__main__":
     data = pd.read_csv('Input_data/heart_failure_prediction/heart.csv')
 
-    le = LabelEncoder()
-    df1 = data.copy(deep=True)
-
-    col = list(data.columns)
+    target_param = "HeartDisease"
     categorical_features = []
     numerical_features = []
-    for i in col:
-        if len(data[i].unique()) > 6:
-            numerical_features.append(i)
-        else:
-            categorical_features.append(i)
+    classify_features()
 
-    print('Categorical Features :', *categorical_features)
-    print('Numerical Features :', *numerical_features)
+    df1 = data.copy(deep=True)
+    transform_features()
 
-    df1['Sex'] = le.fit_transform(df1['Sex'])
-    df1['ChestPainType'] = le.fit_transform(df1['ChestPainType'])
-    df1['RestingECG'] = le.fit_transform(df1['RestingECG'])
-    df1['ExerciseAngina'] = le.fit_transform(df1['ExerciseAngina'])
-    df1['ST_Slope'] = le.fit_transform(df1['ST_Slope'])
 
-    mms = MinMaxScaler()  # Normalization
-    ss = StandardScaler()  # Standardization
-
-    df1['Oldpeak'] = mms.fit_transform(df1[['Oldpeak']])
-    df1['Age'] = ss.fit_transform(df1[['Age']])
-    df1['RestingBP'] = ss.fit_transform(df1[['RestingBP']])
-    df1['Cholesterol'] = ss.fit_transform(df1[['Cholesterol']])
-    df1['MaxHR'] = ss.fit_transform(df1[['MaxHR']])
-    print(df1.head())
 
     #feature_MD
     kaggle_id = []
@@ -199,30 +318,18 @@ if __name__ == "__main__":
     numerical_boolean = []
     chi_square_score = []
     ANOVA_scor = []
+    dropped_boolean = []
 
     chi_squared_score(df1)
     ANOVA_score(df1)
 
-    feature_MD = pd.DataFrame({
-        'kaggle_ID': kaggle_id,
-        'feature_name': feature_name,
-        'categorical_boolean': categorical_boolean,
-        'numerical_boolean': numerical_boolean,
-        'chi_squared_score': chi_square_score,
-        'ANOVA_score': ANOVA_scor
-    })
+    df1 = filter_params(df1)
 
-    # convert file metadata to csv
-    featureNAME = "Dataset_examples/MachineLearningMD/feature_MLMD"
-    feature_MD.to_csv(featureNAME, index=False, header=True)
+    make_featureMD()
 
 
-
-
-
-
-    features = df1[df1.columns.drop(['HeartDisease', 'RestingBP', 'RestingECG'])].values
-    target = df1['HeartDisease'].values
+    features = df1[df1.columns.drop([target_param])].values
+    target = df1[target_param].values
     x_train, x_test, y_train, y_test = train_test_split(features, target, test_size=0.20, random_state=2)
 
     #param_MLMD
@@ -250,85 +357,18 @@ if __name__ == "__main__":
 
 
 
+    lr_exec_and_MD(random_state=0, C=10, penalty='l2')
+    svc_exec_and_MD(kernel='linear', C=0.1)
+    dt_exec_and_MD(random_state=1000, max_depth=4, min_samples_leaf=1)
+    rf_exec_and_MD(max_depth=4, random_state=0)
+    knn_exec_and_MD(leaf_size=1, n_neighbors=3, p=1)
 
-
-    classifier_lr = LogisticRegression(random_state=0, C=10, penalty='l2')
-    params = classifier_lr.get_params()
-    MLA_name = 'LogisticRegression'
-    param_extraction(params, MLA_name)
-
-    ML_name.append(MLA_name)
-    model(classifier_lr)
-    model_evaluation(classifier_lr, MLA_name)
-
-
+    make_paramMD()
+    make_modelMD()
+    make_model_evaluationMD()
 
 
 
-    classifier_svc = SVC(kernel='linear', C=0.1)
-
-    params = classifier_svc.get_params()
-    MLA_name = 'SVC'
-    param_extraction(params, MLA_name)
-
-    ML_name.append(MLA_name)
-
-    model(classifier_svc)
-    model_evaluation(classifier_svc, MLA_name)
 
 
-    classifier_dt = DecisionTreeClassifier(random_state=1000, max_depth=4, min_samples_leaf=1)
-    params = classifier_dt.get_params()
-    MLA_name = 'Decision Tree Classifier'
-    param_extraction(params, MLA_name)
-
-    ML_name.append(MLA_name)
-
-
-    model(classifier_dt)
-    model_evaluation(classifier_dt,MLA_name)
-
-    classifier_rf = RandomForestClassifier(max_depth=4, random_state=0)
-    MLA_name = 'Random Forest Classifier'
-    param_extraction(params, MLA_name)
-
-    ML_name.append(MLA_name)
-
-
-    model(classifier_rf)
-    model_evaluation(classifier_rf, MLA_name)
-
-    param_MLMD = pd.DataFrame({
-        'kaggle_ID': kaggle_id,
-        'ML_name': MLparam_name,
-        'param_name': param_name,
-        'param_value': param_value,
-    })
-
-    paramNAME = "Dataset_examples/MachineLearningMD/param_MLMD"
-    param_MLMD.to_csv(paramNAME, index=False, header=True)
-
-    ML_results_model_MD = pd.DataFrame({
-        'kaggle_ID': did,
-        'ML_name': ML_name,
-        'accuracy': accuracy,
-        'cross_validation_score': cross_validation_score,
-        'ROC_AUC_score': ROC_AUC_score
-    })
-
-    modelNAME = "Dataset_examples/MachineLearningMD/model_results_MLMD"
-    ML_results_model_MD.to_csv(modelNAME, index=False, header=True)
-
-    ML_results_model_evaluation_MD = pd.DataFrame({
-        'Kaggle_ID': model_eval_kaggleID,
-        'ML_name': model_eval_ML_name,
-        'variable': model_eval_name,
-        'precision': model_eval_precision,
-        'recall': model_eval_recall,
-        'f1-score': model_eval_f1_score,
-        'support': model_eval_support
-    })
-
-    model_evalNAME = "Dataset_examples/MachineLearningMD/model_eval_results_MLMD"
-    ML_results_model_evaluation_MD.to_csv(model_evalNAME, index=False, header=True)
 
