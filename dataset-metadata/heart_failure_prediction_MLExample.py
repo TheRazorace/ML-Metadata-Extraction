@@ -297,75 +297,94 @@ def param_extraction(params, model_name):
         param_name.append(parameter_name)
         param_value.append(parameter_value)
 
+# def callGraph():
+#     from pycallgraph import PyCallGraph
+#     from pycallgraph.output import GraphvizOutput
+#
+#     graphviz = GraphvizOutput()
+#     graphviz.output_file = 'basic1.png'
+#     with PyCallGraph(output=graphviz)
+
 
 if __name__ == "__main__":
-    data = pd.read_csv('Input_data/heart_failure_prediction/heart.csv')
+    from pycallgraph import PyCallGraph
+    from pycallgraph.output import GraphvizOutput
 
-    target_param = "HeartDisease"
-    categorical_features = []
-    numerical_features = []
-    classify_features()
+    graph = GraphvizOutput()
+    graph.output_file = "file3.png"
 
-    df1 = data.copy(deep=True)
-    transform_features()
+    with PyCallGraph(output = graph):
 
 
 
-    #feature_MD
-    kaggle_id = []
-    feature_name = []
-    categorical_boolean = []
-    numerical_boolean = []
-    chi_square_score = []
-    ANOVA_scor = []
-    dropped_boolean = []
+        data = pd.read_csv('Input_data/heart_failure_prediction/heart.csv')
 
-    chi_squared_score(df1)
-    ANOVA_score(df1)
+        target_param = "HeartDisease"
+        categorical_features = []
+        numerical_features = []
+        classify_features()
 
-    df1 = filter_params(df1)
-
-    make_featureMD()
-
-
-    features = df1[df1.columns.drop([target_param])].values
-    target = df1[target_param].values
-    x_train, x_test, y_train, y_test = train_test_split(features, target, test_size=0.20, random_state=2)
-
-    #param_MLMD
-    kaggle_id = []
-    MLparam_name = []
-    param_name = []
-    param_value = []
-
-    #model_results_MLMD
-    did = []
-    ML_name = []
-    ML_model = []
-    accuracy = []
-    cross_validation_score = []
-    ROC_AUC_score = []
-
-    #model_evaluation_results_MLMD
-    model_eval_kaggleID = []
-    model_eval_ML_name = []
-    model_eval_name = []
-    model_eval_precision = []
-    model_eval_recall = []
-    model_eval_f1_score = []
-    model_eval_support = []
+        df1 = data.copy(deep=True)
+        transform_features()
 
 
 
-    lr_exec_and_MD(random_state=0, C=10, penalty='l2')
-    svc_exec_and_MD(kernel='linear', C=0.1)
-    dt_exec_and_MD(random_state=1000, max_depth=4, min_samples_leaf=1)
-    rf_exec_and_MD(max_depth=4, random_state=0)
-    knn_exec_and_MD(leaf_size=1, n_neighbors=3, p=1)
+        #feature_MD
+        kaggle_id = []
+        feature_name = []
+        categorical_boolean = []
+        numerical_boolean = []
+        chi_square_score = []
+        ANOVA_scor = []
+        dropped_boolean = []
 
-    make_paramMD()
-    make_modelMD()
-    make_model_evaluationMD()
+        chi_squared_score(df1)
+        ANOVA_score(df1)
+
+        df1 = filter_params(df1)
+
+        make_featureMD()
+
+
+        features = df1[df1.columns.drop([target_param])].values
+        target = df1[target_param].values
+        x_train, x_test, y_train, y_test = train_test_split(features, target, test_size=0.20, random_state=2)
+
+        #param_MLMD
+        kaggle_id = []
+        MLparam_name = []
+        param_name = []
+        param_value = []
+
+        #model_results_MLMD
+        did = []
+        ML_name = []
+        ML_model = []
+        accuracy = []
+        cross_validation_score = []
+        ROC_AUC_score = []
+
+        #model_evaluation_results_MLMD
+        model_eval_kaggleID = []
+        model_eval_ML_name = []
+        model_eval_name = []
+        model_eval_precision = []
+        model_eval_recall = []
+        model_eval_f1_score = []
+        model_eval_support = []
+
+
+
+        lr_exec_and_MD(random_state=0, C=10, penalty='l2')
+        svc_exec_and_MD(kernel='linear', C=0.1)
+        dt_exec_and_MD(random_state=1000, max_depth=4, min_samples_leaf=1)
+        rf_exec_and_MD(max_depth=4, random_state=0)
+        knn_exec_and_MD(leaf_size=1, n_neighbors=3, p=1)
+
+
+        make_paramMD()
+        make_modelMD()
+        make_model_evaluationMD()
 
 
 
