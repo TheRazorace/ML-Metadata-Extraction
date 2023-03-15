@@ -1,25 +1,17 @@
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 pd.options.display.float_format = '{:.2f}'.format
 import warnings
 warnings.filterwarnings('ignore')
 from sklearn.preprocessing import LabelEncoder
-from sklearn.preprocessing import MinMaxScaler,StandardScaler
-from sklearn.feature_selection import SelectKBest
-from sklearn.feature_selection import chi2
-from sklearn.feature_selection import f_classif
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import confusion_matrix
 from sklearn.metrics import roc_auc_score
 from sklearn.metrics import plot_roc_curve
 from sklearn.model_selection import cross_val_score
-from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import classification_report
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import RepeatedStratifiedKFold
-from sklearn.metrics import precision_recall_curve
 from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
@@ -41,25 +33,27 @@ def classify_features():
     print('Categorical Features :', *categorical_features)
     print('Numerical Features :', *numerical_features)
 
-def transform_features():
+def transform_features(df):
+    from sklearn.preprocessing import MinMaxScaler, StandardScaler
+
     le = LabelEncoder()
 
     for features in categorical_features:
 
-        df1[features] = le.fit_transform(df1[features])
+        df[features] = le.fit_transform(df[features])
 
 
     mms = MinMaxScaler()  # Normalization
     ss = StandardScaler()  # Standardization
 
-    # for features in numerical_features:
-    #     df1[features] = ss.fit_transform(df1[[features]])
+    for features in numerical_features:
+        df1[features] = ss.fit_transform(df1[[features]])
 
-    df1['Oldpeak'] = mms.fit_transform(df1[['Oldpeak']])
-    df1['Age'] = ss.fit_transform(df1[['Age']])
-    df1['RestingBP'] = ss.fit_transform(df1[['RestingBP']])
-    df1['Cholesterol'] = ss.fit_transform(df1[['Cholesterol']])
-    df1['MaxHR'] = ss.fit_transform(df1[['MaxHR']])
+    # df1['Oldpeak'] = mms.fit_transform(df1[['Oldpeak']])
+    # df1['Age'] = ss.fit_transform(df1[['Age']])
+    # df1['RestingBP'] = ss.fit_transform(df1[['RestingBP']])
+    # df1['Cholesterol'] = ss.fit_transform(df1[['Cholesterol']])
+    # df1['MaxHR'] = ss.fit_transform(df1[['MaxHR']])
 
     print(df1.head())
 
@@ -158,7 +152,12 @@ def mean_value_features(data):
     plt.show()
 
 
+def modelling(df):
+    features = df1[df1.columns.drop([target_param])].values
+    target = df1[target_param].values
+    x_train, x_test, y_train, y_test = train_test_split(features, target, test_size=0.20, random_state=2)
 
+    return features, target, x_train, x_test, y_train, y_test
 
 
 def model(classifier, MLA_name):
@@ -250,6 +249,9 @@ def knn_exec_and_MD(leaf_size, n_neighbors, p):
     model_evaluation(classifier_knn, MLA_name)
 
 def chi_squared_score(df1):
+    from sklearn.feature_selection import SelectKBest
+    from sklearn.feature_selection import chi2
+
     features = df1.loc[:, categorical_features[:-1]]
     target = df1.loc[:, categorical_features[-1]]
 
@@ -273,6 +275,9 @@ def chi_squared_score(df1):
         print(str(index) + ":: " + str(row['Chi Squared Score']) )
 
 def ANOVA_score(df1):
+    from sklearn.feature_selection import f_classif
+    from sklearn.feature_selection import SelectKBest
+
     features = df1.loc[:, numerical_features]
     target = df1.loc[:, categorical_features[-1]]
 
@@ -297,14 +302,6 @@ def param_extraction(params, model_name):
         param_name.append(parameter_name)
         param_value.append(parameter_value)
 
-# def callGraph():
-#     from pycallgraph import PyCallGraph
-#     from pycallgraph.output import GraphvizOutput
-#
-#     graphviz = GraphvizOutput()
-#     graphviz.output_file = 'basic1.png'
-#     with PyCallGraph(output=graphviz)
-
 
 if __name__ == "__main__":
     from pycallgraph import PyCallGraph
@@ -315,19 +312,17 @@ if __name__ == "__main__":
 
     with PyCallGraph(output = graph):
 
+        #data = pd.read_csv('Input_data/heart_failure_prediction/heart.csv')
+        data = pd.read_csv('Input_data/Surgical_data/Surgical-deepnet.csv')
 
 
-        data = pd.read_csv('Input_data/heart_failure_prediction/heart.csv')
-
-        target_param = "HeartDisease"
+        target_param = "baseline_cancer"
         categorical_features = []
         numerical_features = []
         classify_features()
 
         df1 = data.copy(deep=True)
-        transform_features()
-
-
+        transform_features(df1)
 
         #feature_MD
         kaggle_id = []
@@ -342,13 +337,8 @@ if __name__ == "__main__":
         ANOVA_score(df1)
 
         df1 = filter_params(df1)
-
         make_featureMD()
-
-
-        features = df1[df1.columns.drop([target_param])].values
-        target = df1[target_param].values
-        x_train, x_test, y_train, y_test = train_test_split(features, target, test_size=0.20, random_state=2)
+        features, target, x_train, x_test, y_train, y_test = modelling(df1)
 
         #param_MLMD
         kaggle_id = []
