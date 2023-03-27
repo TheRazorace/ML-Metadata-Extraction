@@ -1,0 +1,11 @@
+file_id,dataset_id,file_name,nr_of_rows,nr_of_features
+0,23752,countries of the world.csv,227,19
+1,1380016,Life expectancy.csv,3253,2
+2,1865113,Netflix subscription fee Dec-2021.csv,65,7
+3,1865113,netflix price in different countries.csv,65,6
+4,376235,Military Expenditure.csv,264,62
+5,2368258,olympics_medals_country_wise.csv,156,16
+6,806968,holidays_df_of_67_countries_for_covid_19.csv,760,9
+7,806968,holidays_df_of_70_countries_for_covid_19.csv,806,9
+8,806968,holidays_df_of_70_countries_for_covid_19_2021.csv,1723,9
+9,806968,holidays_df_of_70_countries_for_covid_19_2022_Temporary.csv,2598,9

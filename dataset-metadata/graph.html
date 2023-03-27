@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 1000px;
+                 height: 1000px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "id": "dataset-metadata\\heart_failure_prediction_MLExample", "label": "dataset-metadata\\heart_failure_prediction_MLExample", "shape": "dot"}, {"color": "#97c2fc", "id": "dataset-metadata\\heart_failure_prediction_MLExample.lr_exec_and_MD", "label": "dataset-metadata\\heart_failure_prediction_MLExample.lr_exec_and_MD", "shape": "dot"}, {"color": "#97c2fc", "id": "dataset-metadata\\heart_failure_prediction_MLExample.make_modelMD", "label": "dataset-metadata\\heart_failure_prediction_MLExample.make_modelMD", "shape": "dot"}, {"color": "#97c2fc", "id": "dataset-metadata\\heart_failure_prediction_MLExample.transform_features", "label": "dataset-metadata\\heart_failure_prediction_MLExample.transform_features", "shape": "dot"}, {"color": "#97c2fc", "id": "dataset-metadata\\heart_failure_prediction_MLExample.make_model_evaluationMD", "label": "dataset-metadata\\heart_failure_prediction_MLExample.make_model_evaluationMD", "shape": "dot"}, {"color": "#97c2fc", "id": "dataset-metadata\\heart_failure_prediction_MLExample.knn_exec_and_MD", "label": "dataset-metadata\\heart_failure_prediction_MLExample.knn_exec_and_MD", "shape": "dot"}, {"color": "#97c2fc", "id": "dataset-metadata\\heart_failure_prediction_MLExample.make_featureMD", "label": "dataset-metadata\\heart_failure_prediction_MLExample.make_featureMD", "shape": "dot"}, {"color": "#97c2fc", "id": "sklearn.model_selection.train_test_split", "label": "sklearn.model_selection.train_test_split", "shape": "dot"}, {"color": "#97c2fc", "id": "dataset-metadata\\heart_failure_prediction_MLExample.rf_exec_and_MD", "label": "dataset-metadata\\heart_failure_prediction_MLExample.rf_exec_and_MD", "shape": "dot"}, {"color": "#97c2fc", "id": "dataset-metadata\\heart_failure_prediction_MLExample.dt_exec_and_MD", "label": "dataset-metadata\\heart_failure_prediction_MLExample.dt_exec_and_MD", "shape": "dot"}, {"color": "#97c2fc", "id": "dataset-metadata\\heart_failure_prediction_MLExample.chi_squared_score", "label": "dataset-metadata\\heart_failure_prediction_MLExample.chi_squared_score", "shape": "dot"}, {"color": "#97c2fc", "id": "pycallgraph.output.GraphvizOutput", "label": "pycallgraph.output.GraphvizOutput", "shape": "dot"}, {"color": "#97c2fc", "id": "dataset-metadata\\heart_failure_prediction_MLExample.make_paramMD", "label": "dataset-metadata\\heart_failure_prediction_MLExample.make_paramMD", "shape": "dot"}, {"color": "#97c2fc", "id": "dataset-metadata\\heart_failure_prediction_MLExample.filter_params", "label": "dataset-metadata\\heart_failure_prediction_MLExample.filter_params", "shape": "dot"}, {"color": "#97c2fc", "id": "pycallgraph.PyCallGraph", "label": "pycallgraph.PyCallGraph", "shape": "dot"}, {"color": "#97c2fc", "id": "pandas.read_csv", "label": "pandas.read_csv", "shape": "dot"}, {"color": "#97c2fc", "id": "warnings.filterwarnings", "label": "warnings.filterwarnings", "shape": "dot"}, {"color": "#97c2fc", "id": "dataset-metadata\\heart_failure_prediction_MLExample.classify_features", "label": "dataset-metadata\\heart_failure_prediction_MLExample.classify_features", "shape": "dot"}, {"color": "#97c2fc", "id": "dataset-metadata\\heart_failure_prediction_MLExample.svc_exec_and_MD", "label": "dataset-metadata\\heart_failure_prediction_MLExample.svc_exec_and_MD", "shape": "dot"}, {"color": "#97c2fc", "id": "dataset-metadata\\heart_failure_prediction_MLExample.ANOVA_score", "label": "dataset-metadata\\heart_failure_prediction_MLExample.ANOVA_score", "shape": "dot"}, {"color": "#97c2fc", "id": "dataset-metadata\\heart_failure_prediction_MLExample.data_info", "label": "dataset-metadata\\heart_failure_prediction_MLExample.data_info", "shape": "dot"}, {"color": "#97c2fc", "id": "\u003cbuiltin\u003e.print", "label": "\u003cbuiltin\u003e.print", "shape": "dot"}, {"color": "#97c2fc", "id": "\u003cbuiltin\u003e.len", "label": "\u003cbuiltin\u003e.len", "shape": "dot"}, {"color": "#97c2fc", "id": "\u003cbuiltin\u003e.list", "label": "\u003cbuiltin\u003e.list", "shape": "dot"}, {"color": "#97c2fc", "id": "sklearn.preprocessing.LabelEncoder", "label": "sklearn.preprocessing.LabelEncoder", "shape": "dot"}, {"color": "#97c2fc", "id": "sklearn.preprocessing.StandardScaler", "label": "sklearn.preprocessing.StandardScaler", "shape": "dot"}, {"color": "#97c2fc", "id": "sklearn.preprocessing.MinMaxScaler", "label": "sklearn.preprocessing.MinMaxScaler", "shape": "dot"}, {"color": "#97c2fc", "id": "pandas.DataFrame", "label": "pandas.DataFrame", "shape": "dot"}, {"color": "#97c2fc", "id": "\u003cbuiltin\u003e.abs", "label": "\u003cbuiltin\u003e.abs", "shape": "dot"}, {"color": "#97c2fc", "id": "dataset-metadata\\heart_failure_prediction_MLExample.mean_value_features", "label": "dataset-metadata\\heart_failure_prediction_MLExample.mean_value_features", "shape": "dot"}, {"color": "#97c2fc", "id": "seaborn.heatmap", "label": "seaborn.heatmap", "shape": "dot"}, {"color": "#97c2fc", "id": "matplotlib.pyplot.subplots", "label": "matplotlib.pyplot.subplots", "shape": "dot"}, {"color": "#97c2fc", "id": "matplotlib.pyplot.subplot", "label": "matplotlib.pyplot.subplot", "shape": "dot"}, {"color": "#97c2fc", "id": "matplotlib.pyplot.title", "label": "matplotlib.pyplot.title", "shape": "dot"}, {"color": "#97c2fc", "id": "matplotlib.pyplot.show", "label": "matplotlib.pyplot.show", "shape": "dot"}, {"color": "#97c2fc", "id": "dataset-metadata\\heart_failure_prediction_MLExample.model", "label": "dataset-metadata\\heart_failure_prediction_MLExample.model", "shape": "dot"}, {"color": "#97c2fc", "id": "sklearn.metrics.plot_roc_curve", "label": "sklearn.metrics.plot_roc_curve", "shape": "dot"}, {"color": "#97c2fc", "id": "sklearn.metrics.accuracy_score", "label": "sklearn.metrics.accuracy_score", "shape": "dot"}, {"color": "#97c2fc", "id": "sklearn.metrics.roc_auc_score", "label": "sklearn.metrics.roc_auc_score", "shape": "dot"}, {"color": "#97c2fc", "id": "sklearn.model_selection.cross_val_score", "label": "sklearn.model_selection.cross_val_score", "shape": "dot"}, {"color": "#97c2fc", "id": "sklearn.model_selection.RepeatedStratifiedKFold", "label": "sklearn.model_selection.RepeatedStratifiedKFold", "shape": "dot"}, {"color": "#97c2fc", "id": "dataset-metadata\\heart_failure_prediction_MLExample.model_evaluation", "label": "dataset-metadata\\heart_failure_prediction_MLExample.model_evaluation", "shape": "dot"}, {"color": "#97c2fc", "id": "sklearn.metrics.classification_report", "label": "sklearn.metrics.classification_report", "shape": "dot"}, {"color": "#97c2fc", "id": "sklearn.linear_model.LogisticRegression", "label": "sklearn.linear_model.LogisticRegression", "shape": "dot"}, {"color": "#97c2fc", "id": "dataset-metadata\\heart_failure_prediction_MLExample.param_extraction", "label": "dataset-metadata\\heart_failure_prediction_MLExample.param_extraction", "shape": "dot"}, {"color": "#97c2fc", "id": "sklearn.svm.SVC", "label": "sklearn.svm.SVC", "shape": "dot"}, {"color": "#97c2fc", "id": "sklearn.tree.DecisionTreeClassifier", "label": "sklearn.tree.DecisionTreeClassifier", "shape": "dot"}, {"color": "#97c2fc", "id": "sklearn.ensemble.RandomForestClassifier", "label": "sklearn.ensemble.RandomForestClassifier", "shape": "dot"}, {"color": "#97c2fc", "id": "sklearn.neighbors.KNeighborsClassifier", "label": "sklearn.neighbors.KNeighborsClassifier", "shape": "dot"}, {"color": "#97c2fc", "id": "\u003cbuiltin\u003e.str", "label": "\u003cbuiltin\u003e.str", "shape": "dot"}, {"color": "#97c2fc", "id": "sklearn.feature_selection.SelectKBest", "label": "sklearn.feature_selection.SelectKBest", "shape": "dot"}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample", "to": "dataset-metadata\\heart_failure_prediction_MLExample.lr_exec_and_MD", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample", "to": "dataset-metadata\\heart_failure_prediction_MLExample.make_modelMD", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample", "to": "dataset-metadata\\heart_failure_prediction_MLExample.transform_features", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample", "to": "dataset-metadata\\heart_failure_prediction_MLExample.make_model_evaluationMD", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample", "to": "dataset-metadata\\heart_failure_prediction_MLExample.knn_exec_and_MD", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample", "to": "dataset-metadata\\heart_failure_prediction_MLExample.make_featureMD", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample", "to": "sklearn.model_selection.train_test_split", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample", "to": "dataset-metadata\\heart_failure_prediction_MLExample.rf_exec_and_MD", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample", "to": "dataset-metadata\\heart_failure_prediction_MLExample.dt_exec_and_MD", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample", "to": "dataset-metadata\\heart_failure_prediction_MLExample.chi_squared_score", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample", "to": "pycallgraph.output.GraphvizOutput", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample", "to": "dataset-metadata\\heart_failure_prediction_MLExample.make_paramMD", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample", "to": "dataset-metadata\\heart_failure_prediction_MLExample.filter_params", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample", "to": "pycallgraph.PyCallGraph", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample", "to": "pandas.read_csv", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample", "to": "warnings.filterwarnings", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample", "to": "dataset-metadata\\heart_failure_prediction_MLExample.classify_features", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample", "to": "dataset-metadata\\heart_failure_prediction_MLExample.svc_exec_and_MD", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample", "to": "dataset-metadata\\heart_failure_prediction_MLExample.ANOVA_score", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.lr_exec_and_MD", "to": "dataset-metadata\\heart_failure_prediction_MLExample.model_evaluation", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.lr_exec_and_MD", "to": "sklearn.linear_model.LogisticRegression", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.lr_exec_and_MD", "to": "dataset-metadata\\heart_failure_prediction_MLExample.model", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.lr_exec_and_MD", "to": "dataset-metadata\\heart_failure_prediction_MLExample.param_extraction", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.make_modelMD", "to": "pandas.DataFrame", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.transform_features", "to": "sklearn.preprocessing.LabelEncoder", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.transform_features", "to": "sklearn.preprocessing.StandardScaler", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.transform_features", "to": "sklearn.preprocessing.MinMaxScaler", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.transform_features", "to": "\u003cbuiltin\u003e.print", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.make_model_evaluationMD", "to": "pandas.DataFrame", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.knn_exec_and_MD", "to": "dataset-metadata\\heart_failure_prediction_MLExample.model_evaluation", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.knn_exec_and_MD", "to": "sklearn.neighbors.KNeighborsClassifier", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.knn_exec_and_MD", "to": "dataset-metadata\\heart_failure_prediction_MLExample.model", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.knn_exec_and_MD", "to": "dataset-metadata\\heart_failure_prediction_MLExample.param_extraction", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.make_featureMD", "to": "pandas.DataFrame", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.rf_exec_and_MD", "to": "dataset-metadata\\heart_failure_prediction_MLExample.model_evaluation", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.rf_exec_and_MD", "to": "sklearn.ensemble.RandomForestClassifier", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.rf_exec_and_MD", "to": "dataset-metadata\\heart_failure_prediction_MLExample.model", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.rf_exec_and_MD", "to": "dataset-metadata\\heart_failure_prediction_MLExample.param_extraction", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.dt_exec_and_MD", "to": "sklearn.tree.DecisionTreeClassifier", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.dt_exec_and_MD", "to": "dataset-metadata\\heart_failure_prediction_MLExample.model_evaluation", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.dt_exec_and_MD", "to": "dataset-metadata\\heart_failure_prediction_MLExample.model", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.dt_exec_and_MD", "to": "dataset-metadata\\heart_failure_prediction_MLExample.param_extraction", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.chi_squared_score", "to": "\u003cbuiltin\u003e.str", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.chi_squared_score", "to": "sklearn.feature_selection.SelectKBest", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.chi_squared_score", "to": "pandas.DataFrame", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.chi_squared_score", "to": "\u003cbuiltin\u003e.print", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.chi_squared_score", "to": "\u003cbuiltin\u003e.list", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.make_paramMD", "to": "pandas.DataFrame", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.filter_params", "to": "\u003cbuiltin\u003e.abs", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.filter_params", "to": "\u003cbuiltin\u003e.print", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.classify_features", "to": "\u003cbuiltin\u003e.len", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.classify_features", "to": "\u003cbuiltin\u003e.list", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.classify_features", "to": "\u003cbuiltin\u003e.print", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.svc_exec_and_MD", "to": "dataset-metadata\\heart_failure_prediction_MLExample.model_evaluation", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.svc_exec_and_MD", "to": "sklearn.svm.SVC", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.svc_exec_and_MD", "to": "dataset-metadata\\heart_failure_prediction_MLExample.model", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.svc_exec_and_MD", "to": "dataset-metadata\\heart_failure_prediction_MLExample.param_extraction", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.ANOVA_score", "to": "\u003cbuiltin\u003e.str", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.ANOVA_score", "to": "sklearn.feature_selection.SelectKBest", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.ANOVA_score", "to": "pandas.DataFrame", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.ANOVA_score", "to": "\u003cbuiltin\u003e.print", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.ANOVA_score", "to": "\u003cbuiltin\u003e.list", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.data_info", "to": "\u003cbuiltin\u003e.print", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.mean_value_features", "to": "seaborn.heatmap", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.mean_value_features", "to": "matplotlib.pyplot.subplots", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.mean_value_features", "to": "matplotlib.pyplot.subplot", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.mean_value_features", "to": "matplotlib.pyplot.title", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.mean_value_features", "to": "matplotlib.pyplot.show", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.model", "to": "sklearn.metrics.plot_roc_curve", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.model", "to": "sklearn.metrics.accuracy_score", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.model", "to": "matplotlib.pyplot.title", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.model", "to": "sklearn.metrics.roc_auc_score", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.model", "to": "matplotlib.pyplot.show", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.model", "to": "\u003cbuiltin\u003e.print", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.model", "to": "sklearn.model_selection.cross_val_score", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.model", "to": "sklearn.model_selection.RepeatedStratifiedKFold", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.model_evaluation", "to": "sklearn.metrics.classification_report", "width": 1}, {"arrows": "to", "from": "dataset-metadata\\heart_failure_prediction_MLExample.model_evaluation", "to": "\u003cbuiltin\u003e.print", "width": 1}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

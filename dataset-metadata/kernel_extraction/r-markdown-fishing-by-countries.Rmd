@@ -1,0 +1,144 @@
+---
+title: "R Markdown - Fishing by Countries"
+author: "Sergey Cherkasov"
+date: "3 June 2016"
+output:
+  html_document:
+    number_sections: yes
+    theme: spacelab
+    toc: yes
+---
+
+# Getting and cleaning data
+
+First of all let us turn on some libraries and read the data.
+
+```{r Libraries and data catching}
+libs <- c("dplyr", "ggplot2", "countrycode", "reshape2")
+sapply(libs, library, character.only = T, logical.return = T, 
+       quietly = T, warn.conflicts = F)
+
+catches <- read.csv("../input/fish_catches.csv",stringsAsFactors = F)
+head(catches)
+unique(catches$Country)
+unique(catches$Units)
+```
+
+So there are 27 countries described in data set. There is a dataset with country codes, but it is useless. There are no TW or GG for example. No problem, it is R, community has done everything. We use package "countrycode". All we need is just replace NA to Great Britain, because in iso2 they use GB for this country instead of UK in dataset.
+
+```{r Catching counntries}
+catches$Country.name <- countrycode(catches$Country, "iso2c", "country.name")
+catches$Country.name[is.na(catches$Country.name)] <- "Great Britain"
+```
+
+"TLW" means "tons of live weight" and it is the only unit. Good, no converting needed. Let us find empty element(s).
+
+```{r Empty element catching}
+which(catches$Country == "")
+which(catches$Units == "")
+catches[49110,]
+catches <- catches[-49110,]
+```
+
+We have removed empty element. How much NA are there?
+
+```{r NA catching}
+sapply(catches[, 14:25], function(x) sum(is.na(x)))
+catches <- catches[, -c(14:25)]
+sum((is.na(catches)))
+```
+
+As we can see, all NA were in last 12 columns. We have removed them in order to simplify following manipulations. Also we have checked that there are no other NA's.
+
+Now let us remove those X's in front of the years (just for beauty).
+
+```{r Clean years catching}
+names(catches)[5:13] <- sub("X", "", names(catches)[5:13])
+```
+
+And finally, let us calculate total tonnage for each row.
+
+```{r Total tonnage catching}
+catches$Tonnage <- rowSums(catches[,c(5:13)])
+```
+
+# Visualisation
+
+## Total tonnage by year
+
+```{r Year tonnage}
+tv <- data.frame(
+    Years = factor(names(catches)[5:13]), 
+    Tons = colSums(catches[,5:13]))
+ggplot(tv, aes(x = Years, y = Tons)) +
+    geom_bar(stat = "identity", fill = "deepskyblue1") +
+    labs(x = "Year", y = "Tons of Live Weight") +
+    ggtitle("Total Tonnage by Year (thousand tons)") +
+    theme(axis.ticks.y = element_blank(), axis.text.y = element_blank()) +
+    geom_text(aes(label = format(round(Tons/1000, 0), big.mark = " ")), vjust=0)
+```
+
+## Total tonnage by country
+
+```{r Country tonnage}
+tv <- catches %>% group_by(Country.name) %>% summarise(Tonnage = sum(Tonnage))
+ggplot(tv, aes(x = reorder(Country.name, Tonnage), y = Tonnage)) + 
+    geom_bar(stat = "identity", fill = "deepskyblue1") + 
+    coord_flip() +
+    labs(x = "Country", y = "Total tons")
+```
+
+Taiwan, China, Japan? It looks like captains confuse the hemisphere. Let us have a look on map.
+
+```{r Map}
+w <- map_data("world", verbose = F)
+w$code <- countrycode(w$region, "country.name", "iso3c")
+tv$code <- countrycode(tv$Country.name, "country.name", "iso3c")
+w <- left_join(w, tv, by = "code")
+no.axes <- theme(
+    axis.text = element_blank(),
+    axis.line = element_blank(),
+    axis.ticks = element_blank(), 
+    axis.title = element_blank())
+ggplot() +
+    geom_polygon(data = w,
+                 aes(x=long, y = lat, fill = Tonnage, group = group)) +
+    coord_fixed(1) + 
+    no.axes + 
+    scale_fill_gradient(low="deepskyblue1", high="navy")
+```
+
+## Top three countries tonnage by years
+
+```{r Top 3 by year 1}
+tv <- tv[order(tv$Tonnage, decreasing = T),]
+format(sum(tv$Tonnage[1:3]), big.mark = "'")
+format(sum(tv$Tonnage[4:27]), big.mark = "'")
+```
+
+As we can see, first three countries catch more fish than all the others. Let's have a look how they change tonnage year by year.
+
+```{r Top 3 by year 2}
+tv <- catches[, c(5:15)]
+tv <- aggregate(.~Country.name, data = tv, sum)
+tv <- tv[order(tv$Tonnage, decreasing = T),]
+tv <- tv[1:3, -11] #remove Tonnage, we were needed it for ordering
+tv <- melt(tv, id = "Country.name")
+tv$Country.name <- as.factor(tv$Country.name)
+tv$variable <- as.numeric(as.character(tv$variable))
+ggplot(tv, aes(x = variable, y = value, color = Country.name)) +
+    geom_line() + labs(x = "Years", y = "Tonnage") +
+    ggtitle("Top 3 Tonnage by Year") +
+    annotate("text", 
+             x = c(2006, 2006, 2006), y = c(3.8e+06, 6e+06, 8.3e+06), 
+             size = 4,
+             label = c("Russia", "Iceland", "Norway")) +
+    theme(legend.position="none")
+
+
+```
+
+We can see, that Norway and Iceland have slightly decreased tonnage, and Russia has increased a little.
+
+
+That is it for the beginning. Thank you for attention!

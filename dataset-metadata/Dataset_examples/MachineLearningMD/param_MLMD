@@ -1,0 +1,71 @@
+kaggle_ID,ML_name,param_name,param_value
+12345,LogisticRegression,C,10
+12345,LogisticRegression,class_weight,
+12345,LogisticRegression,dual,False
+12345,LogisticRegression,fit_intercept,True
+12345,LogisticRegression,intercept_scaling,1
+12345,LogisticRegression,l1_ratio,
+12345,LogisticRegression,max_iter,100
+12345,LogisticRegression,multi_class,auto
+12345,LogisticRegression,n_jobs,
+12345,LogisticRegression,penalty,l2
+12345,LogisticRegression,random_state,0
+12345,LogisticRegression,solver,lbfgs
+12345,LogisticRegression,tol,0.0001
+12345,LogisticRegression,verbose,0
+12345,LogisticRegression,warm_start,False
+12345,SVC,C,0.1
+12345,SVC,break_ties,False
+12345,SVC,cache_size,200
+12345,SVC,class_weight,
+12345,SVC,coef0,0.0
+12345,SVC,decision_function_shape,ovr
+12345,SVC,degree,3
+12345,SVC,gamma,scale
+12345,SVC,kernel,linear
+12345,SVC,max_iter,-1
+12345,SVC,probability,False
+12345,SVC,random_state,
+12345,SVC,shrinking,True
+12345,SVC,tol,0.001
+12345,SVC,verbose,False
+12345,Decision Tree Classifier,ccp_alpha,0.0
+12345,Decision Tree Classifier,class_weight,
+12345,Decision Tree Classifier,criterion,gini
+12345,Decision Tree Classifier,max_depth,4
+12345,Decision Tree Classifier,max_features,
+12345,Decision Tree Classifier,max_leaf_nodes,
+12345,Decision Tree Classifier,min_impurity_decrease,0.0
+12345,Decision Tree Classifier,min_impurity_split,
+12345,Decision Tree Classifier,min_samples_leaf,1
+12345,Decision Tree Classifier,min_samples_split,2
+12345,Decision Tree Classifier,min_weight_fraction_leaf,0.0
+12345,Decision Tree Classifier,random_state,1000
+12345,Decision Tree Classifier,splitter,best
+12345,Random Forest Classifier,bootstrap,True
+12345,Random Forest Classifier,ccp_alpha,0.0
+12345,Random Forest Classifier,class_weight,
+12345,Random Forest Classifier,criterion,gini
+12345,Random Forest Classifier,max_depth,4
+12345,Random Forest Classifier,max_features,auto
+12345,Random Forest Classifier,max_leaf_nodes,
+12345,Random Forest Classifier,max_samples,
+12345,Random Forest Classifier,min_impurity_decrease,0.0
+12345,Random Forest Classifier,min_impurity_split,
+12345,Random Forest Classifier,min_samples_leaf,1
+12345,Random Forest Classifier,min_samples_split,2
+12345,Random Forest Classifier,min_weight_fraction_leaf,0.0
+12345,Random Forest Classifier,n_estimators,100
+12345,Random Forest Classifier,n_jobs,
+12345,Random Forest Classifier,oob_score,False
+12345,Random Forest Classifier,random_state,0
+12345,Random Forest Classifier,verbose,0
+12345,Random Forest Classifier,warm_start,False
+12345,K Nearest Neighbour,algorithm,auto
+12345,K Nearest Neighbour,leaf_size,1
+12345,K Nearest Neighbour,metric,minkowski
+12345,K Nearest Neighbour,metric_params,
+12345,K Nearest Neighbour,n_jobs,
+12345,K Nearest Neighbour,n_neighbors,3
+12345,K Nearest Neighbour,p,1
+12345,K Nearest Neighbour,weights,uniform

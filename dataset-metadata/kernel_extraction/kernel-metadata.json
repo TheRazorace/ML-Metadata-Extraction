@@ -1,0 +1,37 @@
+{
+  "id": "vbmokin/covid-19-new-cases-in-70-countries-fb-prophet",
+  "id_no": 13491149,
+  "title": "COVID-19 new cases in 70 countries - FB Prophet",
+  "code_file": "predicting-gdp-world-countries.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_internet": true,
+  "keywords": [
+    "numpy",
+    "pandas"
+  ],
+  "dataset_sources": [
+    "datasets/kimjihoo/coronavirusdataset",
+    "",
+    "",
+    "datasets/kimdanny/covid19-in-south-korea",
+    "datasets/junhwanhuh/corona-virus-covid19-dataset-korea-busan",
+    "datasets/imdevskp/covid19-corona-virus-india-dataset",
+    "datasets/imdevskp/corona-virus-report",
+    "datasets/sudalairajkumar/covid19-in-india",
+    "datasets/sudalairajkumar/covid19-in-usa",
+    "datasets/hendratno/covid19-indonesia",
+    "datasets/andresjramos/covid19-mexico-clean-order-by-states",
+    "datasets/cprete/covid19-open-datasets-for-brazil",
+    "datasets/duttadebadri/covid19-india-complete-data",
+    "datasets/ardisragen/indonesia-coronavirus-cases",
+    "datasets/marianarfranklin/mexico-covid19-clinical-data",
+    "datasets/sudalairajkumar/novel-corona-virus-2019-dataset",
+    "datasets/roche-data-science-coalition/uncover",
+    "datasets/fireballbyedimyrnmom/us-counties-covid-19-dataset"
+  ],
+  "kernel_sources": [],
+  "competition_sources": []
+}
