@@ -1,0 +1,9 @@
+kaggle_ID,ML_name,accuracy,cross_validation_score,ROC_AUC_score
+binary-classification-multiple-method-comparison,Logistic Regression,0.9226804123711341,0.9874120082815734,0.9162651310377248
+binary-classification-multiple-method-comparison,Decision Tree,0.9175257731958762,0.9072670807453417,0.9299565166294511
+binary-classification-multiple-method-comparison,SVM,0.9226804123711341,0.9804554865424431,0.9056880949582794
+binary-classification-multiple-method-comparison,Linear Discriminant Analysis,0.9639175257731959,0.987080745341615,0.9512868727229992
+binary-classification-multiple-method-comparison,Quadratic Discriminant Analysis,0.9432989690721649,0.986583850931677,0.9566929133858268
+binary-classification-multiple-method-comparison,Random Forest Classifier,0.9690721649484536,0.9907556935817805,0.972852274062757
+binary-classification-multiple-method-comparison,K-Nearest Neighbors,0.9226804123711341,0.9507246376811593,0.9197908097308731
+binary-classification-multiple-method-comparison,Naive Bayes,0.9432989690721649,0.9888198757763973,0.9390645199200846

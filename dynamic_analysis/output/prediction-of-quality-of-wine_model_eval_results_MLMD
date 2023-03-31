@@ -1,0 +1,21 @@
+Kaggle_ID,ML_name,variable,precision,recall,f1-score,support
+beginner-binary-classification-for-nice-movie,random forest classifier,0,0.9041095890410958,0.967032967032967,0.9345132743362832,273
+beginner-binary-classification-for-nice-movie,random forest classifier,1,0.6785714285714286,0.40425531914893614,0.5066666666666666,47
+beginner-binary-classification-for-nice-movie,random forest classifier,accuracy,0.884375,NULL,NULL,NULL
+beginner-binary-classification-for-nice-movie,random forest classifier,macro avg,0.7913405088062622,0.6856441430909516,0.7205899705014749,320
+beginner-binary-classification-for-nice-movie,random forest classifier,weighted avg,0.8709836717221136,0.884375,0.8716733038348081,320
+beginner-binary-classification-for-nice-movie,stochastic gradient decent classifier,0,0.8801369863013698,0.9413919413919414,0.9097345132743362,273
+beginner-binary-classification-for-nice-movie,stochastic gradient decent classifier,1,0.42857142857142855,0.2553191489361702,0.32,47
+beginner-binary-classification-for-nice-movie,stochastic gradient decent classifier,accuracy,0.840625,NULL,NULL,NULL
+beginner-binary-classification-for-nice-movie,stochastic gradient decent classifier,macro avg,0.6543542074363992,0.5983555451640558,0.6148672566371681,320
+beginner-binary-classification-for-nice-movie,stochastic gradient decent classifier,weighted avg,0.8138132950097848,0.840625,0.8231172566371681,320
+beginner-binary-classification-for-nice-movie,support vector classifier,0,0.8844884488448845,0.9816849816849816,0.9305555555555555,273
+beginner-binary-classification-for-nice-movie,support vector classifier,1,0.7058823529411765,0.2553191489361702,0.37499999999999994,47
+beginner-binary-classification-for-nice-movie,support vector classifier,accuracy,0.875,NULL,NULL,NULL
+beginner-binary-classification-for-nice-movie,support vector classifier,macro avg,0.7951854008930306,0.6185020653105759,0.6527777777777777,320
+beginner-binary-classification-for-nice-movie,support vector classifier,weighted avg,0.8582556785090274,0.875,0.8489583333333333,320
+beginner-binary-classification-for-nice-movie,support vector classifier optimised,0,0.8973509933774835,0.9926739926739927,0.942608695652174,273
+beginner-binary-classification-for-nice-movie,support vector classifier optimised,1,0.8888888888888888,0.3404255319148936,0.4923076923076923,47
+beginner-binary-classification-for-nice-movie,support vector classifier optimised,accuracy,0.896875,NULL,NULL,NULL
+beginner-binary-classification-for-nice-movie,support vector classifier optimised,macro avg,0.8931199411331862,0.6665497622944432,0.7174581939799332,320
+beginner-binary-classification-for-nice-movie,support vector classifier optimised,weighted avg,0.8961081217807212,0.896875,0.8764707357859531,320

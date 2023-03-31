@@ -1,0 +1,4 @@
+kaggle_ID,ML_name,accuracy,cross_validation_score,ROC_AUC_score
+logistic-regression-for-binary-classification-task,logistic regression,0.97,0.9929793917567027,0.9702455079167409
+logistic-regression-for-binary-classification-task,random forest classifier,0.9566666666666667,0.990407829798586,0.9569026863547412
+logistic-regression-for-binary-classification-task,logistic regression hyperparameter tuning,0.97,0.9930610911031079,0.9704234122042341

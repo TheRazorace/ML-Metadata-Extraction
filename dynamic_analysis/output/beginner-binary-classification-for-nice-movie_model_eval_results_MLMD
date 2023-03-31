@@ -1,0 +1,21 @@
+Kaggle_ID,ML_name,variable,precision,recall,f1-score,support
+beginner-binary-classification-for-nice-movie,Decision Tree,0,0.6075085324232082,0.6256590509666081,0.6164502164502165,569
+beginner-binary-classification-for-nice-movie,Decision Tree,1,0.6624405705229794,0.6450617283950617,0.6536356528537921,648
+beginner-binary-classification-for-nice-movie,Decision Tree,accuracy,0.6359901396877568,NULL,NULL,NULL
+beginner-binary-classification-for-nice-movie,Decision Tree,macro avg,0.6349745514730938,0.6353603896808349,0.6350429346520043,1217
+beginner-binary-classification-for-nice-movie,Decision Tree,weighted avg,0.6367574730055021,0.6359901396877568,0.6362498571975599,1217
+beginner-binary-classification-for-nice-movie,K-Nearest Neighbors,0,0.6111111111111112,0.6186291739894552,0.6148471615720524,569
+beginner-binary-classification-for-nice-movie,K-Nearest Neighbors,1,0.6614664586583463,0.654320987654321,0.6578743211792087,648
+beginner-binary-classification-for-nice-movie,K-Nearest Neighbors,accuracy,0.637633525061627,NULL,NULL,NULL
+beginner-binary-classification-for-nice-movie,K-Nearest Neighbors,macro avg,0.6362887848847287,0.6364750808218881,0.6363607413756306,1217
+beginner-binary-classification-for-nice-movie,K-Nearest Neighbors,weighted avg,0.6379231614074204,0.637633525061627,0.6377572679199878,1217
+beginner-binary-classification-for-nice-movie,Random Forest,0,0.6844919786096256,0.6748681898066784,0.679646017699115,569
+beginner-binary-classification-for-nice-movie,Random Forest,1,0.7179878048780488,0.7268518518518519,0.7223926380368099,648
+beginner-binary-classification-for-nice-movie,Random Forest,accuracy,0.7025472473294988,NULL,NULL,NULL
+beginner-binary-classification-for-nice-movie,Random Forest,macro avg,0.7012398917438372,0.7008600208292651,0.7010193278679624,1217
+beginner-binary-classification-for-nice-movie,Random Forest,weighted avg,0.7023270611255978,0.7025472473294988,0.702406748988208,1217
+beginner-binary-classification-for-nice-movie,Gradient Boosting,0,0.6859344894026975,0.6256590509666081,0.6544117647058824,569
+beginner-binary-classification-for-nice-movie,Gradient Boosting,1,0.6948424068767909,0.7484567901234568,0.7206537890044576,648
+beginner-binary-classification-for-nice-movie,Gradient Boosting,accuracy,0.6910435497124076,NULL,NULL,NULL
+beginner-binary-classification-for-nice-movie,Gradient Boosting,macro avg,0.6903884481397442,0.6870579205450325,0.68753277685517,1217
+beginner-binary-classification-for-nice-movie,Gradient Boosting,weighted avg,0.6906775711801934,0.6910435497124076,0.6896827850390598,1217

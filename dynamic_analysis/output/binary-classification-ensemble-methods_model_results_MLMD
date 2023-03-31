@@ -1,0 +1,2 @@
+kaggle_ID,ML_name,accuracy,cross_validation_score,ROC_AUC_score
+12345,svc,0.9047619047619048,0.7738343253968255,0.9027777777777777

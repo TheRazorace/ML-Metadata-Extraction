@@ -1,0 +1,59 @@
+kaggle_ID,ML_name,param_name,param_value
+logistic-regression-for-binary-classification-task,logistic regression,C,1.0
+logistic-regression-for-binary-classification-task,logistic regression,class_weight,
+logistic-regression-for-binary-classification-task,logistic regression,dual,False
+logistic-regression-for-binary-classification-task,logistic regression,fit_intercept,True
+logistic-regression-for-binary-classification-task,logistic regression,intercept_scaling,1
+logistic-regression-for-binary-classification-task,logistic regression,l1_ratio,
+logistic-regression-for-binary-classification-task,logistic regression,max_iter,100
+logistic-regression-for-binary-classification-task,logistic regression,multi_class,auto
+logistic-regression-for-binary-classification-task,logistic regression,n_jobs,
+logistic-regression-for-binary-classification-task,logistic regression,penalty,l2
+logistic-regression-for-binary-classification-task,logistic regression,random_state,
+logistic-regression-for-binary-classification-task,logistic regression,solver,liblinear
+logistic-regression-for-binary-classification-task,logistic regression,tol,0.0001
+logistic-regression-for-binary-classification-task,logistic regression,verbose,0
+logistic-regression-for-binary-classification-task,logistic regression,warm_start,False
+logistic-regression-for-binary-classification-task,random forest classifier,bootstrap,True
+logistic-regression-for-binary-classification-task,random forest classifier,ccp_alpha,0.0
+logistic-regression-for-binary-classification-task,random forest classifier,class_weight,
+logistic-regression-for-binary-classification-task,random forest classifier,criterion,gini
+logistic-regression-for-binary-classification-task,random forest classifier,max_depth,
+logistic-regression-for-binary-classification-task,random forest classifier,max_features,sqrt
+logistic-regression-for-binary-classification-task,random forest classifier,max_leaf_nodes,
+logistic-regression-for-binary-classification-task,random forest classifier,max_samples,
+logistic-regression-for-binary-classification-task,random forest classifier,min_impurity_decrease,0.0
+logistic-regression-for-binary-classification-task,random forest classifier,min_samples_leaf,1
+logistic-regression-for-binary-classification-task,random forest classifier,min_samples_split,2
+logistic-regression-for-binary-classification-task,random forest classifier,min_weight_fraction_leaf,0.0
+logistic-regression-for-binary-classification-task,random forest classifier,n_estimators,1000
+logistic-regression-for-binary-classification-task,random forest classifier,n_jobs,
+logistic-regression-for-binary-classification-task,random forest classifier,oob_score,False
+logistic-regression-for-binary-classification-task,random forest classifier,random_state,
+logistic-regression-for-binary-classification-task,random forest classifier,verbose,0
+logistic-regression-for-binary-classification-task,random forest classifier,warm_start,False
+logistic-regression-for-binary-classification-task,logistic regression hyperparameter tuning,cv,10
+logistic-regression-for-binary-classification-task,logistic regression hyperparameter tuning,error_score,
+logistic-regression-for-binary-classification-task,logistic regression hyperparameter tuning,estimator__C,1.0
+logistic-regression-for-binary-classification-task,logistic regression hyperparameter tuning,estimator__class_weight,
+logistic-regression-for-binary-classification-task,logistic regression hyperparameter tuning,estimator__dual,False
+logistic-regression-for-binary-classification-task,logistic regression hyperparameter tuning,estimator__fit_intercept,True
+logistic-regression-for-binary-classification-task,logistic regression hyperparameter tuning,estimator__intercept_scaling,1
+logistic-regression-for-binary-classification-task,logistic regression hyperparameter tuning,estimator__l1_ratio,
+logistic-regression-for-binary-classification-task,logistic regression hyperparameter tuning,estimator__max_iter,100
+logistic-regression-for-binary-classification-task,logistic regression hyperparameter tuning,estimator__multi_class,auto
+logistic-regression-for-binary-classification-task,logistic regression hyperparameter tuning,estimator__n_jobs,
+logistic-regression-for-binary-classification-task,logistic regression hyperparameter tuning,estimator__penalty,l2
+logistic-regression-for-binary-classification-task,logistic regression hyperparameter tuning,estimator__random_state,
+logistic-regression-for-binary-classification-task,logistic regression hyperparameter tuning,estimator__solver,lbfgs
+logistic-regression-for-binary-classification-task,logistic regression hyperparameter tuning,estimator__tol,0.0001
+logistic-regression-for-binary-classification-task,logistic regression hyperparameter tuning,estimator__verbose,0
+logistic-regression-for-binary-classification-task,logistic regression hyperparameter tuning,estimator__warm_start,False
+logistic-regression-for-binary-classification-task,logistic regression hyperparameter tuning,estimator,LogisticRegression()
+logistic-regression-for-binary-classification-task,logistic regression hyperparameter tuning,n_jobs,-1
+logistic-regression-for-binary-classification-task,logistic regression hyperparameter tuning,param_grid,"{'penalty': ['l1', 'l2'], 'C': [0.5, 0.6, 0.7, 0.8], 'class_weight': [{1: 0.5, 0: 0.5}, {1: 0.4, 0: 0.6}, {1: 0.6, 0: 0.4}, {1: 0.7, 0: 0.3}], 'solver': ['liblinear', 'saga']}"
+logistic-regression-for-binary-classification-task,logistic regression hyperparameter tuning,pre_dispatch,2*n_jobs
+logistic-regression-for-binary-classification-task,logistic regression hyperparameter tuning,refit,True
+logistic-regression-for-binary-classification-task,logistic regression hyperparameter tuning,return_train_score,False
+logistic-regression-for-binary-classification-task,logistic regression hyperparameter tuning,scoring,f1
+logistic-regression-for-binary-classification-task,logistic regression hyperparameter tuning,verbose,1

@@ -1,0 +1,5 @@
+kaggle_ID,ML_name,accuracy,cross_validation_score,ROC_AUC_score
+beginner-binary-classification-for-nice-movie,Decision Tree,0.6359901396877568,0.6467792804209972,0.6353603896808347
+beginner-binary-classification-for-nice-movie,K-Nearest Neighbors,0.637633525061627,0.7069034582421306,0.6364750808218881
+beginner-binary-classification-for-nice-movie,Random Forest,0.7025472473294988,0.753967267142654,0.7008600208292651
+beginner-binary-classification-for-nice-movie,Gradient Boosting,0.6910435497124076,0.7471432015594157,0.6870579205450323

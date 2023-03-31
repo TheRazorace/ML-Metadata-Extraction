@@ -1,0 +1,11 @@
+Kaggle_ID,ML_name,variable,precision,recall,f1-score,support
+sentiment-analysis-of-imdb-movie-reviews,logistic regression,0,0.5553157655611086,0.9791708391748448,0.7087047908965717,4993
+sentiment-analysis-of-imdb-movie-reviews,logistic regression,1,0.9130434782608695,0.21809466746554823,0.3520876995002418,5007
+sentiment-analysis-of-imdb-movie-reviews,logistic regression,accuracy,0.5981,NULL,NULL,NULL
+sentiment-analysis-of-imdb-movie-reviews,logistic regression,macro avg,0.7341796219109891,0.5986327533201965,0.5303962451984068,10000
+sentiment-analysis-of-imdb-movie-reviews,logistic regression,weighted avg,0.7344300313098789,0.5981,0.5301466132344294,10000
+sentiment-analysis-of-imdb-movie-reviews,stochastic gradient descent,0,0.5559333560013601,0.9823753254556379,0.7100463231036479,4993
+sentiment-analysis-of-imdb-movie-reviews,stochastic gradient descent,1,0.9252336448598131,0.21749550629119233,0.3521992238033635,5007
+sentiment-analysis-of-imdb-movie-reviews,stochastic gradient descent,accuracy,0.5994,NULL,NULL,NULL
+sentiment-analysis-of-imdb-movie-reviews,stochastic gradient descent,macro avg,0.7405835004305865,0.5999354158734151,0.5311227734535057,10000
+sentiment-analysis-of-imdb-movie-reviews,stochastic gradient descent,weighted avg,0.7408420106327874,0.5994,0.5308722804839956,10000

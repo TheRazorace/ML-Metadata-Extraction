@@ -1,0 +1,16 @@
+kaggle_ID,ML_name,param_name,param_value
+binary-classification-ensemble-methods,svc,C,2.0
+binary-classification-ensemble-methods,svc,break_ties,False
+binary-classification-ensemble-methods,svc,cache_size,200
+binary-classification-ensemble-methods,svc,class_weight,
+binary-classification-ensemble-methods,svc,coef0,0.0
+binary-classification-ensemble-methods,svc,decision_function_shape,ovr
+binary-classification-ensemble-methods,svc,degree,3
+binary-classification-ensemble-methods,svc,gamma,auto
+binary-classification-ensemble-methods,svc,kernel,rbf
+binary-classification-ensemble-methods,svc,max_iter,-1
+binary-classification-ensemble-methods,svc,probability,False
+binary-classification-ensemble-methods,svc,random_state,
+binary-classification-ensemble-methods,svc,shrinking,True
+binary-classification-ensemble-methods,svc,tol,0.001
+binary-classification-ensemble-methods,svc,verbose,False

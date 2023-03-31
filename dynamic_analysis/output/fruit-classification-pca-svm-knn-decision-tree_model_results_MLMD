@@ -1,0 +1,31 @@
+kaggle_ID,ML_name,accuracy,cross_validation_score,ROC_AUC_score
+fruit-classification-pca-svm-knn-decision-tree,Linear SVM,0.9759036144578314,0.9965014577259476,0.9759036144578312
+fruit-classification-pca-svm-knn-decision-tree,SVM + PCA,0.13855421686746988,0.9175343606830488,0.13855421686746988
+fruit-classification-pca-svm-knn-decision-tree,KERNEL SVM + PCA,0.5210843373493976,0.9416909620991254,0.5210843373493976
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR,0.9698795180722891,0.9061224489795918,0.9698795180722891
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 1 neighbors,0.9608433734939759,0.9020408163265305,0.960843373493976
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 2 neighbors,0.9698795180722891,0.9061224489795918,0.9698795180722891
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 3 neighbors,0.9698795180722891,0.9081632653061223,0.969879518072289
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 4 neighbors,0.9668674698795181,0.9122448979591837,0.966867469879518
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 5 neighbors,0.9518072289156626,0.9193877551020408,0.9518072289156626
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 6 neighbors,0.9548192771084337,0.9224489795918368,0.9548192771084337
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 7 neighbors,0.927710843373494,0.9275510204081632,0.927710843373494
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 8 neighbors,0.9337349397590361,0.9326530612244897,0.9337349397590362
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 9 neighbors,0.9186746987951807,0.9346938775510203,0.9186746987951807
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 10 neighbors,0.9246987951807228,0.9367346938775512,0.924698795180723
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 11 neighbors,0.9036144578313253,0.939795918367347,0.9036144578313252
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 12 neighbors,0.9066265060240963,0.939795918367347,0.9066265060240964
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 13 neighbors,0.8975903614457831,0.9428571428571428,0.8975903614457832
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 14 neighbors,0.9066265060240963,0.9459183673469388,0.9066265060240964
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR + PCA,0.15060240963855423,0.9317784256559767,0.1506024096385542
+fruit-classification-pca-svm-knn-decision-tree,Decision Tree,0.8795180722891566,0.9071428571428573,0.8795180722891567
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 1,0.9006024096385542,0.8438775510204082,0.9006024096385542
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 2,0.8463855421686747,0.8917117867555187,0.8463855421686746
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 3,0.858433734939759,0.8942523948354852,0.858433734939759
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 4,0.8614457831325302,0.8943981674302375,0.8614457831325301
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 5,0.8765060240963856,0.9173469387755102,0.8765060240963857
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 6,0.8765060240963856,0.9051020408163264,0.8765060240963856
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 7,0.8765060240963856,0.9010204081632652,0.8765060240963857
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 8,0.8765060240963856,0.8989795918367346,0.8765060240963857
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 9,0.9066265060240963,0.8969387755102041,0.9066265060240964
+fruit-classification-pca-svm-knn-decision-tree,Decision tree + PCA,0.12349397590361445,0.9210537276134945,0.12349397590361444

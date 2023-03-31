@@ -1,0 +1,70 @@
+kaggle_ID,ML_name,param_name,param_value
+beginner-binary-classification-for-nice-movie,random forest classifier,bootstrap,True
+beginner-binary-classification-for-nice-movie,random forest classifier,ccp_alpha,0.0
+beginner-binary-classification-for-nice-movie,random forest classifier,class_weight,
+beginner-binary-classification-for-nice-movie,random forest classifier,criterion,gini
+beginner-binary-classification-for-nice-movie,random forest classifier,max_depth,
+beginner-binary-classification-for-nice-movie,random forest classifier,max_features,sqrt
+beginner-binary-classification-for-nice-movie,random forest classifier,max_leaf_nodes,
+beginner-binary-classification-for-nice-movie,random forest classifier,max_samples,
+beginner-binary-classification-for-nice-movie,random forest classifier,min_impurity_decrease,0.0
+beginner-binary-classification-for-nice-movie,random forest classifier,min_samples_leaf,1
+beginner-binary-classification-for-nice-movie,random forest classifier,min_samples_split,2
+beginner-binary-classification-for-nice-movie,random forest classifier,min_weight_fraction_leaf,0.0
+beginner-binary-classification-for-nice-movie,random forest classifier,n_estimators,200
+beginner-binary-classification-for-nice-movie,random forest classifier,n_jobs,
+beginner-binary-classification-for-nice-movie,random forest classifier,oob_score,False
+beginner-binary-classification-for-nice-movie,random forest classifier,random_state,
+beginner-binary-classification-for-nice-movie,random forest classifier,verbose,0
+beginner-binary-classification-for-nice-movie,random forest classifier,warm_start,False
+beginner-binary-classification-for-nice-movie,stochastic gradient decent classifier,alpha,0.0001
+beginner-binary-classification-for-nice-movie,stochastic gradient decent classifier,average,False
+beginner-binary-classification-for-nice-movie,stochastic gradient decent classifier,class_weight,
+beginner-binary-classification-for-nice-movie,stochastic gradient decent classifier,early_stopping,False
+beginner-binary-classification-for-nice-movie,stochastic gradient decent classifier,epsilon,0.1
+beginner-binary-classification-for-nice-movie,stochastic gradient decent classifier,eta0,0.0
+beginner-binary-classification-for-nice-movie,stochastic gradient decent classifier,fit_intercept,True
+beginner-binary-classification-for-nice-movie,stochastic gradient decent classifier,l1_ratio,0.15
+beginner-binary-classification-for-nice-movie,stochastic gradient decent classifier,learning_rate,optimal
+beginner-binary-classification-for-nice-movie,stochastic gradient decent classifier,loss,hinge
+beginner-binary-classification-for-nice-movie,stochastic gradient decent classifier,max_iter,1000
+beginner-binary-classification-for-nice-movie,stochastic gradient decent classifier,n_iter_no_change,5
+beginner-binary-classification-for-nice-movie,stochastic gradient decent classifier,n_jobs,
+beginner-binary-classification-for-nice-movie,stochastic gradient decent classifier,penalty,
+beginner-binary-classification-for-nice-movie,stochastic gradient decent classifier,power_t,0.5
+beginner-binary-classification-for-nice-movie,stochastic gradient decent classifier,random_state,
+beginner-binary-classification-for-nice-movie,stochastic gradient decent classifier,shuffle,True
+beginner-binary-classification-for-nice-movie,stochastic gradient decent classifier,tol,0.001
+beginner-binary-classification-for-nice-movie,stochastic gradient decent classifier,validation_fraction,0.1
+beginner-binary-classification-for-nice-movie,stochastic gradient decent classifier,verbose,0
+beginner-binary-classification-for-nice-movie,stochastic gradient decent classifier,warm_start,False
+beginner-binary-classification-for-nice-movie,support vector classifier,C,1.0
+beginner-binary-classification-for-nice-movie,support vector classifier,break_ties,False
+beginner-binary-classification-for-nice-movie,support vector classifier,cache_size,200
+beginner-binary-classification-for-nice-movie,support vector classifier,class_weight,
+beginner-binary-classification-for-nice-movie,support vector classifier,coef0,0.0
+beginner-binary-classification-for-nice-movie,support vector classifier,decision_function_shape,ovr
+beginner-binary-classification-for-nice-movie,support vector classifier,degree,3
+beginner-binary-classification-for-nice-movie,support vector classifier,gamma,scale
+beginner-binary-classification-for-nice-movie,support vector classifier,kernel,rbf
+beginner-binary-classification-for-nice-movie,support vector classifier,max_iter,-1
+beginner-binary-classification-for-nice-movie,support vector classifier,probability,False
+beginner-binary-classification-for-nice-movie,support vector classifier,random_state,
+beginner-binary-classification-for-nice-movie,support vector classifier,shrinking,True
+beginner-binary-classification-for-nice-movie,support vector classifier,tol,0.001
+beginner-binary-classification-for-nice-movie,support vector classifier,verbose,False
+beginner-binary-classification-for-nice-movie,support vector classifier optimised,C,1.2
+beginner-binary-classification-for-nice-movie,support vector classifier optimised,break_ties,False
+beginner-binary-classification-for-nice-movie,support vector classifier optimised,cache_size,200
+beginner-binary-classification-for-nice-movie,support vector classifier optimised,class_weight,
+beginner-binary-classification-for-nice-movie,support vector classifier optimised,coef0,0.0
+beginner-binary-classification-for-nice-movie,support vector classifier optimised,decision_function_shape,ovr
+beginner-binary-classification-for-nice-movie,support vector classifier optimised,degree,3
+beginner-binary-classification-for-nice-movie,support vector classifier optimised,gamma,0.9
+beginner-binary-classification-for-nice-movie,support vector classifier optimised,kernel,rbf
+beginner-binary-classification-for-nice-movie,support vector classifier optimised,max_iter,-1
+beginner-binary-classification-for-nice-movie,support vector classifier optimised,probability,False
+beginner-binary-classification-for-nice-movie,support vector classifier optimised,random_state,
+beginner-binary-classification-for-nice-movie,support vector classifier optimised,shrinking,True
+beginner-binary-classification-for-nice-movie,support vector classifier optimised,tol,0.001
+beginner-binary-classification-for-nice-movie,support vector classifier optimised,verbose,False

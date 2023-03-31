@@ -1,0 +1,84 @@
+kaggle_ID,ML_name,param_name,param_value
+binary-classification-multiple-method-comparison,Logistic Regression,C,1.0
+binary-classification-multiple-method-comparison,Logistic Regression,class_weight,
+binary-classification-multiple-method-comparison,Logistic Regression,dual,False
+binary-classification-multiple-method-comparison,Logistic Regression,fit_intercept,True
+binary-classification-multiple-method-comparison,Logistic Regression,intercept_scaling,1
+binary-classification-multiple-method-comparison,Logistic Regression,l1_ratio,
+binary-classification-multiple-method-comparison,Logistic Regression,max_iter,100
+binary-classification-multiple-method-comparison,Logistic Regression,multi_class,auto
+binary-classification-multiple-method-comparison,Logistic Regression,n_jobs,
+binary-classification-multiple-method-comparison,Logistic Regression,penalty,l2
+binary-classification-multiple-method-comparison,Logistic Regression,random_state,
+binary-classification-multiple-method-comparison,Logistic Regression,solver,lbfgs
+binary-classification-multiple-method-comparison,Logistic Regression,tol,0.0001
+binary-classification-multiple-method-comparison,Logistic Regression,verbose,0
+binary-classification-multiple-method-comparison,Logistic Regression,warm_start,False
+binary-classification-multiple-method-comparison,Decision Tree,ccp_alpha,0.0
+binary-classification-multiple-method-comparison,Decision Tree,class_weight,
+binary-classification-multiple-method-comparison,Decision Tree,criterion,gini
+binary-classification-multiple-method-comparison,Decision Tree,max_depth,
+binary-classification-multiple-method-comparison,Decision Tree,max_features,
+binary-classification-multiple-method-comparison,Decision Tree,max_leaf_nodes,
+binary-classification-multiple-method-comparison,Decision Tree,min_impurity_decrease,0.0
+binary-classification-multiple-method-comparison,Decision Tree,min_impurity_split,
+binary-classification-multiple-method-comparison,Decision Tree,min_samples_leaf,1
+binary-classification-multiple-method-comparison,Decision Tree,min_samples_split,2
+binary-classification-multiple-method-comparison,Decision Tree,min_weight_fraction_leaf,0.0
+binary-classification-multiple-method-comparison,Decision Tree,random_state,
+binary-classification-multiple-method-comparison,Decision Tree,splitter,best
+binary-classification-multiple-method-comparison,SVM,C,1.0
+binary-classification-multiple-method-comparison,SVM,break_ties,False
+binary-classification-multiple-method-comparison,SVM,cache_size,200
+binary-classification-multiple-method-comparison,SVM,class_weight,
+binary-classification-multiple-method-comparison,SVM,coef0,0.0
+binary-classification-multiple-method-comparison,SVM,decision_function_shape,ovr
+binary-classification-multiple-method-comparison,SVM,degree,3
+binary-classification-multiple-method-comparison,SVM,gamma,scale
+binary-classification-multiple-method-comparison,SVM,kernel,rbf
+binary-classification-multiple-method-comparison,SVM,max_iter,-1
+binary-classification-multiple-method-comparison,SVM,probability,True
+binary-classification-multiple-method-comparison,SVM,random_state,
+binary-classification-multiple-method-comparison,SVM,shrinking,True
+binary-classification-multiple-method-comparison,SVM,tol,0.001
+binary-classification-multiple-method-comparison,SVM,verbose,False
+binary-classification-multiple-method-comparison,Linear Discriminant Analysis,covariance_estimator,
+binary-classification-multiple-method-comparison,Linear Discriminant Analysis,n_components,
+binary-classification-multiple-method-comparison,Linear Discriminant Analysis,priors,
+binary-classification-multiple-method-comparison,Linear Discriminant Analysis,shrinkage,
+binary-classification-multiple-method-comparison,Linear Discriminant Analysis,solver,svd
+binary-classification-multiple-method-comparison,Linear Discriminant Analysis,store_covariance,False
+binary-classification-multiple-method-comparison,Linear Discriminant Analysis,tol,0.0001
+binary-classification-multiple-method-comparison,Quadratic Discriminant Analysis,priors,
+binary-classification-multiple-method-comparison,Quadratic Discriminant Analysis,reg_param,0.0
+binary-classification-multiple-method-comparison,Quadratic Discriminant Analysis,store_covariance,False
+binary-classification-multiple-method-comparison,Quadratic Discriminant Analysis,tol,0.0001
+binary-classification-multiple-method-comparison,Random Forest Classifier,bootstrap,True
+binary-classification-multiple-method-comparison,Random Forest Classifier,ccp_alpha,0.0
+binary-classification-multiple-method-comparison,Random Forest Classifier,class_weight,
+binary-classification-multiple-method-comparison,Random Forest Classifier,criterion,gini
+binary-classification-multiple-method-comparison,Random Forest Classifier,max_depth,
+binary-classification-multiple-method-comparison,Random Forest Classifier,max_features,auto
+binary-classification-multiple-method-comparison,Random Forest Classifier,max_leaf_nodes,
+binary-classification-multiple-method-comparison,Random Forest Classifier,max_samples,
+binary-classification-multiple-method-comparison,Random Forest Classifier,min_impurity_decrease,0.0
+binary-classification-multiple-method-comparison,Random Forest Classifier,min_impurity_split,
+binary-classification-multiple-method-comparison,Random Forest Classifier,min_samples_leaf,1
+binary-classification-multiple-method-comparison,Random Forest Classifier,min_samples_split,2
+binary-classification-multiple-method-comparison,Random Forest Classifier,min_weight_fraction_leaf,0.0
+binary-classification-multiple-method-comparison,Random Forest Classifier,n_estimators,100
+binary-classification-multiple-method-comparison,Random Forest Classifier,n_jobs,
+binary-classification-multiple-method-comparison,Random Forest Classifier,oob_score,False
+binary-classification-multiple-method-comparison,Random Forest Classifier,random_state,
+binary-classification-multiple-method-comparison,Random Forest Classifier,verbose,0
+binary-classification-multiple-method-comparison,Random Forest Classifier,warm_start,False
+binary-classification-multiple-method-comparison,K-Nearest Neighbors,algorithm,auto
+binary-classification-multiple-method-comparison,K-Nearest Neighbors,leaf_size,30
+binary-classification-multiple-method-comparison,K-Nearest Neighbors,metric,minkowski
+binary-classification-multiple-method-comparison,K-Nearest Neighbors,metric_params,
+binary-classification-multiple-method-comparison,K-Nearest Neighbors,n_jobs,
+binary-classification-multiple-method-comparison,K-Nearest Neighbors,n_neighbors,5
+binary-classification-multiple-method-comparison,K-Nearest Neighbors,p,2
+binary-classification-multiple-method-comparison,K-Nearest Neighbors,weights,uniform
+binary-classification-multiple-method-comparison,Naive Bayes,priors,
+binary-classification-multiple-method-comparison,Naive Bayes,var_smoothing,1e-09

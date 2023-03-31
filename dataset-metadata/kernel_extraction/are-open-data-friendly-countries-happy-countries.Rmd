@@ -1,0 +1,71 @@
+---
+title: "Are open data friendly countries happy countries?"
+author: "Megan Risdal"
+output:
+  html_document:
+    fig_width: 10
+    fig_height: 6
+    theme: spacelab
+    highlight: kate
+---
+
+### Introduction
+
+In this multiple data sources kernel, we'll have a look at whether countries whose governments adopt open policies with respect to data sharing are the same countries that score highly on the world happiness index. Let's hypothesize that the two are positively correlated.
+
+The two datasets shared on Kaggle that I'm going to use are:
+
+* Open Knowledge International's [2015 Global Open Data Index](https://www.kaggle.com/okfn/open-data)
+* Sustainable Development Solutions Network's [World Happiness Report](https://www.kaggle.com/unsdsn/world-happiness) from 2016
+
+### Reading in Multiple Sources
+
+It's pretty straightforward to read in multiple data sources. The dataset files will all be located at `../input/DATASETSLUG/DATAFILENAME` once you've selected two or more datasets to add to your environment. To see exactly what I mean, click on the "Fork Script" button at the top and you'll be able to see the data sources and even add more if you like.
+
+So, the code below reads in the data sources and joins them together by country name. There are probably some country names that don't exactly match, so I'll leave it to you to fork this and tweak the code.
+ 
+```{r, message = F, warning = F}
+library(dplyr)
+
+# Read in data files from `open-data` and `world-happiness` datasets
+open_data <- read.csv("../input/open-data/countries.csv", stringsAsFactors=F)
+happiness <- read.csv("../input/world-happiness/2015.csv", stringsAsFactors=F)
+
+# Rename from "Country Name" to just "Country"
+colnames(open_data)[2] <- "Country"
+
+# Join the two dataset files on "Country"
+open_data_happiness <- open_data %>%
+    left_join(happiness, by = "Country")
+
+# Inspect
+summary(open_data_happiness)
+```
+
+### Are open countries happy countries?
+
+Now we're ready to answer our question of whether countries that index highly for data openness are also home to happy people. Let's find out. The plot below will show the openness score and happiness score for each country as measured in 2015.
+
+```{r, message = F, warning = F}
+library(ggplot2)
+library(ggthemes)
+
+ggplot(open_data_happiness, 
+    aes(x = X2015.Score, 
+        y = Happiness.Score)) +
+    geom_point() +
+    geom_smooth(method="lm") +
+    labs(x = "Openness Score",
+         y = "Happiness Score",
+         title = "Are open data friendly countries happy countries?",
+         subtitle = "Data openness and happiness by country in 2015") +
+    theme_hc()
+    
+
+```
+
+Looks like the answer is ... yes! Hope you enjoyed this introduction to multiple data sources. Go make the world a happier place!
+
+P.S. If you're interested in adding more data to this analysis (or any other analysis), you can upload new datasets here: https://www.kaggle.com/datasets/new. And in a fun coincidence, Open Knowledge International just released the 2016 Global Open Data Index dataset today (May 2nd). You can check it out here: https://index.okfn.org/place/.
+
+P.P.S. View the code behind this kernel by clicking on the "Code" tab at the top. See the data sources used in this kernel by clicking on the "Input" tab.

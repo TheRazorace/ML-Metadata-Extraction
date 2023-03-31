@@ -1,0 +1,306 @@
+kaggle_ID,ML_name,param_name,param_value
+fruit-classification-pca-svm-knn-decision-tree,Linear SVM,C,1.0
+fruit-classification-pca-svm-knn-decision-tree,Linear SVM,break_ties,False
+fruit-classification-pca-svm-knn-decision-tree,Linear SVM,cache_size,200
+fruit-classification-pca-svm-knn-decision-tree,Linear SVM,class_weight,
+fruit-classification-pca-svm-knn-decision-tree,Linear SVM,coef0,0.0
+fruit-classification-pca-svm-knn-decision-tree,Linear SVM,decision_function_shape,ovr
+fruit-classification-pca-svm-knn-decision-tree,Linear SVM,degree,3
+fruit-classification-pca-svm-knn-decision-tree,Linear SVM,gamma,auto
+fruit-classification-pca-svm-knn-decision-tree,Linear SVM,kernel,linear
+fruit-classification-pca-svm-knn-decision-tree,Linear SVM,max_iter,-1
+fruit-classification-pca-svm-knn-decision-tree,Linear SVM,probability,True
+fruit-classification-pca-svm-knn-decision-tree,Linear SVM,random_state,
+fruit-classification-pca-svm-knn-decision-tree,Linear SVM,shrinking,True
+fruit-classification-pca-svm-knn-decision-tree,Linear SVM,tol,0.001
+fruit-classification-pca-svm-knn-decision-tree,Linear SVM,verbose,False
+fruit-classification-pca-svm-knn-decision-tree,SVM + PCA,C,1.0
+fruit-classification-pca-svm-knn-decision-tree,SVM + PCA,break_ties,False
+fruit-classification-pca-svm-knn-decision-tree,SVM + PCA,cache_size,200
+fruit-classification-pca-svm-knn-decision-tree,SVM + PCA,class_weight,
+fruit-classification-pca-svm-knn-decision-tree,SVM + PCA,coef0,0.0
+fruit-classification-pca-svm-knn-decision-tree,SVM + PCA,decision_function_shape,ovr
+fruit-classification-pca-svm-knn-decision-tree,SVM + PCA,degree,3
+fruit-classification-pca-svm-knn-decision-tree,SVM + PCA,gamma,auto
+fruit-classification-pca-svm-knn-decision-tree,SVM + PCA,kernel,linear
+fruit-classification-pca-svm-knn-decision-tree,SVM + PCA,max_iter,-1
+fruit-classification-pca-svm-knn-decision-tree,SVM + PCA,probability,True
+fruit-classification-pca-svm-knn-decision-tree,SVM + PCA,random_state,
+fruit-classification-pca-svm-knn-decision-tree,SVM + PCA,shrinking,True
+fruit-classification-pca-svm-knn-decision-tree,SVM + PCA,tol,0.001
+fruit-classification-pca-svm-knn-decision-tree,SVM + PCA,verbose,False
+fruit-classification-pca-svm-knn-decision-tree,KERNEL SVM + PCA,C,1.0
+fruit-classification-pca-svm-knn-decision-tree,KERNEL SVM + PCA,break_ties,False
+fruit-classification-pca-svm-knn-decision-tree,KERNEL SVM + PCA,cache_size,200
+fruit-classification-pca-svm-knn-decision-tree,KERNEL SVM + PCA,class_weight,
+fruit-classification-pca-svm-knn-decision-tree,KERNEL SVM + PCA,coef0,0.0
+fruit-classification-pca-svm-knn-decision-tree,KERNEL SVM + PCA,decision_function_shape,ovr
+fruit-classification-pca-svm-knn-decision-tree,KERNEL SVM + PCA,degree,3
+fruit-classification-pca-svm-knn-decision-tree,KERNEL SVM + PCA,gamma,0.01
+fruit-classification-pca-svm-knn-decision-tree,KERNEL SVM + PCA,kernel,rbf
+fruit-classification-pca-svm-knn-decision-tree,KERNEL SVM + PCA,max_iter,-1
+fruit-classification-pca-svm-knn-decision-tree,KERNEL SVM + PCA,probability,True
+fruit-classification-pca-svm-knn-decision-tree,KERNEL SVM + PCA,random_state,
+fruit-classification-pca-svm-knn-decision-tree,KERNEL SVM + PCA,shrinking,True
+fruit-classification-pca-svm-knn-decision-tree,KERNEL SVM + PCA,tol,0.001
+fruit-classification-pca-svm-knn-decision-tree,KERNEL SVM + PCA,verbose,False
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR,algorithm,auto
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR,leaf_size,30
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR,metric,minkowski
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR,metric_params,
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR,n_jobs,
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR,n_neighbors,2
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR,p,2
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR,weights,uniform
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 1 neighbors,algorithm,auto
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 1 neighbors,leaf_size,30
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 1 neighbors,metric,minkowski
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 1 neighbors,metric_params,
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 1 neighbors,n_jobs,
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 1 neighbors,n_neighbors,1
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 1 neighbors,p,2
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 1 neighbors,weights,uniform
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 2 neighbors,algorithm,auto
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 2 neighbors,leaf_size,30
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 2 neighbors,metric,minkowski
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 2 neighbors,metric_params,
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 2 neighbors,n_jobs,
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 2 neighbors,n_neighbors,2
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 2 neighbors,p,2
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 2 neighbors,weights,uniform
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 3 neighbors,algorithm,auto
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 3 neighbors,leaf_size,30
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 3 neighbors,metric,minkowski
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 3 neighbors,metric_params,
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 3 neighbors,n_jobs,
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 3 neighbors,n_neighbors,3
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 3 neighbors,p,2
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 3 neighbors,weights,uniform
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 4 neighbors,algorithm,auto
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 4 neighbors,leaf_size,30
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 4 neighbors,metric,minkowski
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 4 neighbors,metric_params,
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 4 neighbors,n_jobs,
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 4 neighbors,n_neighbors,4
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 4 neighbors,p,2
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 4 neighbors,weights,uniform
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 5 neighbors,algorithm,auto
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 5 neighbors,leaf_size,30
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 5 neighbors,metric,minkowski
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 5 neighbors,metric_params,
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 5 neighbors,n_jobs,
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 5 neighbors,n_neighbors,5
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 5 neighbors,p,2
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 5 neighbors,weights,uniform
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 6 neighbors,algorithm,auto
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 6 neighbors,leaf_size,30
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 6 neighbors,metric,minkowski
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 6 neighbors,metric_params,
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 6 neighbors,n_jobs,
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 6 neighbors,n_neighbors,6
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 6 neighbors,p,2
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 6 neighbors,weights,uniform
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 7 neighbors,algorithm,auto
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 7 neighbors,leaf_size,30
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 7 neighbors,metric,minkowski
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 7 neighbors,metric_params,
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 7 neighbors,n_jobs,
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 7 neighbors,n_neighbors,7
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 7 neighbors,p,2
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 7 neighbors,weights,uniform
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 8 neighbors,algorithm,auto
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 8 neighbors,leaf_size,30
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 8 neighbors,metric,minkowski
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 8 neighbors,metric_params,
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 8 neighbors,n_jobs,
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 8 neighbors,n_neighbors,8
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 8 neighbors,p,2
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 8 neighbors,weights,uniform
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 9 neighbors,algorithm,auto
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 9 neighbors,leaf_size,30
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 9 neighbors,metric,minkowski
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 9 neighbors,metric_params,
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 9 neighbors,n_jobs,
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 9 neighbors,n_neighbors,9
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 9 neighbors,p,2
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 9 neighbors,weights,uniform
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 10 neighbors,algorithm,auto
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 10 neighbors,leaf_size,30
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 10 neighbors,metric,minkowski
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 10 neighbors,metric_params,
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 10 neighbors,n_jobs,
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 10 neighbors,n_neighbors,10
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 10 neighbors,p,2
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 10 neighbors,weights,uniform
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 11 neighbors,algorithm,auto
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 11 neighbors,leaf_size,30
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 11 neighbors,metric,minkowski
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 11 neighbors,metric_params,
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 11 neighbors,n_jobs,
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 11 neighbors,n_neighbors,11
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 11 neighbors,p,2
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 11 neighbors,weights,uniform
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 12 neighbors,algorithm,auto
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 12 neighbors,leaf_size,30
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 12 neighbors,metric,minkowski
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 12 neighbors,metric_params,
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 12 neighbors,n_jobs,
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 12 neighbors,n_neighbors,12
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 12 neighbors,p,2
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 12 neighbors,weights,uniform
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 13 neighbors,algorithm,auto
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 13 neighbors,leaf_size,30
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 13 neighbors,metric,minkowski
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 13 neighbors,metric_params,
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 13 neighbors,n_jobs,
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 13 neighbors,n_neighbors,13
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 13 neighbors,p,2
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 13 neighbors,weights,uniform
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 14 neighbors,algorithm,auto
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 14 neighbors,leaf_size,30
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 14 neighbors,metric,minkowski
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 14 neighbors,metric_params,
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 14 neighbors,n_jobs,
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 14 neighbors,n_neighbors,14
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 14 neighbors,p,2
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR with 14 neighbors,weights,uniform
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR + PCA,algorithm,auto
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR + PCA,leaf_size,30
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR + PCA,metric,minkowski
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR + PCA,metric_params,
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR + PCA,n_jobs,
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR + PCA,n_neighbors,2
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR + PCA,p,2
+fruit-classification-pca-svm-knn-decision-tree,K-NEAREST NEIGHBOR + PCA,weights,uniform
+fruit-classification-pca-svm-knn-decision-tree,Decision Tree,ccp_alpha,0.0
+fruit-classification-pca-svm-knn-decision-tree,Decision Tree,class_weight,
+fruit-classification-pca-svm-knn-decision-tree,Decision Tree,criterion,gini
+fruit-classification-pca-svm-knn-decision-tree,Decision Tree,max_depth,
+fruit-classification-pca-svm-knn-decision-tree,Decision Tree,max_features,
+fruit-classification-pca-svm-knn-decision-tree,Decision Tree,max_leaf_nodes,
+fruit-classification-pca-svm-knn-decision-tree,Decision Tree,min_impurity_decrease,0.0
+fruit-classification-pca-svm-knn-decision-tree,Decision Tree,min_samples_leaf,1
+fruit-classification-pca-svm-knn-decision-tree,Decision Tree,min_samples_split,2
+fruit-classification-pca-svm-knn-decision-tree,Decision Tree,min_weight_fraction_leaf,0.0
+fruit-classification-pca-svm-knn-decision-tree,Decision Tree,random_state,
+fruit-classification-pca-svm-knn-decision-tree,Decision Tree,splitter,best
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 1,ccp_alpha,0.0
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 1,class_weight,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 1,criterion,gini
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 1,max_depth,1
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 1,max_features,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 1,max_leaf_nodes,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 1,min_impurity_decrease,0.0
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 1,min_samples_leaf,1
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 1,min_samples_split,2
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 1,min_weight_fraction_leaf,0.0
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 1,random_state,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 1,splitter,best
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 2,ccp_alpha,0.0
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 2,class_weight,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 2,criterion,gini
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 2,max_depth,2
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 2,max_features,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 2,max_leaf_nodes,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 2,min_impurity_decrease,0.0
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 2,min_samples_leaf,1
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 2,min_samples_split,2
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 2,min_weight_fraction_leaf,0.0
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 2,random_state,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 2,splitter,best
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 3,ccp_alpha,0.0
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 3,class_weight,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 3,criterion,gini
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 3,max_depth,3
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 3,max_features,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 3,max_leaf_nodes,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 3,min_impurity_decrease,0.0
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 3,min_samples_leaf,1
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 3,min_samples_split,2
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 3,min_weight_fraction_leaf,0.0
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 3,random_state,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 3,splitter,best
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 4,ccp_alpha,0.0
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 4,class_weight,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 4,criterion,gini
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 4,max_depth,4
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 4,max_features,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 4,max_leaf_nodes,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 4,min_impurity_decrease,0.0
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 4,min_samples_leaf,1
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 4,min_samples_split,2
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 4,min_weight_fraction_leaf,0.0
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 4,random_state,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 4,splitter,best
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 5,ccp_alpha,0.0
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 5,class_weight,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 5,criterion,gini
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 5,max_depth,5
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 5,max_features,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 5,max_leaf_nodes,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 5,min_impurity_decrease,0.0
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 5,min_samples_leaf,1
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 5,min_samples_split,2
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 5,min_weight_fraction_leaf,0.0
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 5,random_state,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 5,splitter,best
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 6,ccp_alpha,0.0
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 6,class_weight,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 6,criterion,gini
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 6,max_depth,6
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 6,max_features,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 6,max_leaf_nodes,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 6,min_impurity_decrease,0.0
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 6,min_samples_leaf,1
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 6,min_samples_split,2
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 6,min_weight_fraction_leaf,0.0
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 6,random_state,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 6,splitter,best
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 7,ccp_alpha,0.0
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 7,class_weight,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 7,criterion,gini
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 7,max_depth,7
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 7,max_features,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 7,max_leaf_nodes,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 7,min_impurity_decrease,0.0
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 7,min_samples_leaf,1
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 7,min_samples_split,2
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 7,min_weight_fraction_leaf,0.0
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 7,random_state,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 7,splitter,best
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 8,ccp_alpha,0.0
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 8,class_weight,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 8,criterion,gini
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 8,max_depth,8
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 8,max_features,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 8,max_leaf_nodes,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 8,min_impurity_decrease,0.0
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 8,min_samples_leaf,1
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 8,min_samples_split,2
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 8,min_weight_fraction_leaf,0.0
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 8,random_state,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 8,splitter,best
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 9,ccp_alpha,0.0
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 9,class_weight,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 9,criterion,gini
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 9,max_depth,9
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 9,max_features,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 9,max_leaf_nodes,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 9,min_impurity_decrease,0.0
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 9,min_samples_leaf,1
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 9,min_samples_split,2
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 9,min_weight_fraction_leaf,0.0
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 9,random_state,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree with depth 9,splitter,best
+fruit-classification-pca-svm-knn-decision-tree,Decision tree + PCA,ccp_alpha,0.0
+fruit-classification-pca-svm-knn-decision-tree,Decision tree + PCA,class_weight,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree + PCA,criterion,gini
+fruit-classification-pca-svm-knn-decision-tree,Decision tree + PCA,max_depth,9
+fruit-classification-pca-svm-knn-decision-tree,Decision tree + PCA,max_features,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree + PCA,max_leaf_nodes,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree + PCA,min_impurity_decrease,0.0
+fruit-classification-pca-svm-knn-decision-tree,Decision tree + PCA,min_samples_leaf,1
+fruit-classification-pca-svm-knn-decision-tree,Decision tree + PCA,min_samples_split,2
+fruit-classification-pca-svm-knn-decision-tree,Decision tree + PCA,min_weight_fraction_leaf,0.0
+fruit-classification-pca-svm-knn-decision-tree,Decision tree + PCA,random_state,
+fruit-classification-pca-svm-knn-decision-tree,Decision tree + PCA,splitter,best

@@ -1,0 +1,5 @@
+kaggle_ID,ML_name,accuracy,cross_validation_score,ROC_AUC_score
+beginner-binary-classification-for-nice-movie,random forest classifier,0.884375,0.9119747555041673,0.6856441430909517
+beginner-binary-classification-for-nice-movie,stochastic gradient decent classifier,0.840625,0.8357171074818135,0.5983555451640558
+beginner-binary-classification-for-nice-movie,support vector classifier,0.875,0.8447241894300717,0.6185020653105758
+beginner-binary-classification-for-nice-movie,support vector classifier optimised,0.896875,0.8582935877053524,0.6665497622944432

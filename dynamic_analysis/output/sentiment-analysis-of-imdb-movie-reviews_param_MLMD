@@ -1,0 +1,37 @@
+kaggle_ID,ML_name,param_name,param_value
+sentiment-analysis-of-imdb-movie-reviews,logistic regression,C,1
+sentiment-analysis-of-imdb-movie-reviews,logistic regression,class_weight,
+sentiment-analysis-of-imdb-movie-reviews,logistic regression,dual,False
+sentiment-analysis-of-imdb-movie-reviews,logistic regression,fit_intercept,True
+sentiment-analysis-of-imdb-movie-reviews,logistic regression,intercept_scaling,1
+sentiment-analysis-of-imdb-movie-reviews,logistic regression,l1_ratio,
+sentiment-analysis-of-imdb-movie-reviews,logistic regression,max_iter,500
+sentiment-analysis-of-imdb-movie-reviews,logistic regression,multi_class,auto
+sentiment-analysis-of-imdb-movie-reviews,logistic regression,n_jobs,
+sentiment-analysis-of-imdb-movie-reviews,logistic regression,penalty,l2
+sentiment-analysis-of-imdb-movie-reviews,logistic regression,random_state,42
+sentiment-analysis-of-imdb-movie-reviews,logistic regression,solver,lbfgs
+sentiment-analysis-of-imdb-movie-reviews,logistic regression,tol,0.0001
+sentiment-analysis-of-imdb-movie-reviews,logistic regression,verbose,0
+sentiment-analysis-of-imdb-movie-reviews,logistic regression,warm_start,False
+sentiment-analysis-of-imdb-movie-reviews,stochastic gradient descent,alpha,0.0001
+sentiment-analysis-of-imdb-movie-reviews,stochastic gradient descent,average,False
+sentiment-analysis-of-imdb-movie-reviews,stochastic gradient descent,class_weight,
+sentiment-analysis-of-imdb-movie-reviews,stochastic gradient descent,early_stopping,False
+sentiment-analysis-of-imdb-movie-reviews,stochastic gradient descent,epsilon,0.1
+sentiment-analysis-of-imdb-movie-reviews,stochastic gradient descent,eta0,0.0
+sentiment-analysis-of-imdb-movie-reviews,stochastic gradient descent,fit_intercept,True
+sentiment-analysis-of-imdb-movie-reviews,stochastic gradient descent,l1_ratio,0.15
+sentiment-analysis-of-imdb-movie-reviews,stochastic gradient descent,learning_rate,optimal
+sentiment-analysis-of-imdb-movie-reviews,stochastic gradient descent,loss,hinge
+sentiment-analysis-of-imdb-movie-reviews,stochastic gradient descent,max_iter,500
+sentiment-analysis-of-imdb-movie-reviews,stochastic gradient descent,n_iter_no_change,5
+sentiment-analysis-of-imdb-movie-reviews,stochastic gradient descent,n_jobs,
+sentiment-analysis-of-imdb-movie-reviews,stochastic gradient descent,penalty,l2
+sentiment-analysis-of-imdb-movie-reviews,stochastic gradient descent,power_t,0.5
+sentiment-analysis-of-imdb-movie-reviews,stochastic gradient descent,random_state,42
+sentiment-analysis-of-imdb-movie-reviews,stochastic gradient descent,shuffle,True
+sentiment-analysis-of-imdb-movie-reviews,stochastic gradient descent,tol,0.001
+sentiment-analysis-of-imdb-movie-reviews,stochastic gradient descent,validation_fraction,0.1
+sentiment-analysis-of-imdb-movie-reviews,stochastic gradient descent,verbose,0
+sentiment-analysis-of-imdb-movie-reviews,stochastic gradient descent,warm_start,False

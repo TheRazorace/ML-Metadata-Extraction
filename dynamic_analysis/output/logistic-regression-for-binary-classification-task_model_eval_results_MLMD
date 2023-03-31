@@ -1,0 +1,16 @@
+Kaggle_ID,ML_name,variable,precision,recall,f1-score,support
+logistic-regression-for-binary-classification-task,logistic regression,0,0.959731543624161,0.9794520547945206,0.9694915254237289,146
+logistic-regression-for-binary-classification-task,logistic regression,1,0.9801324503311258,0.961038961038961,0.9704918032786884,154
+logistic-regression-for-binary-classification-task,logistic regression,accuracy,0.97,NULL,NULL,NULL
+logistic-regression-for-binary-classification-task,logistic regression,macro avg,0.9699319969776434,0.9702455079167408,0.9699916643512086,300
+logistic-regression-for-binary-classification-task,logistic regression,weighted avg,0.9702040090670696,0.97,0.9700050013892746,300
+logistic-regression-for-binary-classification-task,random forest classifier,0,0.9463087248322147,0.9657534246575342,0.9559322033898304,146
+logistic-regression-for-binary-classification-task,random forest classifier,1,0.9668874172185431,0.948051948051948,0.957377049180328,154
+logistic-regression-for-binary-classification-task,random forest classifier,accuracy,0.9566666666666667,NULL,NULL,NULL
+logistic-regression-for-binary-classification-task,random forest classifier,macro avg,0.956598071025379,0.9569026863547412,0.9566546262850792,300
+logistic-regression-for-binary-classification-task,random forest classifier,weighted avg,0.9568724535905299,0.9566666666666667,0.9566738908956192,300
+logistic-regression-for-binary-classification-task,logistic regression hyperparameter tuning,0,0.9536423841059603,0.9863013698630136,0.9696969696969696,146
+logistic-regression-for-binary-classification-task,logistic regression hyperparameter tuning,1,0.9865771812080537,0.9545454545454546,0.9702970297029703,154
+logistic-regression-for-binary-classification-task,logistic regression hyperparameter tuning,accuracy,0.97,NULL,NULL,NULL
+logistic-regression-for-binary-classification-task,logistic regression hyperparameter tuning,macro avg,0.970109782657007,0.9704234122042341,0.96999699969997,300
+logistic-regression-for-binary-classification-task,logistic regression hyperparameter tuning,weighted avg,0.970548913285035,0.97,0.9700050005000499,300
