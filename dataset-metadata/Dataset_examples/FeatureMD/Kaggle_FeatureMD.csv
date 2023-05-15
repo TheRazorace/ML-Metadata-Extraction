@@ -1,0 +1,149 @@
+feature_id,dataset_id,file_id,file_name,feature_name,feature_type,feature_distinct,feature_missing
+0,23752,1,countries of the world,Region,object,11,0
+1,23752,1,countries of the world,Population,int64,227,0
+2,23752,1,countries of the world,Area (sq. mi.),int64,226,0
+3,23752,1,countries of the world,Pop. Density (per sq. mi.),object,219,0
+4,23752,1,countries of the world,Coastline (coast/area ratio),object,151,0
+5,23752,1,countries of the world,Net migration,object,158,3
+6,23752,1,countries of the world,Infant mortality (per 1000 births),object,221,3
+7,23752,1,countries of the world,GDP ($ per capita),float64,131,1
+8,23752,1,countries of the world,Literacy (%),object,141,18
+9,23752,1,countries of the world,Phones (per 1000),object,215,4
+10,23752,1,countries of the world,Arable (%),object,204,2
+11,23752,1,countries of the world,Crops (%),object,163,2
+12,23752,1,countries of the world,Other (%),object,210,2
+13,23752,1,countries of the world,Climate,object,7,22
+14,23752,1,countries of the world,Birthrate,object,221,3
+15,23752,1,countries of the world,Deathrate,object,202,4
+16,23752,1,countries of the world,Agriculture,object,151,15
+17,23752,1,countries of the world,Industry,object,156,16
+18,23752,1,countries of the world,Service,object,168,15
+19,1380016,2,Life expectancy,Year,int64,217,0
+20,1380016,2,Life expectancy,Life expectancy,float64,2190,0
+21,1865113,3,Netflix subscription fee Dec-2021,Country,object,65,0
+22,1865113,3,Netflix subscription fee Dec-2021,Total Library Size,int64,62,0
+23,1865113,3,Netflix subscription fee Dec-2021,No. of TV Shows,int64,56,0
+24,1865113,3,Netflix subscription fee Dec-2021,No. of Movies,int64,56,0
+25,1865113,3,Netflix subscription fee Dec-2021,Cost Per Month - Basic ($),float64,35,0
+26,1865113,3,Netflix subscription fee Dec-2021,Cost Per Month - Standard ($),float64,39,0
+27,1865113,3,Netflix subscription fee Dec-2021,Cost Per Month - Premium ($),float64,40,0
+28,1865113,4,netflix price in different countries,Total Library Size,int64,62,0
+29,1865113,4,netflix price in different countries,No. of TV Shows,int64,56,0
+30,1865113,4,netflix price in different countries,No. of Movies,int64,56,0
+31,1865113,4,netflix price in different countries,Cost Per Month - Basic ($),float64,35,0
+32,1865113,4,netflix price in different countries,Cost Per Month - Standard ($),float64,39,0
+33,1865113,4,netflix price in different countries,Cost Per Month - Premium ($),float64,40,0
+34,376235,5,Military Expenditure,Code,object,264,0
+35,376235,5,Military Expenditure,Type,object,4,0
+36,376235,5,Military Expenditure,Indicator Name,object,1,0
+37,376235,5,Military Expenditure,1960,float64,77,185
+38,376235,5,Military Expenditure,1961,float64,82,180
+39,376235,5,Military Expenditure,1962,float64,90,171
+40,376235,5,Military Expenditure,1963,float64,93,166
+41,376235,5,Military Expenditure,1964,float64,93,166
+42,376235,5,Military Expenditure,1965,float64,99,160
+43,376235,5,Military Expenditure,1966,float64,98,160
+44,376235,5,Military Expenditure,1967,float64,99,159
+45,376235,5,Military Expenditure,1968,float64,107,151
+46,376235,5,Military Expenditure,1969,float64,107,151
+47,376235,5,Military Expenditure,1970,float64,115,143
+48,376235,5,Military Expenditure,1971,float64,115,142
+49,376235,5,Military Expenditure,1972,float64,118,141
+50,376235,5,Military Expenditure,1973,float64,125,134
+51,376235,5,Military Expenditure,1974,float64,122,136
+52,376235,5,Military Expenditure,1975,float64,123,136
+53,376235,5,Military Expenditure,1976,float64,127,132
+54,376235,5,Military Expenditure,1977,float64,132,127
+55,376235,5,Military Expenditure,1978,float64,131,128
+56,376235,5,Military Expenditure,1979,float64,133,126
+57,376235,5,Military Expenditure,1980,float64,135,124
+58,376235,5,Military Expenditure,1981,float64,138,121
+59,376235,5,Military Expenditure,1982,float64,132,127
+60,376235,5,Military Expenditure,1983,float64,131,128
+61,376235,5,Military Expenditure,1984,float64,137,122
+62,376235,5,Military Expenditure,1985,float64,143,117
+63,376235,5,Military Expenditure,1986,float64,139,121
+64,376235,5,Military Expenditure,1987,float64,143,117
+65,376235,5,Military Expenditure,1988,float64,141,119
+66,376235,5,Military Expenditure,1989,float64,149,110
+67,376235,5,Military Expenditure,1990,float64,153,106
+68,376235,5,Military Expenditure,1991,float64,155,104
+69,376235,5,Military Expenditure,1992,float64,162,97
+70,376235,5,Military Expenditure,1993,float64,180,79
+71,376235,5,Military Expenditure,1994,float64,182,77
+72,376235,5,Military Expenditure,1995,float64,179,80
+73,376235,5,Military Expenditure,1996,float64,180,78
+74,376235,5,Military Expenditure,1997,float64,182,77
+75,376235,5,Military Expenditure,1998,float64,177,82
+76,376235,5,Military Expenditure,1999,float64,179,80
+77,376235,5,Military Expenditure,2000,float64,183,75
+78,376235,5,Military Expenditure,2001,float64,184,74
+79,376235,5,Military Expenditure,2002,float64,186,71
+80,376235,5,Military Expenditure,2003,float64,194,65
+81,376235,5,Military Expenditure,2004,float64,193,65
+82,376235,5,Military Expenditure,2005,float64,196,63
+83,376235,5,Military Expenditure,2006,float64,192,67
+84,376235,5,Military Expenditure,2007,float64,190,69
+85,376235,5,Military Expenditure,2008,float64,196,63
+86,376235,5,Military Expenditure,2009,float64,191,67
+87,376235,5,Military Expenditure,2010,float64,191,68
+88,376235,5,Military Expenditure,2011,float64,189,70
+89,376235,5,Military Expenditure,2012,float64,193,65
+90,376235,5,Military Expenditure,2013,float64,197,62
+91,376235,5,Military Expenditure,2014,float64,198,61
+92,376235,5,Military Expenditure,2015,float64,192,66
+93,376235,5,Military Expenditure,2016,float64,192,67
+94,376235,5,Military Expenditure,2017,float64,190,69
+95,376235,5,Military Expenditure,2018,float64,190,68
+96,2368258,6,olympics_medals_country_wise,ioc_code ,object,156,0
+97,2368258,6,olympics_medals_country_wise,summer_participations,int64,30,0
+98,2368258,6,olympics_medals_country_wise,summer_gold,object,52,0
+99,2368258,6,olympics_medals_country_wise,summer_silver,int64,59,0
+100,2368258,6,olympics_medals_country_wise,summer_bronze,int64,61,0
+101,2368258,6,olympics_medals_country_wise,summer_total,object,84,0
+102,2368258,6,olympics_medals_country_wise,winter_participations,int64,24,0
+103,2368258,6,olympics_medals_country_wise,winter_gold,int64,29,0
+104,2368258,6,olympics_medals_country_wise,winter_silver,int64,29,0
+105,2368258,6,olympics_medals_country_wise,winter_bronze,int64,29,0
+106,2368258,6,olympics_medals_country_wise,winter_total,int64,36,0
+107,2368258,6,olympics_medals_country_wise,total_participation,int64,48,0
+108,2368258,6,olympics_medals_country_wise,total_gold,object,57,0
+109,2368258,6,olympics_medals_country_wise,total_silver,int64,60,0
+110,2368258,6,olympics_medals_country_wise,total_bronze,int64,65,0
+111,2368258,6,olympics_medals_country_wise,total_total ,object,84,0
+112,806968,7,holidays_df_of_67_countries_for_covid_19,holiday,object,575,0
+113,806968,7,holidays_df_of_67_countries_for_covid_19,ds,object,221,0
+114,806968,7,holidays_df_of_67_countries_for_covid_19,country,object,67,0
+115,806968,7,holidays_df_of_67_countries_for_covid_19,code,object,67,0
+116,806968,7,holidays_df_of_67_countries_for_covid_19,country_official_name,object,67,0
+117,806968,7,holidays_df_of_67_countries_for_covid_19,lower_window,int64,1,0
+118,806968,7,holidays_df_of_67_countries_for_covid_19,upper_window,int64,1,0
+119,806968,7,holidays_df_of_67_countries_for_covid_19,prior_scale,int64,1,0
+120,806968,7,holidays_df_of_67_countries_for_covid_19,source,object,6,0
+121,806968,8,holidays_df_of_70_countries_for_covid_19,holiday,object,611,0
+122,806968,8,holidays_df_of_70_countries_for_covid_19,ds,object,229,0
+123,806968,8,holidays_df_of_70_countries_for_covid_19,country,object,70,0
+124,806968,8,holidays_df_of_70_countries_for_covid_19,code,object,70,0
+125,806968,8,holidays_df_of_70_countries_for_covid_19,country_official_name,object,70,0
+126,806968,8,holidays_df_of_70_countries_for_covid_19,lower_window,int64,1,0
+127,806968,8,holidays_df_of_70_countries_for_covid_19,upper_window,int64,1,0
+128,806968,8,holidays_df_of_70_countries_for_covid_19,prior_scale,int64,1,0
+129,806968,8,holidays_df_of_70_countries_for_covid_19,source,object,4,0
+130,806968,9,holidays_df_of_70_countries_for_covid_19_2021,holiday,object,685,0
+131,806968,9,holidays_df_of_70_countries_for_covid_19_2021,ds,object,463,0
+132,806968,9,holidays_df_of_70_countries_for_covid_19_2021,country,object,70,0
+133,806968,9,holidays_df_of_70_countries_for_covid_19_2021,code,object,70,0
+134,806968,9,holidays_df_of_70_countries_for_covid_19_2021,country_official_name,object,70,0
+135,806968,9,holidays_df_of_70_countries_for_covid_19_2021,lower_window,int64,1,0
+136,806968,9,holidays_df_of_70_countries_for_covid_19_2021,upper_window,int64,1,0
+137,806968,9,holidays_df_of_70_countries_for_covid_19_2021,prior_scale,int64,1,0
+138,806968,9,holidays_df_of_70_countries_for_covid_19_2021,source,object,4,0
+139,806968,10,holidays_df_of_70_countries_for_covid_19_2022_Temporary,holiday,object,700,0
+140,806968,10,holidays_df_of_70_countries_for_covid_19_2022_Temporary,ds,object,690,0
+141,806968,10,holidays_df_of_70_countries_for_covid_19_2022_Temporary,country,object,70,0
+142,806968,10,holidays_df_of_70_countries_for_covid_19_2022_Temporary,code,object,70,0
+143,806968,10,holidays_df_of_70_countries_for_covid_19_2022_Temporary,country_official_name,object,70,0
+144,806968,10,holidays_df_of_70_countries_for_covid_19_2022_Temporary,lower_window,int64,1,0
+145,806968,10,holidays_df_of_70_countries_for_covid_19_2022_Temporary,upper_window,int64,1,0
+146,806968,10,holidays_df_of_70_countries_for_covid_19_2022_Temporary,prior_scale,int64,1,0
+147,806968,10,holidays_df_of_70_countries_for_covid_19_2022_Temporary,source,object,4,0
