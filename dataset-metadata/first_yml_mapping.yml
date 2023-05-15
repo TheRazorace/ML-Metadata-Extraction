@@ -1,0 +1,200 @@
+prefixes:
+
+    prefix : http://mapping.example.com/
+    d2rq: http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#
+    dc: http://purl.org/dc/terms/
+    fnml: http://semweb.mmlab.be/ns/fnml#
+    fno: https://w3id.org/function/ontology#
+    foaf: http://xmlns.com/foaf/0.1/
+    grel: http://users.ugent.be/~bjdmeest/function/grel.ttl#
+    idlab-fn: http://example.com/idlab/function/
+    ml-onto: http://www.semanticweb.org/ioannisdasoulas/ontologies/2022/8/ml-onto#
+    ml-vocab: http://www.semanticweb.org/ioannisdasoulas/ontologies/2022/8/ml-vocab#
+    mls: http://www.w3.org/ns/mls#
+    open: http://open.vocab.org/terms/
+    prov: http://www.w3.org/ns/prov#
+    qb: http://purl.org/linked-data/cube#
+    ql: http://semweb.mmlab.be/ns/ql#
+    rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+    rdfs: http://www.w3.org/2000/01/rdf-schema#
+    rml: http://semweb.mmlab.be/ns/rml#
+    rr: http://www.w3.org/ns/r2rml#
+    schema: http://schema.org/
+    skos: http://www.w3.org/2004/02/skos/core#
+    void: http://rdfs.org/ns/void#
+    xsd: http://www.w3.org/2001/XMLSchema#
+    kaggle-data: http://mldata.com/resource/kaggle/
+    dcat: http://www.w3.org/ns/dcat#
+
+
+mappings:
+
+    Catalog:
+        sources:
+            - [ 'Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv~csv' ]
+        s: http://mldata.com/resource/kaggle/catalog/$(id)
+        po:
+            - [ a, dcat:Catalog]
+            - [ ml-onto:totalBytesSize, $(totalBytesNullable)]
+            - [ dc:creator, http://mldata.com/resource/kaggle/creator/$(creatorUrlNullable)~iri ]
+            - [ dc:source, $(url)~iri]
+            - [ dcat:dataset, http://mldata.com/resource/kaggle/dataset/$(id)~iri]
+
+    Agent:
+        sources:
+            - [ 'Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv~csv' ]
+        s: https://mldata.com/resource/kaggle/creator/$(creatorUrlNullable)
+        po:
+            - [ a, foaf:Agent ]
+            - [ foaf:name, $(creatorNameNullable) ]
+            - [ foaf:homepage, https://www.kaggle.com/$(creatorUrlNullable)~iri ]
+
+    Document:
+        sources:
+            - ['Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv~csv' ]
+        s: $(url)
+        po:
+            - [a,foaf:Document]
+
+    Kernel:
+        sources:
+            - ['Dataset_examples/KernelMD/Kaggle_KernelMD.csv~csv']
+        s: https://mldata.com/resource/kaggle/kernel/$(ref)
+        po:
+            - [a,foaf:Kernel]
+            - [dc:creator,$(author)]
+            - [dc:title, $(title)]
+            - p: dcat:Dataset
+              o:
+                mapping: DatasetToKernel
+                condition:
+                    function: equal
+                    parameters:
+                        - [str1, $(refDataset), s]
+                        - [str2, $(ref), o]
+
+    DatasetToKernel:
+        sources:
+            - ['Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv~csv']
+        s: http://mldata.com/resource/kaggle/dataset/$(id)
+        po:
+            - [a, dcat:Dataset]
+
+    Dataset:
+        sources:
+            - ['Dataset_examples/FileMD/Kaggle_fileMD.csv~csv']
+        s: http://mldata.com/resource/kaggle/dataset/$(dataset_id)/$(file_name)
+        po:
+            - [a, dcat:Dataset]
+            - p: dc:creator
+              o:
+                mapping: CreatorDummy
+                condition:
+                    function: equal
+                    parameters:
+                        - [str1, $(dataset_id), s]
+                        - [str2, $(id), o]
+            - p: dc:source
+              o:
+                  mapping: SourceDummy
+                  condition:
+                      function: equal
+                      parameters:
+                          - [ str1, $(dataset_id), s ]
+                          - [ str2, $(id), o]
+            - p: dc:license
+              o:
+                  mapping: LicenseDummy
+                  condition:
+                      function: equal
+                      parameters:
+                          - [ str1, $(dataset_id), s ]
+                          - [ str2, $(id), o ]
+            - p: dc:version
+              o:
+                  mapping: VersionDummy
+                  condition:
+                      function: equal
+                      parameters:
+                          - [ str1, $(dataset_id), s ]
+                          - [ str2, $(id), o ]
+            - p: dc:byteSize
+              o:
+                  mapping: ByteSizeDummy
+                  condition:
+                      function: equal
+                      parameters:
+                          - [ str1, $(dataset_id), s ]
+                          - [ str2, $(id), o ]
+            - [dc:identifier, $(dataset_id)]
+            - [dcat:distribution,http://mldata.com/resource/kaggle/distribution/$(dataset_id)/$(file_name)~iri]
+
+
+
+    SourceDummy:
+        sources:
+            - [ 'Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv~csv' ]
+        s: $(urlNullable)
+
+    CreatorDummy:
+        sources:
+            - ['Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv~csv']
+        s: http://mldata.com/resource/kaggle/creator/$(creatorUrlNullable)
+
+    LicenseDummy:
+        sources:
+            - ['Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv~csv']
+        s: $(licenseNameNullable)
+
+    VersionDummy:
+        sources:
+            - [ 'Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv~csv' ]
+        s: $(currentVersionNumber)
+
+    ByteSizeDummy:
+        sources:
+            - ['Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv~csv']
+        s: $(totalBytesNullable)
+
+    feature:
+        sources:
+            - ['Dataset_examples/FeatureMD/Kaggle_featureMD.csv~csv']
+        s: http://mldata.com/resource/kaggle/dataset/$(dataset_id)/file/$(file_id)/feature/$(feature_id)
+        po:
+            - [a,mls:Feature]
+            - [rdfs:label,$(feature_name)]
+            - [mls:hasQuality, http://mldata.com/resource/kaggle/dataset/$(dataset_id)/feature/$(feature_id)/featureCharacteristic/datatype~iri]
+            - [mls:hasQuality, http://mldata.com/resource/kaggle/dataset/$(dataset_id)/feature/$(feature_id)/featureCharacteristic/number_of_distinct_values~iri]
+            - [mls:hasQuality, http://mldata.com/resource/kaggle/dataset/$(dataset_id)/feature/$(feature_id)/featureCharacteristic/number_of_missing_values~iri]
+
+    featureDatatype:
+        sources:
+            - ['Dataset_examples/FeatureMD/Kaggle_featureMD.csv~csv']
+        s: http://mldata.com/resource/kaggle/dataset/$(dataset_id)/file/$(file_id)/feature/$(feature_id)/featureCharacteristic/datatype
+        po:
+            - [a, mls:FeatureCharacteristic]
+            - [rdfs:label, $(feature_name) data-type]
+            - [ml-onto:hasDataCharacteristicType, ml-vocab:datatype~iri]
+            - [mls:hasValue, $(feature_type), rdfs:Literal]
+
+    featureNumberOfDistinctValues:
+        sources:
+            - ['Dataset_examples/FeatureMD/Kaggle_featureMD.csv~csv']
+        s: http://mldata.com/resource/kaggle/dataset/$(dataset_id)/file/$(file_id)/feature/$(feature_id)/featureCharacteristic/number_of_distinct_values
+        po:
+            - [a, mls:FeatureCharacteristic]
+            - [rdfs:label, $(feature_name) number of distinct values]
+            - [ml-onto:hasDataCharacteristicType, ml-vocab:number_of_distinct_values~iri]
+            - [mls:hasValue, $(feature_distinct), xsd:integer]
+
+    featureNumberOfMissingValues:
+        sources:
+            - ['Dataset_examples/FeatureMD/Kaggle_featureMD.csv~csv']
+        s: http://mldata.com/resource/kaggle/dataset/$(dataset_id)/file/$(file_id)/feature/$(feature_id)/featureCharacteristic/number_of_missing_values
+        po:
+            - [ a, mls:FeatureCharacteristic ]
+            - [ rdfs:label, $(feature_name) number-of-missing-values ]
+            - [ ml-onto:hasDataCharacteristicType, ml-vocab:number_of_missing_values]
+            - [ mls:hasValue, $(feature_missing), xsd:integer ]
+
+##I'm here
