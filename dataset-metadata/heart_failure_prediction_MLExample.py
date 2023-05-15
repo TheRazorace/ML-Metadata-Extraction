@@ -297,7 +297,7 @@ def ANOVA_score(df1):
 
 def param_extraction(params, model_name):
     for parameter_name, parameter_value in params.items():
-        kaggle_id.append('12345')
+        kaggle_id.append('heart')
         MLparam_name.append(model_name)
         param_name.append(parameter_name)
         param_value.append(parameter_value)

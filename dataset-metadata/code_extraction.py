@@ -11,7 +11,6 @@ import shutil
 api = KaggleApi()
 api.authenticate()
 
-
 kernels = kaggle.api.kernels_list(search= "countries")
 
 

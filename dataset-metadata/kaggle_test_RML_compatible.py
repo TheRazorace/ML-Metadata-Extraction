@@ -2,12 +2,14 @@ from kaggle.api.kaggle_api_extended import KaggleApi
 import kaggle
 import zipfile
 import pandas as pd
+import gzip
+import numpy
 import os
 
 
 def datasetMD_extraction(data_df):
     dataset_df = data_df.drop(['versions', 'files','tags'], axis=1)
-    dataset_name = "Dataset_examples/DatasetMD/Kaggle_DatasetMD"
+    dataset_name = "Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv"
     dataset_df.to_csv(dataset_name, index=False, header=True)
 
 def tags_extraction(data_df):
@@ -22,6 +24,7 @@ def tags_extraction(data_df):
 
     tag_df = pd.DataFrame()
     tag_df['did_per_tag'] = did_creators
+    print(did_creators)
     tag_df['tag_per_dataset'] = tags
 
     parsed_tags = []
@@ -37,8 +40,12 @@ def tags_extraction(data_df):
 
         for key in keys:
             did.append(row['did_per_tag'])
+            #print(row['did_per_tag'])
             column_name.append(key)
             column_description.append(desired[key])
+            #print(str(key) + ": " + str(desired[key]))
+
+
 
         parsed_tags = pd.DataFrame({
             'did': did,
@@ -48,7 +55,7 @@ def tags_extraction(data_df):
 
     parsed_tag_df = pd.DataFrame(parsed_tags)
 
-    tags_name = "Dataset_examples/DatasetMD/Kaggle_DatasetTags"
+    tags_name = "Dataset_examples/DatasetMD/Kaggle_DatasetTags.csv"
     parsed_tag_df.to_csv(tags_name, index=False, header=True)
 
 
@@ -66,6 +73,7 @@ def features_filesMD_extraction(data_df):
     # metadata for featureMD
     feature_count = []
     did_features = []
+    file_id = []
     features_file_name = []
     feature_name = []
     feature_type = []
@@ -83,7 +91,9 @@ def features_filesMD_extraction(data_df):
         for filename in file_list:
             if filename.endswith(".zip"):
                 zip_filename = filename
-                with zipfile.ZipFile(filename) as z:
+                print(pd.__version__)
+                with zipfile.ZipFile(zip_filename) as z:
+
                     z.extractall(".")
                     file_list = z.namelist()
 
@@ -95,17 +105,20 @@ def features_filesMD_extraction(data_df):
                             # convert csv to pd DataFrame
                             df = pd.read_csv(csv_filename)
 
+                            base_name = os.path.splitext(csv_filename)[0]
+
+                            file_counter += 1
                             files_count.append(file_counter)
                             did_files.append(id)
-                            file_name.append(csv_filename)
+                            file_name.append(base_name)
                             nr_of_rows.append(df.shape[0])
                             nr_of_features.append(df.shape[1] - 1)
-                            file_counter += 1
 
                             for feature in list(df.columns)[1:]:
                                 feature_count.append(feature_counter)
                                 did_features.append(id)
-                                features_file_name.append(csv_filename)
+                                file_id.append(file_counter)
+                                features_file_name.append(base_name)
                                 feature_name.append(feature)
                                 feature_type.append(df[feature].dtype)
                                 feature_distinct.append(len(df[feature].unique()))
@@ -127,6 +140,7 @@ def features_filesMD_extraction(data_df):
         feature_df = pd.DataFrame({
             "feature_id": feature_count,
             "dataset_id": did_features,
+            "file_id": file_id,
             "file_name": features_file_name,
             "feature_name": feature_name,
             "feature_type": feature_type,
@@ -135,13 +149,13 @@ def features_filesMD_extraction(data_df):
         })
 
         # convert file metadata to csv
-        fileNAME = "Dataset_examples/FileMD/Kaggle_FileMD"
+        fileNAME = "Dataset_examples/FileMD/Kaggle_FileMD.csv"
         header = ["file_id", "dataset_id", "file_name", "nr_of_rows", "nr_of_features"]
         file_df.to_csv(fileNAME, index=False, header=header)
 
         # convert feature metadata to csv
-        featureNAME = "Dataset_examples/FeatureMD/Kaggle_FeatureMD"
-        header = ["feature_id", "dataset_id", "file_name", "feature_name", "feature_type", "feature_distinct",
+        featureNAME = "Dataset_examples/FeatureMD/Kaggle_FeatureMD.csv"
+        header = ["feature_id", "dataset_id", "file_id","file_name", "feature_name", "feature_type", "feature_distinct",
                   "feature_missing"]
         feature_df.to_csv(featureNAME, index=False, header=header)
 
@@ -155,10 +169,10 @@ def kernelMD_extraction(data_df):
         data_row = data_df.iloc[i]
 
         kernels_df = pd.DataFrame(kernels) # Convert kernels to a Pandas dataframe
-        kernels_df['did'] = data_row['id'] # Add 'id' column to kernels_df
+        kernels_df['refDataset'] = data_row['ref'] # Add 'id' column to kernels_df
         kernel_df = kernel_df.append(kernels_df)
 
-    kernelNAME = "Dataset_examples/KernelMD/Kaggle_KernelMD"
+    kernelNAME = "Dataset_examples/KernelMD/Kaggle_KernelMD.csv"
     kernel_df.to_csv(kernelNAME, index=False, header=True)
 
 
