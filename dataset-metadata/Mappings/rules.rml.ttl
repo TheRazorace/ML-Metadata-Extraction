@@ -29,7 +29,7 @@ prefix:rules_000 a void:Dataset;
     void:exampleResource prefix:map_Catalog_000.
 prefix:map_Catalog_000 rml:logicalSource prefix:source_000.
 prefix:source_000 a rml:LogicalSource;
-    rml:source "Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv";
+    rml:source "../Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv";
     rml:referenceFormulation ql:CSV.
 prefix:map_Catalog_000 a rr:TriplesMap;
     rdfs:label "Catalog".
@@ -84,7 +84,7 @@ prefix:om_004 a rr:ObjectMap;
 prefix:rules_000 void:exampleResource prefix:map_Agent_000.
 prefix:map_Agent_000 rml:logicalSource prefix:source_001.
 prefix:source_001 a rml:LogicalSource;
-    rml:source "Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv";
+    rml:source "../Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv";
     rml:referenceFormulation ql:CSV.
 prefix:map_Agent_000 a rr:TriplesMap;
     rdfs:label "Agent".
@@ -121,7 +121,7 @@ prefix:om_007 a rr:ObjectMap;
 prefix:rules_000 void:exampleResource prefix:map_Document_000.
 prefix:map_Document_000 rml:logicalSource prefix:source_002.
 prefix:source_002 a rml:LogicalSource;
-    rml:source "Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv";
+    rml:source "../Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv";
     rml:referenceFormulation ql:CSV.
 prefix:map_Document_000 a rr:TriplesMap;
     rdfs:label "Document".
@@ -140,7 +140,7 @@ prefix:om_008 a rr:ObjectMap;
 prefix:rules_000 void:exampleResource prefix:map_Kernel_000.
 prefix:map_Kernel_000 rml:logicalSource prefix:source_003.
 prefix:source_003 a rml:LogicalSource;
-    rml:source "Dataset_examples/KernelMD/Kaggle_KernelMD.csv";
+    rml:source "../Dataset_examples/KernelMD/Kaggle_KernelMD.csv";
     rml:referenceFormulation ql:CSV.
 prefix:map_Kernel_000 a rr:TriplesMap;
     rdfs:label "Kernel".
@@ -183,7 +183,7 @@ prefix:pom_012 rr:objectMap prefix:om_012.
 prefix:rules_000 void:exampleResource prefix:map_DatasetToKernel_000.
 prefix:map_DatasetToKernel_000 rml:logicalSource prefix:source_004.
 prefix:source_004 a rml:LogicalSource;
-    rml:source "Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv";
+    rml:source "../Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv";
     rml:referenceFormulation ql:CSV.
 prefix:map_DatasetToKernel_000 a rr:TriplesMap;
     rdfs:label "DatasetToKernel".
@@ -202,7 +202,7 @@ prefix:om_013 a rr:ObjectMap;
 prefix:rules_000 void:exampleResource prefix:map_Dataset_000.
 prefix:map_Dataset_000 rml:logicalSource prefix:source_005.
 prefix:source_005 a rml:LogicalSource;
-    rml:source "Dataset_examples/FileMD/Kaggle_fileMD.csv";
+    rml:source "../Dataset_examples/FileMD/Kaggle_fileMD.csv";
     rml:referenceFormulation ql:CSV.
 prefix:map_Dataset_000 a rr:TriplesMap;
     rdfs:label "Dataset".
@@ -269,7 +269,7 @@ prefix:om_021 a rr:ObjectMap;
 prefix:rules_000 void:exampleResource prefix:map_SourceDummy_000.
 prefix:map_SourceDummy_000 rml:logicalSource prefix:source_006.
 prefix:source_006 a rml:LogicalSource;
-    rml:source "Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv";
+    rml:source "../Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv";
     rml:referenceFormulation ql:CSV.
 prefix:map_SourceDummy_000 a rr:TriplesMap;
     rdfs:label "SourceDummy".
@@ -279,7 +279,7 @@ prefix:s_006 rml:reference "urlNullable".
 prefix:rules_000 void:exampleResource prefix:map_CreatorDummy_000.
 prefix:map_CreatorDummy_000 rml:logicalSource prefix:source_007.
 prefix:source_007 a rml:LogicalSource;
-    rml:source "Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv";
+    rml:source "../Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv";
     rml:referenceFormulation ql:CSV.
 prefix:map_CreatorDummy_000 a rr:TriplesMap;
     rdfs:label "CreatorDummy".
@@ -289,7 +289,7 @@ prefix:s_007 rr:template "http://mldata.com/resource/kaggle/creator/{creatorUrlN
 prefix:rules_000 void:exampleResource prefix:map_LicenseDummy_000.
 prefix:map_LicenseDummy_000 rml:logicalSource prefix:source_008.
 prefix:source_008 a rml:LogicalSource;
-    rml:source "Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv";
+    rml:source "../Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv";
     rml:referenceFormulation ql:CSV.
 prefix:map_LicenseDummy_000 a rr:TriplesMap;
     rdfs:label "LicenseDummy".
@@ -299,7 +299,7 @@ prefix:s_008 rml:reference "licenseNameNullable".
 prefix:rules_000 void:exampleResource prefix:map_VersionDummy_000.
 prefix:map_VersionDummy_000 rml:logicalSource prefix:source_009.
 prefix:source_009 a rml:LogicalSource;
-    rml:source "Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv";
+    rml:source "../Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv";
     rml:referenceFormulation ql:CSV.
 prefix:map_VersionDummy_000 a rr:TriplesMap;
     rdfs:label "VersionDummy".
@@ -309,7 +309,7 @@ prefix:s_009 rml:reference "currentVersionNumber".
 prefix:rules_000 void:exampleResource prefix:map_ByteSizeDummy_000.
 prefix:map_ByteSizeDummy_000 rml:logicalSource prefix:source_010.
 prefix:source_010 a rml:LogicalSource;
-    rml:source "Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv";
+    rml:source "../Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv";
     rml:referenceFormulation ql:CSV.
 prefix:map_ByteSizeDummy_000 a rr:TriplesMap;
     rdfs:label "ByteSizeDummy".
@@ -319,7 +319,7 @@ prefix:s_010 rml:reference "totalBytesNullable".
 prefix:rules_000 void:exampleResource prefix:map_feature_000.
 prefix:map_feature_000 rml:logicalSource prefix:source_011.
 prefix:source_011 a rml:LogicalSource;
-    rml:source "Dataset_examples/FeatureMD/Kaggle_featureMD.csv";
+    rml:source "../Dataset_examples/FeatureMD/Kaggle_featureMD.csv";
     rml:referenceFormulation ql:CSV.
 prefix:map_feature_000 a rr:TriplesMap;
     rdfs:label "feature".
@@ -374,7 +374,7 @@ prefix:om_026 a rr:ObjectMap;
 prefix:rules_000 void:exampleResource prefix:map_featureDatatype_000.
 prefix:map_featureDatatype_000 rml:logicalSource prefix:source_012.
 prefix:source_012 a rml:LogicalSource;
-    rml:source "Dataset_examples/FeatureMD/Kaggle_featureMD.csv";
+    rml:source "../Dataset_examples/FeatureMD/Kaggle_featureMD.csv";
     rml:referenceFormulation ql:CSV.
 prefix:map_featureDatatype_000 a rr:TriplesMap;
     rdfs:label "featureDatatype".
@@ -421,7 +421,7 @@ prefix:om_030 a rr:ObjectMap;
 prefix:rules_000 void:exampleResource prefix:map_featureNumberOfDistinctValues_000.
 prefix:map_featureNumberOfDistinctValues_000 rml:logicalSource prefix:source_013.
 prefix:source_013 a rml:LogicalSource;
-    rml:source "Dataset_examples/FeatureMD/Kaggle_featureMD.csv";
+    rml:source "../Dataset_examples/FeatureMD/Kaggle_featureMD.csv";
     rml:referenceFormulation ql:CSV.
 prefix:map_featureNumberOfDistinctValues_000 a rr:TriplesMap;
     rdfs:label "featureNumberOfDistinctValues".
@@ -468,7 +468,7 @@ prefix:om_034 a rr:ObjectMap;
 prefix:rules_000 void:exampleResource prefix:map_featureNumberOfMissingValues_000.
 prefix:map_featureNumberOfMissingValues_000 rml:logicalSource prefix:source_014.
 prefix:source_014 a rml:LogicalSource;
-    rml:source "Dataset_examples/FeatureMD/Kaggle_featureMD.csv";
+    rml:source "../Dataset_examples/FeatureMD/Kaggle_featureMD.csv";
     rml:referenceFormulation ql:CSV.
 prefix:map_featureNumberOfMissingValues_000 a rr:TriplesMap;
     rdfs:label "featureNumberOfMissingValues".

@@ -29,7 +29,7 @@ prefixes:
 mappings:
     Catalog:
         sources:
-            - [ 'Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv~csv' ]
+            - [ '../Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv~csv' ]
         s: http://mldata.com/resource/kaggle/catalog/$(id)
         po:
             - [ a, dcat:Catalog]
@@ -40,7 +40,7 @@ mappings:
 
     Agent:
         sources:
-            - [ 'Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv~csv' ]
+            - [ '../Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv~csv' ]
         s: https://mldata.com/resource/kaggle/creator/$(creatorUrlNullable)
         po:
             - [ a, foaf:Agent ]
@@ -49,14 +49,14 @@ mappings:
 
     Document:
         sources:
-            - ['Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv~csv' ]
+            - ['../Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv~csv' ]
         s: $(url)
         po:
             - [a,foaf:Document]
 
     Kernel:
         sources:
-            - ['Dataset_examples/KernelMD/Kaggle_KernelMD.csv~csv']
+            - ['../Dataset_examples/KernelMD/Kaggle_KernelMD.csv~csv']
         s: https://mldata.com/resource/kaggle/kernel/$(ref)
         po:
             - [a,foaf:Kernel]
@@ -73,14 +73,14 @@ mappings:
 
     DatasetToKernel:
         sources:
-            - ['Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv~csv']
+            - ['../Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv~csv']
         s: http://mldata.com/resource/kaggle/dataset/$(id)
         po:
             - [a, dcat:Dataset]
 
     Dataset:
         sources:
-            - ['Dataset_examples/FileMD/Kaggle_fileMD.csv~csv']
+            - ['../Dataset_examples/FileMD/Kaggle_fileMD.csv~csv']
         s: http://mldata.com/resource/kaggle/dataset/$(dataset_id)/$(file_name)
         po:
             - [a, dcat:Dataset]
@@ -129,32 +129,32 @@ mappings:
 
     SourceDummy:
         sources:
-            - [ 'Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv~csv' ]
+            - [ '../Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv~csv' ]
         s: $(urlNullable)
 
     CreatorDummy:
         sources:
-            - ['Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv~csv']
+            - ['../Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv~csv']
         s: http://mldata.com/resource/kaggle/creator/$(creatorUrlNullable)
 
     LicenseDummy:
         sources:
-            - ['Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv~csv']
+            - ['../Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv~csv']
         s: $(licenseNameNullable)
 
     VersionDummy:
         sources:
-            - [ 'Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv~csv' ]
+            - [ '../Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv~csv' ]
         s: $(currentVersionNumber)
 
     ByteSizeDummy:
         sources:
-            - ['Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv~csv']
+            - ['../Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv~csv']
         s: $(totalBytesNullable)
 
     feature:
         sources:
-            - ['Dataset_examples/FeatureMD/Kaggle_featureMD.csv~csv']
+            - ['../Dataset_examples/FeatureMD/Kaggle_featureMD.csv~csv']
         s: http://mldata.com/resource/kaggle/dataset/$(dataset_id)/file/$(file_id)/feature/$(feature_id)
         po:
             - [a,mls:Feature]
@@ -165,7 +165,7 @@ mappings:
 
     featureDatatype:
         sources:
-            - ['Dataset_examples/FeatureMD/Kaggle_featureMD.csv~csv']
+            - ['../Dataset_examples/FeatureMD/Kaggle_featureMD.csv~csv']
         s: http://mldata.com/resource/kaggle/dataset/$(dataset_id)/file/$(file_id)/feature/$(feature_id)/featureCharacteristic/datatype
         po:
             - [a, mls:FeatureCharacteristic]
@@ -175,7 +175,7 @@ mappings:
 
     featureNumberOfDistinctValues:
         sources:
-            - ['Dataset_examples/FeatureMD/Kaggle_featureMD.csv~csv']
+            - ['../Dataset_examples/FeatureMD/Kaggle_featureMD.csv~csv']
         s: http://mldata.com/resource/kaggle/dataset/$(dataset_id)/file/$(file_id)/feature/$(feature_id)/featureCharacteristic/number_of_distinct_values
         po:
             - [a, mls:FeatureCharacteristic]
@@ -185,7 +185,7 @@ mappings:
 
     featureNumberOfMissingValues:
         sources:
-            - ['Dataset_examples/FeatureMD/Kaggle_featureMD.csv~csv']
+            - ['../Dataset_examples/FeatureMD/Kaggle_featureMD.csv~csv']
         s: http://mldata.com/resource/kaggle/dataset/$(dataset_id)/file/$(file_id)/feature/$(feature_id)/featureCharacteristic/number_of_missing_values
         po:
             - [ a, mls:FeatureCharacteristic ]
