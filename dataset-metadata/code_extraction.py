@@ -22,7 +22,7 @@ for i in range(len(kernels)):
 
 
 # Directory containing the .ipynb files
-notebook_dir = "kernel_extraction"
+notebook_dir = "KernelExtraction/kernel_extraction"
 
 # Get a list of all .ipynb files in the directory
 notebook_files = glob.glob(f"{notebook_dir}/*.ipynb")
@@ -46,7 +46,7 @@ for notebook_file in notebook_files:
 # files = glob.glob(os.path.join(notebook_dir, "*"))
 #
 
-destination_dir = "converted_python_files"
+destination_dir = "KernelExtraction/converted_python_files"
 
 # Filter out .py files
 py_files = [file for file in os.listdir(notebook_dir) if file.endswith(".py")]

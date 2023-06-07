@@ -183,7 +183,7 @@ if __name__ == "__main__":
     # Documentation--> https://github.com/Kaggle/kaggle-api
 
     # get dataset metadata
-    datasets = kaggle.api.datasets_list(search="countries")
+    datasets = kaggle.api.datasets_list(search="Binary Classification")
     dataset_df = pd.DataFrame(datasets)[:6]
 
     datasetMD_extraction(dataset_df)
@@ -191,27 +191,6 @@ if __name__ == "__main__":
     features_filesMD_extraction(dataset_df)
     kernelMD_extraction(dataset_df)
 
-#
-# with zipfile.ZipFile(zip_filename) as z:
-#      z.extractall(".")
-#      file_list = z.namelist()
-#
-#      for filename in file_list:
-#         if filename.endswith(".csv"):
-#             csv_filename = filename
-#             break
-
-
-# Save the dataset as pandas dataframe and delete the original dataset from your computer (for storage management)
-# os.remove("hotel-reservations-classification-dataset.zip")
-# os.remove(csv_filename)
-#
-#
-# #Find some extra metadata (e.g column names, datatypes, number of features...)
-# #Save metadata in a new dataframe
-
-
-#####
 
 
 

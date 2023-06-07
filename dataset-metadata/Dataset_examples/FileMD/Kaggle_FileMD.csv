@@ -1,11 +1,23 @@
 file_id,dataset_id,file_name,nr_of_rows,nr_of_features
-1,23752,countries of the world,227,19
-2,1380016,Life expectancy,3253,2
-3,1865113,Netflix subscription fee Dec-2021,65,7
-4,1865113,netflix price in different countries,65,6
-5,376235,Military Expenditure,264,62
-6,2368258,olympics_medals_country_wise,156,16
-7,806968,holidays_df_of_67_countries_for_covid_19,760,9
-8,806968,holidays_df_of_70_countries_for_covid_19,806,9
-9,806968,holidays_df_of_70_countries_for_covid_19_2021,1723,9
-10,806968,holidays_df_of_70_countries_for_covid_19_2022_Temporary,2598,9
+1,550917,small_train_data_set/small_train_data_set/train_data,2027,3
+2,550917,train_data,2027,3
+3,1829286,breast-cancer,569,31
+4,2190381,submission,4291,1
+5,2190381,test,4291,15
+6,2190381,test_label,4291,1
+7,2190381,train,12870,16
+8,2190381,breast-cancer,569,31
+9,1490083,submission,4291,1
+10,1490083,test,4291,15
+11,1490083,test_label,4291,1
+12,1490083,train,12870,16
+13,1490083,small_train_data_set/small_train_data_set/train_data,2027,3
+14,1490083,train_data,2027,3
+15,2296957,submission,4291,1
+16,2296957,test,4291,15
+17,2296957,test_label,4291,1
+18,2296957,train,12870,16
+19,501010,submission,4291,1
+20,501010,test,4291,15
+21,501010,test_label,4291,1
+22,501010,train,12870,16

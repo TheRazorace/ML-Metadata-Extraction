@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+!/usr/bin/env python
 # coding: utf-8
 
 # In[ ]:
@@ -39,7 +39,7 @@ for dirname, _, filenames in os.walk('/kaggle/input'):
 # 3. BIRCH
 # 4. DBSCAN
 # 5. K-Means
-# 6. Mini-Batch K-Means
+# 6. Mini-atch K-Means
 # 7. Mean Shift
 # 8. OPTICS
 # 9. Spectral Clustering

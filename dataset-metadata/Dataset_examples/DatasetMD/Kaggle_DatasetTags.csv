@@ -1,323 +1,379 @@
 did,column_name,column_description
-23752,nameNullable,global
-23752,descriptionNullable,A country is a region that is identified as a distinct national entity in political geography.
-23752,fullPathNullable,geography and places > global
-23752,ref,global
-23752,name,global
-23752,hasName,True
-23752,description,A country is a region that is identified as a distinct national entity in political geography.
-23752,hasDescription,True
-23752,fullPath,geography and places > global
-23752,hasFullPath,True
-23752,competitionCount,0
-23752,datasetCount,708
-23752,scriptCount,232
-23752,totalCount,940
-23752,nameNullable,categorical
-23752,descriptionNullable,"Categorical data are observations that fall into discrete categories, like dog breed, dog color or whether or not a dog likes chew toys."
-23752,fullPathNullable,data type > categorical
-23752,ref,categorical
-23752,name,categorical
-23752,hasName,True
-23752,description,"Categorical data are observations that fall into discrete categories, like dog breed, dog color or whether or not a dog likes chew toys."
-23752,hasDescription,True
-23752,fullPath,data type > categorical
-23752,hasFullPath,True
-23752,competitionCount,0
-23752,datasetCount,1415
-23752,scriptCount,1905
-23752,totalCount,3320
-23752,nameNullable,social science
-23752,descriptionNullable,Social science is the collection of disciplines studying how humans interact with each other.
-23752,fullPathNullable,subject > people and society > social science
-23752,ref,social science
-23752,name,social science
-23752,hasName,True
-23752,description,Social science is the collection of disciplines studying how humans interact with each other.
-23752,hasDescription,True
-23752,fullPath,subject > people and society > social science
-23752,hasFullPath,True
-23752,competitionCount,0
-23752,datasetCount,5415
-23752,scriptCount,743
-23752,totalCount,6158
-1380016,nameNullable,global
-1380016,descriptionNullable,A country is a region that is identified as a distinct national entity in political geography.
-1380016,fullPathNullable,geography and places > global
-1380016,ref,global
-1380016,name,global
-1380016,hasName,True
-1380016,description,A country is a region that is identified as a distinct national entity in political geography.
-1380016,hasDescription,True
-1380016,fullPath,geography and places > global
-1380016,hasFullPath,True
-1380016,competitionCount,0
-1380016,datasetCount,708
-1380016,scriptCount,232
-1380016,totalCount,940
-1380016,nameNullable,health
-1380016,descriptionNullable,Consider the health tag your data science gym. Get in there and work out those data science muscles on health analytics. Analyze heart disease until you sweat. Then recover with with a nice candy production dataset.
-1380016,fullPathNullable,subject > health and fitness > health
-1380016,ref,health
-1380016,name,health
-1380016,hasName,True
-1380016,description,Consider the health tag your data science gym. Get in there and work out those data science muscles on health analytics. Analyze heart disease until you sweat. Then recover with with a nice candy production dataset.
-1380016,hasDescription,True
-1380016,fullPath,subject > health and fitness > health
-1380016,hasFullPath,True
-1380016,competitionCount,7
-1380016,datasetCount,8876
-1380016,scriptCount,7539
-1380016,totalCount,16422
-1380016,nameNullable,social science
-1380016,descriptionNullable,Social science is the collection of disciplines studying how humans interact with each other.
-1380016,fullPathNullable,subject > people and society > social science
-1380016,ref,social science
-1380016,name,social science
-1380016,hasName,True
-1380016,description,Social science is the collection of disciplines studying how humans interact with each other.
-1380016,hasDescription,True
-1380016,fullPath,subject > people and society > social science
-1380016,hasFullPath,True
-1380016,competitionCount,0
-1380016,datasetCount,5415
-1380016,scriptCount,743
-1380016,totalCount,6158
-1380016,nameNullable,beginner
-1380016,descriptionNullable,"New to data science? Explore tips, tricks, and beginner friendly work from other Kagglers."
-1380016,fullPathNullable,audience > beginner
-1380016,ref,beginner
-1380016,name,beginner
-1380016,hasName,True
-1380016,description,"New to data science? Explore tips, tricks, and beginner friendly work from other Kagglers."
-1380016,hasDescription,True
-1380016,fullPath,audience > beginner
-1380016,hasFullPath,True
-1380016,competitionCount,5093
-1380016,datasetCount,4562
-1380016,scriptCount,36794
-1380016,totalCount,46449
-1380016,nameNullable,matplotlib
-1380016,descriptionNullable,
-1380016,fullPathNullable,packages > matplotlib
-1380016,ref,matplotlib
-1380016,name,matplotlib
-1380016,hasName,True
-1380016,description,
-1380016,hasDescription,True
-1380016,fullPath,packages > matplotlib
-1380016,hasFullPath,True
-1380016,competitionCount,0
-1380016,datasetCount,241
-1380016,scriptCount,64012
-1380016,totalCount,64253
-1865113,nameNullable,movies and tv shows
-1865113,descriptionNullable,Grab a bucket of popcorn and come analyze these movie ratings. The world must know which blockbuster film is the blockbuster film of all time!
-1865113,fullPathNullable,subject > arts and entertainment > movies and tv shows
-1865113,ref,movies and tv shows
-1865113,name,movies and tv shows
-1865113,hasName,True
-1865113,description,Grab a bucket of popcorn and come analyze these movie ratings. The world must know which blockbuster film is the blockbuster film of all time!
-1865113,hasDescription,True
-1865113,fullPath,subject > arts and entertainment > movies and tv shows
-1865113,hasFullPath,True
-1865113,competitionCount,3
-1865113,datasetCount,8816
-1865113,scriptCount,2023
-1865113,totalCount,10842
-1865113,nameNullable,exploratory data analysis
-1865113,descriptionNullable,
-1865113,fullPathNullable,technique > exploratory data analysis
-1865113,ref,exploratory data analysis
-1865113,name,exploratory data analysis
-1865113,hasName,True
-1865113,description,
-1865113,hasDescription,False
-1865113,fullPath,technique > exploratory data analysis
-1865113,hasFullPath,True
-1865113,competitionCount,0
-1865113,datasetCount,2635
-1865113,scriptCount,27199
-1865113,totalCount,29834
-1865113,nameNullable,regression
-1865113,descriptionNullable,
-1865113,fullPathNullable,task > regression
-1865113,ref,regression
-1865113,name,regression
-1865113,hasName,True
-1865113,description,
-1865113,hasDescription,False
-1865113,fullPath,task > regression
-1865113,hasFullPath,True
-1865113,competitionCount,117
-1865113,datasetCount,1045
-1865113,scriptCount,5272
-1865113,totalCount,6434
-376235,nameNullable,military
-376235,descriptionNullable,"Datasets and kernels based on historical battles and other military activities including drone attaccks, bombings, and veteran suicides."
-376235,fullPathNullable,subject > people and society > law > government > military
-376235,ref,military
-376235,name,military
-376235,hasName,True
-376235,description,"Datasets and kernels based on historical battles and other military activities including drone attaccks, bombings, and veteran suicides."
-376235,hasDescription,True
-376235,fullPath,subject > people and society > law > government > military
-376235,hasFullPath,True
-376235,competitionCount,0
-376235,datasetCount,502
-376235,scriptCount,75
-376235,totalCount,577
-376235,nameNullable,economics
-376235,descriptionNullable,"The economics tag contains resources for analyzing the production, consumption, and transfer of wealth."
-376235,fullPathNullable,subject > people and society > social science > economics
-376235,ref,economics
-376235,name,economics
-376235,hasName,True
-376235,description,"The economics tag contains resources for analyzing the production, consumption, and transfer of wealth."
-376235,hasDescription,True
-376235,fullPath,subject > people and society > social science > economics
-376235,hasFullPath,True
-376235,competitionCount,0
-376235,datasetCount,2352
-376235,scriptCount,587
-376235,totalCount,2939
-2368258,nameNullable,water sports
-2368258,descriptionNullable,
-2368258,fullPathNullable,subject > health and fitness > exercise > sports > water sports
-2368258,ref,water sports
-2368258,name,water sports
-2368258,hasName,True
-2368258,description,
-2368258,hasDescription,False
-2368258,fullPath,subject > health and fitness > exercise > sports > water sports
-2368258,hasFullPath,True
-2368258,competitionCount,0
-2368258,datasetCount,30
-2368258,scriptCount,6
-2368258,totalCount,36
-2368258,nameNullable,global
-2368258,descriptionNullable,A country is a region that is identified as a distinct national entity in political geography.
-2368258,fullPathNullable,geography and places > global
-2368258,ref,global
-2368258,name,global
-2368258,hasName,True
-2368258,description,A country is a region that is identified as a distinct national entity in political geography.
-2368258,hasDescription,True
-2368258,fullPath,geography and places > global
-2368258,hasFullPath,True
-2368258,competitionCount,0
-2368258,datasetCount,708
-2368258,scriptCount,232
-2368258,totalCount,940
-2368258,nameNullable,sports
-2368258,descriptionNullable,"The sports tag covers the whole spectrum of sports around the world. We've got tennis, we've got football, and we've even got kitefoil racing."
-2368258,fullPathNullable,subject > health and fitness > exercise > sports
-2368258,ref,sports
-2368258,name,sports
-2368258,hasName,True
-2368258,description,"The sports tag covers the whole spectrum of sports around the world. We've got tennis, we've got football, and we've even got kitefoil racing."
-2368258,hasDescription,True
-2368258,fullPath,subject > health and fitness > exercise > sports
-2368258,hasFullPath,True
-2368258,competitionCount,23
-2368258,datasetCount,5034
-2368258,scriptCount,3331
-2368258,totalCount,8388
-2368258,nameNullable,exploratory data analysis
-2368258,descriptionNullable,
-2368258,fullPathNullable,technique > exploratory data analysis
-2368258,ref,exploratory data analysis
-2368258,name,exploratory data analysis
-2368258,hasName,True
-2368258,description,
-2368258,hasDescription,False
-2368258,fullPath,technique > exploratory data analysis
-2368258,hasFullPath,True
-2368258,competitionCount,0
-2368258,datasetCount,2635
-2368258,scriptCount,27199
-2368258,totalCount,29834
-2368258,nameNullable,data visualization
-2368258,descriptionNullable,"The art of depicting data in a visual format. Using charts and graphs, it is easier to observe patterns, relationships, and outliers."
-2368258,fullPathNullable,technique > data visualization
-2368258,ref,data visualization
-2368258,name,data visualization
-2368258,hasName,True
-2368258,description,"The art of depicting data in a visual format. Using charts and graphs, it is easier to observe patterns, relationships, and outliers."
-2368258,hasDescription,True
-2368258,fullPath,technique > data visualization
-2368258,hasFullPath,True
-2368258,competitionCount,0
-2368258,datasetCount,3580
-2368258,scriptCount,30207
-2368258,totalCount,33787
-806968,nameNullable,health
-806968,descriptionNullable,Consider the health tag your data science gym. Get in there and work out those data science muscles on health analytics. Analyze heart disease until you sweat. Then recover with with a nice candy production dataset.
-806968,fullPathNullable,subject > health and fitness > health
-806968,ref,health
-806968,name,health
-806968,hasName,True
-806968,description,Consider the health tag your data science gym. Get in there and work out those data science muscles on health analytics. Analyze heart disease until you sweat. Then recover with with a nice candy production dataset.
-806968,hasDescription,True
-806968,fullPath,subject > health and fitness > health
-806968,hasFullPath,True
-806968,competitionCount,7
-806968,datasetCount,8876
-806968,scriptCount,7539
-806968,totalCount,16422
-806968,nameNullable,time series analysis
-806968,descriptionNullable,
-806968,fullPathNullable,technique > time series analysis
-806968,ref,time series analysis
-806968,name,time series analysis
-806968,hasName,True
-806968,description,
-806968,hasDescription,False
-806968,fullPath,technique > time series analysis
-806968,hasFullPath,True
-806968,competitionCount,39
-806968,datasetCount,1650
-806968,scriptCount,2902
-806968,totalCount,4591
-806968,nameNullable,holidays and cultural events
-806968,descriptionNullable,
-806968,fullPathNullable,subject > people and society > people > holidays and cultural events
-806968,ref,holidays and cultural events
-806968,name,holidays and cultural events
-806968,hasName,True
-806968,description,
-806968,hasDescription,False
-806968,fullPath,subject > people and society > people > holidays and cultural events
-806968,hasFullPath,True
-806968,competitionCount,4
-806968,datasetCount,566
-806968,scriptCount,136
-806968,totalCount,706
-806968,nameNullable,travel
-806968,descriptionNullable,
-806968,fullPathNullable,subject > people and society > business > travel
-806968,ref,travel
-806968,name,travel
-806968,hasName,True
-806968,description,
-806968,hasDescription,False
-806968,fullPath,subject > people and society > business > travel
-806968,hasFullPath,True
-806968,competitionCount,0
-806968,datasetCount,3959
-806968,scriptCount,1324
-806968,totalCount,5283
-806968,nameNullable,covid19
-806968,descriptionNullable,COVID-19 is a disease that is caused by the SARS-CoV-2 virus. In 2020 there was a global COVID-19 pandemic.
-806968,fullPathNullable,subject > health and fitness > health > health conditions > diseases > covid19
-806968,ref,covid19
-806968,name,covid19
-806968,hasName,True
-806968,description,COVID-19 is a disease that is caused by the SARS-CoV-2 virus. In 2020 there was a global COVID-19 pandemic.
-806968,hasDescription,True
-806968,fullPath,subject > health and fitness > health > health conditions > diseases > covid19
-806968,hasFullPath,True
-806968,competitionCount,9
-806968,datasetCount,1774
-806968,scriptCount,2456
-806968,totalCount,4239
+550917,nameNullable,earth and nature
+550917,descriptionNullable,
+550917,fullPathNullable,subject > earth and nature
+550917,ref,earth and nature
+550917,name,earth and nature
+550917,hasName,True
+550917,description,
+550917,hasDescription,False
+550917,fullPath,subject > earth and nature
+550917,hasFullPath,True
+550917,competitionCount,10
+550917,datasetCount,27421
+550917,scriptCount,276
+550917,totalCount,27707
+550917,nameNullable,classification
+550917,descriptionNullable,
+550917,fullPathNullable,task > classification
+550917,ref,classification
+550917,name,classification
+550917,hasName,True
+550917,description,
+550917,hasDescription,False
+550917,fullPath,task > classification
+550917,hasFullPath,True
+550917,competitionCount,7
+550917,datasetCount,3445
+550917,scriptCount,17016
+550917,totalCount,20468
+550917,nameNullable,cnn
+550917,descriptionNullable,
+550917,fullPathNullable,technique > neural networks > cnn
+550917,ref,cnn
+550917,name,cnn
+550917,hasName,True
+550917,description,
+550917,hasDescription,False
+550917,fullPath,technique > neural networks > cnn
+550917,hasFullPath,True
+550917,competitionCount,0
+550917,datasetCount,1042
+550917,scriptCount,5594
+550917,totalCount,6636
+550917,nameNullable,image
+550917,descriptionNullable,
+550917,fullPathNullable,data type > image
+550917,ref,image
+550917,name,image
+550917,hasName,True
+550917,description,
+550917,hasDescription,False
+550917,fullPath,data type > image
+550917,hasFullPath,True
+550917,competitionCount,210
+550917,datasetCount,5424
+550917,scriptCount,4997
+550917,totalCount,10631
+550917,nameNullable,binary classification
+550917,descriptionNullable,
+550917,fullPathNullable,task > binary-classification
+550917,ref,binary classification
+550917,name,binary classification
+550917,hasName,True
+550917,description,
+550917,hasDescription,False
+550917,fullPath,task > binary-classification
+550917,hasFullPath,True
+550917,competitionCount,5604
+550917,datasetCount,798
+550917,scriptCount,5638
+550917,totalCount,12040
+1829286,nameNullable,healthcare
+1829286,descriptionNullable,"AI in healthcare is a growing interest. One of the major problems is simply converting research into an application. Should be easy, right?"
+1829286,fullPathNullable,subject > health and fitness > health > healthcare
+1829286,ref,healthcare
+1829286,name,healthcare
+1829286,hasName,True
+1829286,description,"AI in healthcare is a growing interest. One of the major problems is simply converting research into an application. Should be easy, right?"
+1829286,hasDescription,True
+1829286,fullPath,subject > health and fitness > health > healthcare
+1829286,hasFullPath,True
+1829286,competitionCount,9
+1829286,datasetCount,1227
+1829286,scriptCount,1399
+1829286,totalCount,2635
+1829286,nameNullable,classification
+1829286,descriptionNullable,
+1829286,fullPathNullable,task > classification
+1829286,ref,classification
+1829286,name,classification
+1829286,hasName,True
+1829286,description,
+1829286,hasDescription,False
+1829286,fullPath,task > classification
+1829286,hasFullPath,True
+1829286,competitionCount,7
+1829286,datasetCount,3445
+1829286,scriptCount,17016
+1829286,totalCount,20468
+1829286,nameNullable,tabular
+1829286,descriptionNullable,
+1829286,fullPathNullable,data type > tabular
+1829286,ref,tabular
+1829286,name,tabular
+1829286,hasName,True
+1829286,description,
+1829286,hasDescription,False
+1829286,fullPath,data type > tabular
+1829286,hasFullPath,True
+1829286,competitionCount,5979
+1829286,datasetCount,6769
+1829286,scriptCount,5314
+1829286,totalCount,18062
+1829286,nameNullable,binary classification
+1829286,descriptionNullable,
+1829286,fullPathNullable,task > binary-classification
+1829286,ref,binary classification
+1829286,name,binary classification
+1829286,hasName,True
+1829286,description,
+1829286,hasDescription,False
+1829286,fullPath,task > binary-classification
+1829286,hasFullPath,True
+1829286,competitionCount,5604
+1829286,datasetCount,798
+1829286,scriptCount,5638
+1829286,totalCount,12040
+1829286,nameNullable,cancer
+1829286,descriptionNullable,
+1829286,fullPathNullable,subject > health and fitness > health > health conditions > cancer
+1829286,ref,cancer
+1829286,name,cancer
+1829286,hasName,True
+1829286,description,
+1829286,hasDescription,False
+1829286,fullPath,subject > health and fitness > health > health conditions > cancer
+1829286,hasFullPath,True
+1829286,competitionCount,1
+1829286,datasetCount,5949
+1829286,scriptCount,3240
+1829286,totalCount,9190
+2190381,nameNullable,business
+2190381,descriptionNullable,"Businesses are organizational entities that drive economic activity. Explore the inner workings of things like HR practices, product sales, and customer happiness in these competitions, kernels, and datasets."
+2190381,fullPathNullable,subject > people and society > business
+2190381,ref,business
+2190381,name,business
+2190381,hasName,True
+2190381,description,"Businesses are organizational entities that drive economic activity. Explore the inner workings of things like HR practices, product sales, and customer happiness in these competitions, kernels, and datasets."
+2190381,hasDescription,True
+2190381,fullPath,subject > people and society > business
+2190381,hasFullPath,True
+2190381,competitionCount,10
+2190381,datasetCount,46266
+2190381,scriptCount,25172
+2190381,totalCount,71448
+2190381,nameNullable,exploratory data analysis
+2190381,descriptionNullable,
+2190381,fullPathNullable,technique > exploratory data analysis
+2190381,ref,exploratory data analysis
+2190381,name,exploratory data analysis
+2190381,hasName,True
+2190381,description,
+2190381,hasDescription,False
+2190381,fullPath,technique > exploratory data analysis
+2190381,hasFullPath,True
+2190381,competitionCount,0
+2190381,datasetCount,2711
+2190381,scriptCount,27390
+2190381,totalCount,30101
+2190381,nameNullable,classification
+2190381,descriptionNullable,
+2190381,fullPathNullable,task > classification
+2190381,ref,classification
+2190381,name,classification
+2190381,hasName,True
+2190381,description,
+2190381,hasDescription,False
+2190381,fullPath,task > classification
+2190381,hasFullPath,True
+2190381,competitionCount,7
+2190381,datasetCount,3445
+2190381,scriptCount,17016
+2190381,totalCount,20468
+2190381,nameNullable,binary classification
+2190381,descriptionNullable,
+2190381,fullPathNullable,task > binary-classification
+2190381,ref,binary classification
+2190381,name,binary classification
+2190381,hasName,True
+2190381,description,
+2190381,hasDescription,False
+2190381,fullPath,task > binary-classification
+2190381,hasFullPath,True
+2190381,competitionCount,5604
+2190381,datasetCount,798
+2190381,scriptCount,5638
+2190381,totalCount,12040
+1490083,nameNullable,health
+1490083,descriptionNullable,Consider the health tag your data science gym. Get in there and work out those data science muscles on health analytics. Analyze heart disease until you sweat. Then recover with with a nice candy production dataset.
+1490083,fullPathNullable,subject > health and fitness > health
+1490083,ref,health
+1490083,name,health
+1490083,hasName,True
+1490083,description,Consider the health tag your data science gym. Get in there and work out those data science muscles on health analytics. Analyze heart disease until you sweat. Then recover with with a nice candy production dataset.
+1490083,hasDescription,True
+1490083,fullPath,subject > health and fitness > health
+1490083,hasFullPath,True
+1490083,competitionCount,7
+1490083,datasetCount,9215
+1490083,scriptCount,7566
+1490083,totalCount,16788
+1490083,nameNullable,medicine
+1490083,descriptionNullable,"Medicine is the science and practice of the diagnosis, treatment, and prevention of disease. We recommend you take two datasets and analyze them in the morning. If that doesn't work, analyze one dataset every four hours."
+1490083,fullPathNullable,subject > health and fitness > health > medicine
+1490083,ref,medicine
+1490083,name,medicine
+1490083,hasName,True
+1490083,description,"Medicine is the science and practice of the diagnosis, treatment, and prevention of disease. We recommend you take two datasets and analyze them in the morning. If that doesn't work, analyze one dataset every four hours."
+1490083,hasDescription,True
+1490083,fullPath,subject > health and fitness > health > medicine
+1490083,hasFullPath,True
+1490083,competitionCount,9
+1490083,datasetCount,609
+1490083,scriptCount,830
+1490083,totalCount,1448
+1490083,nameNullable,image
+1490083,descriptionNullable,
+1490083,fullPathNullable,data type > image
+1490083,ref,image
+1490083,name,image
+1490083,hasName,True
+1490083,description,
+1490083,hasDescription,False
+1490083,fullPath,data type > image
+1490083,hasFullPath,True
+1490083,competitionCount,210
+1490083,datasetCount,5424
+1490083,scriptCount,4997
+1490083,totalCount,10631
+1490083,nameNullable,binary classification
+1490083,descriptionNullable,
+1490083,fullPathNullable,task > binary-classification
+1490083,ref,binary classification
+1490083,name,binary classification
+1490083,hasName,True
+1490083,description,
+1490083,hasDescription,False
+1490083,fullPath,task > binary-classification
+1490083,hasFullPath,True
+1490083,competitionCount,5604
+1490083,datasetCount,798
+1490083,scriptCount,5638
+1490083,totalCount,12040
+1490083,nameNullable,pytorch
+1490083,descriptionNullable,
+1490083,fullPathNullable,packages > pytorch
+1490083,ref,pytorch
+1490083,name,pytorch
+1490083,hasName,True
+1490083,description,
+1490083,hasDescription,True
+1490083,fullPath,packages > pytorch
+1490083,hasFullPath,True
+1490083,competitionCount,0
+1490083,datasetCount,320
+1490083,scriptCount,3073
+1490083,totalCount,3393
+2296957,nameNullable,computer vision
+2296957,descriptionNullable,"Teaching a machine to interpret real-world images and videos. Applications include detecting objects, capturing motion, and restoring images."
+2296957,fullPathNullable,technique > computer vision
+2296957,ref,computer vision
+2296957,name,computer vision
+2296957,hasName,True
+2296957,description,"Teaching a machine to interpret real-world images and videos. Applications include detecting objects, capturing motion, and restoring images."
+2296957,hasDescription,True
+2296957,fullPath,technique > computer vision
+2296957,hasFullPath,True
+2296957,competitionCount,23
+2296957,datasetCount,2570
+2296957,scriptCount,4070
+2296957,totalCount,6663
+2296957,nameNullable,classification
+2296957,descriptionNullable,
+2296957,fullPathNullable,task > classification
+2296957,ref,classification
+2296957,name,classification
+2296957,hasName,True
+2296957,description,
+2296957,hasDescription,False
+2296957,fullPath,task > classification
+2296957,hasFullPath,True
+2296957,competitionCount,7
+2296957,datasetCount,3445
+2296957,scriptCount,17016
+2296957,totalCount,20468
+2296957,nameNullable,image
+2296957,descriptionNullable,
+2296957,fullPathNullable,data type > image
+2296957,ref,image
+2296957,name,image
+2296957,hasName,True
+2296957,description,
+2296957,hasDescription,False
+2296957,fullPath,data type > image
+2296957,hasFullPath,True
+2296957,competitionCount,210
+2296957,datasetCount,5424
+2296957,scriptCount,4997
+2296957,totalCount,10631
+2296957,nameNullable,binary classification
+2296957,descriptionNullable,
+2296957,fullPathNullable,task > binary-classification
+2296957,ref,binary classification
+2296957,name,binary classification
+2296957,hasName,True
+2296957,description,
+2296957,hasDescription,False
+2296957,fullPath,task > binary-classification
+2296957,hasFullPath,True
+2296957,competitionCount,5604
+2296957,datasetCount,798
+2296957,scriptCount,5638
+2296957,totalCount,12040
+2296957,nameNullable,food
+2296957,descriptionNullable,
+2296957,fullPathNullable,subject > health and fitness > food
+2296957,ref,food
+2296957,name,food
+2296957,hasName,True
+2296957,description,
+2296957,hasDescription,False
+2296957,fullPath,subject > health and fitness > food
+2296957,hasFullPath,True
+2296957,competitionCount,6
+2296957,datasetCount,6003
+2296957,scriptCount,510
+2296957,totalCount,6519
+501010,nameNullable,universities and colleges
+501010,descriptionNullable,This tag contains all kinds of information about which colleges are good and how much money people make after attending classes there.
+501010,fullPathNullable,subject > people and society > education > universities and colleges
+501010,ref,universities and colleges
+501010,name,universities and colleges
+501010,hasName,True
+501010,description,This tag contains all kinds of information about which colleges are good and how much money people make after attending classes there.
+501010,hasDescription,True
+501010,fullPath,subject > people and society > education > universities and colleges
+501010,hasFullPath,True
+501010,competitionCount,0
+501010,datasetCount,4979
+501010,scriptCount,415
+501010,totalCount,5394
+501010,nameNullable,business
+501010,descriptionNullable,"Businesses are organizational entities that drive economic activity. Explore the inner workings of things like HR practices, product sales, and customer happiness in these competitions, kernels, and datasets."
+501010,fullPathNullable,subject > people and society > business
+501010,ref,business
+501010,name,business
+501010,hasName,True
+501010,description,"Businesses are organizational entities that drive economic activity. Explore the inner workings of things like HR practices, product sales, and customer happiness in these competitions, kernels, and datasets."
+501010,hasDescription,True
+501010,fullPath,subject > people and society > business
+501010,hasFullPath,True
+501010,competitionCount,10
+501010,datasetCount,46266
+501010,scriptCount,25172
+501010,totalCount,71448
+501010,nameNullable,marketing
+501010,descriptionNullable,"Marketing is the activity of connecting consumers to products and services. Find datasets, kernels, and competitions related to marketing in this tag."
+501010,fullPathNullable,subject > people and society > business > marketing
+501010,ref,marketing
+501010,name,marketing
+501010,hasName,True
+501010,description,"Marketing is the activity of connecting consumers to products and services. Find datasets, kernels, and competitions related to marketing in this tag."
+501010,hasDescription,True
+501010,fullPath,subject > people and society > business > marketing
+501010,hasFullPath,True
+501010,competitionCount,5
+501010,datasetCount,293
+501010,scriptCount,504
+501010,totalCount,802

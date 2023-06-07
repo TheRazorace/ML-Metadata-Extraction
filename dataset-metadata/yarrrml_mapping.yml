@@ -26,9 +26,7 @@ prefixes:
     kaggle-data: http://mldata.com/resource/kaggle/
     dcat: http://www.w3.org/ns/dcat#
 
-
 mappings:
-
     Catalog:
         sources:
             - [ 'Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv~csv' ]
@@ -129,8 +127,6 @@ mappings:
             - [dc:identifier, $(dataset_id)]
             - [dcat:distribution,http://mldata.com/resource/kaggle/distribution/$(dataset_id)/$(file_name)~iri]
 
-
-
     SourceDummy:
         sources:
             - [ 'Dataset_examples/DatasetMD/Kaggle_DatasetMD.csv~csv' ]
@@ -196,5 +192,3 @@ mappings:
             - [ rdfs:label, $(feature_name) number-of-missing-values ]
             - [ ml-onto:hasDataCharacteristicType, ml-vocab:number_of_missing_values]
             - [ mls:hasValue, $(feature_missing), xsd:integer ]
-
-##I'm here
